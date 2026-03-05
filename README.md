@@ -16,18 +16,28 @@ Ao criar novas pastas, deve-se manter o padrão de nomenclatura em kebab-case (s
 ProjetoTransformese/
 │
 ├── css/
-│   └── style.css
+│   └── global.css
 │
 ├── img/
 │
+├── js/
+│   └── script.js
+│
 ├── pages/
 │   ├── cadastro/
+│   │   ├── cadastro.css
 │   │   └── page.html
+│   │
 │   ├── controle-de-gasto/
+│   │   ├── controleGasto.css
 │   │   └── page.html
+│   │
 │   ├── login/
+│   │   ├── login.css
 │   │   └── page.html
+│   │
 │   └── questionario/
+│       ├── questionario.css
 │       └── page.html
 │
 ├── .gitignore
