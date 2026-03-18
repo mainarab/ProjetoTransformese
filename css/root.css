@@ -1,0 +1,40 @@
+
+:root {
+  /* CORES LIGHT MODE */
+  --bg-body: #f1eeee;
+  --text-main: #1b1b1b;
+
+  --bg-header: #d2cccc;
+  --bg-footer: #d2cccc;
+
+  --bg-hero: #dcd6d6;
+
+  --bg-card: #cec7c7;
+  --shadow-card: 0 10px 25px rgba(0,0,0,0.1);
+
+  --bg-problem: #bfb9b9;
+  --bg-problem-hover: #b3acac;
+
+  --btn-bg: #555;
+  --btn-hover: #000;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg-body: #0f172a;
+  --text-main: #e2e8f0;
+
+  --bg-header: #020617;
+  --bg-footer: #020617;
+
+  --bg-hero: #1e293b;
+
+  --bg-card: #1e293b;
+  --shadow-card: 0 10px 25px rgba(0,0,0,0.5);
+
+  --bg-problem: #1e293b;
+  --bg-problem-hover: #334155;
+
+  --btn-bg: #334155;
+  --btn-hover: #1f2937;
+}
