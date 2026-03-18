@@ -1,0 +1,116 @@
+/* LAYOUT */
+.layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* HEADER */
+.topo{
+  height:60px;
+  color:#000000; 
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:0 20px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.2); 
+}
+
+.titulo{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* BOTÕES */
+.toggleMenu,
+.temaBtn{
+  background:none;
+  border:none;
+  color:#000000;
+  font-size:20px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.toggleMenu:hover,
+.temaBtn:hover{
+  transform:scale(1.1);
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:240px;
+  background:#f7f7f7; 
+  color:#000000;
+  transition:0.3s;
+  display:flex;
+  flex-direction:column;
+
+  position:fixed;
+  top:60px;
+  left:0;
+  height:100%;
+  z-index:1000;
+}
+
+/* SIDEBAR FECHADA */
+.sidebar.fechado{
+  transform:translateX(-100%);
+}
+
+/* USUARIO */
+.usuario{
+  text-align:center;
+  padding:20px 10px;
+}
+
+.usuario img{
+  width:55px;
+  border-radius:50%;
+  margin-bottom:8px;
+}
+
+.usuario h2{
+  font-size:15px;
+  font-weight:500;
+  color:#000000; /* cor fixa para usuário */
+}
+
+/* MENU */
+.sidebar ul{
+  list-style:none;
+  padding-top:10px;
+}
+
+.sidebar li{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 20px;
+  cursor:pointer;
+  transition:0.2s;
+  font-size:15px;
+}
+
+.sidebar li:hover{
+  background:#919396; /* substituído var(--bg-hover-menu) */
+}
+
+.sidebar li span{
+  font-size:18px;
+  min-width:20px;
+}
+
+/* CONTEÚDO */
+main{
+  flex:1;
+  padding:25px;
+  margin-left:240px;
+  transition:0.3s;
+}
+
+/* QUANDO MENU SOME */
+.sidebar.fechado ~ main{
+  margin-left:0;
+  width:100%;
+}

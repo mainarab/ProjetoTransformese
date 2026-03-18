@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Financeiro</title>
+  <link rel="stylesheet" href="./css/controlegastos.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="topo">
+    <button class="toggleMenu" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <button onclick="toggleTema()" class="temaBtn">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <div class="titulo">
+      <img src="./img/logo.png" alt="ControlMoney Logo" class="logoTitulo">
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <section class="usuario">
+        <img src="https://i.pravatar.cc/100" id="fotoUsuario">
+        <h2 id="nomeUsuario">Usuário</h2>
+      </section>
+      <nav>
+        <ul>
+          <li><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+          <li><i class="fa-solid fa-money-bill-transfer"></i> Transações</li>
+          <li><i class="fa-solid fa-chart-pie"></i> Relatórios</li>
+          <li>
+            <a href="../../index.html">
+              <i class="fa-solid fa-right-from-bracket"></i> Sair
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <!-- RESUMO -->
+      <section class="resume">
+        <article>
+          <p>Entradas: <span id="entradas">R$ 0</span></p>
+        </article>
+        <article>
+          <p>Saídas: <span id="saidas">R$ 0</span></p>
+        </article>
+        <article>
+          <p>Total: <span id="total">R$ 0</span></p>
+        </article>
+      </section>
+      <section class="divTable" id="transacoes">
+        <form id="formTransacao">
+          <input type="text" id="descricao" placeholder="Descrição">
+          <input type="number" id="valor" placeholder="Valor">
+          <input type="date" id="data">
+          <select id="tipo" onchange="verificarTipo()">
+            <option value="">Tipo</option>
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saída</option>
+          </select>
+
+          <select id="tipoGasto" style="display:none" onchange="atualizarSubcategorias()">
+            <option value="">Tipo de gasto</option>
+            <option value="fixo">Fixo</option>
+            <option value="variavel">Variável</option>
+          </select>
+
+          <select id="subcategoria" style="display:none">
+            <option value="">Subcategoria</option>
+          </select>
+
+          <button type="button" onclick="adicionar()">Incluir</button>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Tipo</th>
+              <th>Tipo de Gasto</th>
+              <th>Subcategoria</th>
+              <th>Data</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </section>
+      <!-- DASHBOARDS -->
+      <section class="dashboards" id="dashboards-carousel">
+
+        <div class="dash-carousel-wrapper">
+
+          <div class="dash-carousel-track">
+
+            <div class="cardDash">
+              <i class="fa-solid fa-chart-column"></i>
+              Entradas vs Saídas
+              <canvas id="graficoEntradasSaidas"></canvas>
+            </div>
+
+            <div class="cardDash">
+              <i class="fa-solid fa-folder"></i>
+              Gastos por Categoria
+              <canvas id="graficoCategorias"></canvas>
+            </div>
+
+            <div class="cardDash">
+              <i class="fa-solid fa-thumbtack"></i>
+              Fixos vs Variáveis
+              <canvas id="graficoTipoGasto"></canvas>
+            </div>
+
+            <div class="cardDash info">
+              <i class="fa-solid fa-money-bill-wave"></i>
+              Maior gasto
+              <p id="maiorGasto">R$ 0</p>
+            </div>
+
+            <div class="cardDash info">
+              <i class="fa-solid fa-trophy"></i>
+              Categoria que mais gasta
+              <p id="categoriaTop">Nenhuma</p>
+            </div>
+
+            <div class="cardDash info">
+              <i class="fa-solid fa-percent"></i>
+              % de despesas
+              <p id="percentualGasto">0%</p>
+            </div>
+
+            <div class="cardDash">
+              <i class="fa-solid fa-calendar-days"></i>
+              Evolução Financeira
+              <canvas id="graficoEvolucao"></canvas>
+            </div>
+
+            <div class="cardDash">
+              <i class="fa-solid fa-fire"></i>
+              Top 5 Gastos
+              <canvas id="graficoTopGastos"></canvas>
+            </div>
+
+            <div class="cardDash">
+              <i class="fa-solid fa-chart-pie"></i>
+              Distribuição das despesas
+              <canvas id="graficoDistribuicao"></canvas>
+            </div>
+
+          </div>
+
+        </div>
+
+        <button class="dash-prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button class="dash-next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+  </div>
+
+  </section>
+
+  </main>
+
+  </div>
+
+  <script src="./js/storage.js"></script>
+  <script src="./js/categorias.js"></script>
+  <script src="./js/tabela.js"></script>
+  <script src="./js/resumo.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/tema.js"></script>
+  <script src="./js/transacoes.js"></script>
+  <script src="./js/Dashboards.js"></script>
+  <script src="./js/carousel.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
