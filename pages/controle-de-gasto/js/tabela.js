@@ -1,53 +1,72 @@
 function mostrarTransacoes() {
+  // Pega o elemento da tabela
   let lista = document.getElementById("lista");
 
+  // Limpa a tabela antes de preencher
   lista.innerHTML = "";
 
-  transacoes.forEach((item, index) => {
-    lista.innerHTML += `
-    <tr>
+  // Percorre todas as transações
+  for (let i = 0; i < transacoes.length; i++) {
+    let item = transacoes[i]; // pega cada transação
 
-      <td>${item.descricao}</td>
-      <td>${item.valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</td>
-      <td>${item.tipo}</td>
-      <td>${item.tipoGasto}</td>
-      <td>${item.subcategoria}</td>
-      <td>${new Date(item.data).toLocaleDateString("pt-BR")}</td>
-
-      <td>
-        <button onclick="editar(${index})">✏️</button>
-        <button onclick="excluir(${index})">🗑️</button>
-      </td>
-
-    </tr>
-    `;
-  });
+    // Cria uma linha da tabela com os dados da transação
+    lista.innerHTML +=
+      "<tr>" +
+      "<td>" +
+      item.descricao +
+      "</td>" +
+      "<td>" +
+      item.valor.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      }) +
+      "</td>" +
+      "<td>" +
+      item.tipo +
+      "</td>" +
+      "<td>" +
+      item.tipoGasto +
+      "</td>" +
+      "<td>" +
+      item.subcategoria +
+      "</td>" +
+      "<td>" +
+      new Date(item.data).toLocaleDateString("pt-BR") +
+      "</td>" +
+      "<td>" +
+      "<button onclick='editar(" +
+      i +
+      ")'>✏️</button> " +
+      "<button onclick='excluir(" +
+      i +
+      ")'>🗑️</button>" +
+      "</td>" +
+      "</tr>";
+  }
 }
 
+// Função para excluir uma transação
 function excluir(index) {
-  transacoes.splice(index, 1);
-  salvarDados();
-  mostrarTransacoes();
-  atualizarResumo();
-  atualizarDashboards();
+  transacoes.splice(index, 1); 
+  salvarDados(); 
+  mostrarTransacoes(); 
+  atualizarResumo(); 
+  atualizarDashboards(); 
 }
+
 
 function editar(index) {
-  let t = transacoes[index];
-
+  let t = transacoes[index]; 
   document.getElementById("descricao").value = t.descricao;
   document.getElementById("valor").value = t.valor;
-document.getElementById("data").value = t.data;
-
+  document.getElementById("data").value = t.data;
   document.getElementById("tipo").value = t.tipo;
 
-  verificarTipo();
+  verificarTipo(); 
 
   document.getElementById("tipoGasto").value = t.tipoGasto;
-
-  atualizarSubcategorias();
-
+  atualizarSubcategorias(); 
   document.getElementById("subcategoria").value = t.subcategoria;
 
-  editIndex = index;
+  editIndex = index; 
 }

@@ -6,176 +6,181 @@ let chartTop;
 let chartDistribuicao;
 
 function atualizarDashboards() {
-
+  // SOMA TOTAL DE ENTRADAS E SAÍDAS
   let entradas = 0;
   let saidas = 0;
 
-  let categorias = {};
-  let tipos = {fixo:0, variavel:0};
+  for (let i = 0; i < transacoes.length; i++) {
+    if (transacoes[i].tipo === "entrada") entradas += transacoes[i].valor;
+    if (transacoes[i].tipo === "saida") saidas += transacoes[i].valor;
+  }
 
-  transacoes.forEach(t => {
-    if(t.tipo === "entrada") entradas += t.valor;
-    if(t.tipo === "saida") saidas += t.valor;
+  // CATEGORIAS DE GASTO
+  let categoriasNomes = [];
+  let categoriasValores = [];
 
-    if(t.tipo === "saida"){
-      if(!categorias[t.subcategoria]) categorias[t.subcategoria] = 0;
-      categorias[t.subcategoria] += t.valor;
+  for (let i = 0; i < transacoes.length; i++) {
+    if (transacoes[i].tipo === "saida") {
+      let index = categoriasNomes.indexOf(transacoes[i].subcategoria);
+      if (index === -1) {
+        categoriasNomes.push(transacoes[i].subcategoria);
+        categoriasValores.push(transacoes[i].valor);
+      } else {
+        categoriasValores[index] += transacoes[i].valor;
+      }
     }
+  }
 
-    if(t.tipoGasto === "fixo") tipos.fixo += t.valor;
-    if(t.tipoGasto === "variavel") tipos.variavel += t.valor;
-  });
+  // TIPO DE GASTO
+  let fixo = 0;
+  let variavel = 0;
 
-  /* ENTRADAS VS SAIDAS */
-  if(chartEntradasSaidas) chartEntradasSaidas.destroy();
+  for (let i = 0; i < transacoes.length; i++) {
+    if (transacoes[i].tipoGasto === "fixo") fixo += transacoes[i].valor;
+    if (transacoes[i].tipoGasto === "variavel") variavel += transacoes[i].valor;
+  }
 
+  // GRAFICO ENTRADAS VS SAIDAS
+  if (chartEntradasSaidas) chartEntradasSaidas.destroy();
   chartEntradasSaidas = new Chart(
     document.getElementById("graficoEntradasSaidas"),
     {
       type: "doughnut",
       data: {
-        labels: ["Entradas","Saídas"],
-        datasets: [{
-          data: [entradas, saidas],
-          backgroundColor: ["#4ade80","#f87171"], // verde e vermelho
-          borderColor: ["#16a34a","#b91c1c"],
-          borderWidth: 2
-        }]
-      }
-    }
+        labels: ["Entradas", "Saídas"],
+        datasets: [
+          {
+            data: [entradas, saidas],
+            backgroundColor: ["#4ade80", "#f87171"],
+          },
+        ],
+      },
+    },
   );
 
-  /* CATEGORIAS */
-  if(chartCategorias) chartCategorias.destroy();
-
-  chartCategorias = new Chart(
-    document.getElementById("graficoCategorias"),
-    {
-      type: "bar",
-      data: {
-        labels: Object.keys(categorias),
-        datasets: [{
+  // GRAFICO CATEGORIAS
+  if (chartCategorias) chartCategorias.destroy();
+  chartCategorias = new Chart(document.getElementById("graficoCategorias"), {
+    type: "bar",
+    data: {
+      labels: categoriasNomes,
+      datasets: [
+        {
           label: "Gastos",
-          data: Object.values(categorias),
-          backgroundColor: Object.keys(categorias).map((_,i)=>`hsl(${i*50},70%,50%)`),
-          borderColor: "black",
-          borderWidth: 1
-        }]
-      }
-    }
-  );
-
-  /* FIXO VS VARIAVEL */
-  if(chartTipoGasto) chartTipoGasto.destroy();
-
-  chartTipoGasto = new Chart(
-    document.getElementById("graficoTipoGasto"),
-    {
-      type: "pie",
-      data: {
-        labels: ["Fixo","Variável"],
-        datasets: [{
-          data: [tipos.fixo, tipos.variavel],
-          backgroundColor: ["#60a5fa","#facc15"], // azul e amarelo
-          borderColor: ["#1e40af","#78350f"],
-          borderWidth: 2
-        }]
-      }
-    }
-  );
-
-  /* EVOLUÇÃO MENSAL */
-  let meses = {};
-
-  transacoes.forEach(t => {
-    let mes = t.data.substring(0,7);
-    if(!meses[mes]) meses[mes] = 0;
-    if(t.tipo==="entrada") meses[mes] += t.valor;
-    if(t.tipo==="saida") meses[mes] -= t.valor;
+          data: categoriasValores,
+          backgroundColor: [
+            "red",
+            "blue",
+            "green",
+            "orange",
+            "purple",
+            "pink",
+            "yellow",
+          ],
+        },
+      ],
+    },
   });
 
-  if(chartEvolucao) chartEvolucao.destroy();
+  // GRAFICO TIPO DE GASTO
+  if (chartTipoGasto) chartTipoGasto.destroy();
+  chartTipoGasto = new Chart(document.getElementById("graficoTipoGasto"), {
+    type: "pie",
+    data: {
+      labels: ["Fixo", "Variável"],
+      datasets: [
+        {
+          data: [fixo, variavel],
+          backgroundColor: ["#60a5fa", "#facc15"],
+        },
+      ],
+    },
+  });
 
-  chartEvolucao = new Chart(
-    document.getElementById("graficoEvolucao"),
-    {
-      type: "line",
-      data: {
-        labels: Object.keys(meses),
-        datasets: [{
-          label: "Saldo mensal",
-          data: Object.values(meses),
+  // EVOLUÇÃO MENSAL (somente soma simples)
+  let mesesNomes = [];
+  let mesesValores = [];
+
+  for (let i = 0; i < transacoes.length; i++) {
+    let mes = transacoes[i].data.substring(0, 7);
+    let index = mesesNomes.indexOf(mes);
+    let valor =
+      transacoes[i].tipo === "entrada"
+        ? transacoes[i].valor
+        : -transacoes[i].valor;
+
+    if (index === -1) {
+      mesesNomes.push(mes);
+      mesesValores.push(valor);
+    } else {
+      mesesValores[index] += valor;
+    }
+  }
+
+  if (chartEvolucao) chartEvolucao.destroy();
+  chartEvolucao = new Chart(document.getElementById("graficoEvolucao"), {
+    type: "line",
+    data: {
+      labels: mesesNomes,
+      datasets: [
+        {
+          label: "Saldo Mensal",
+          data: mesesValores,
           backgroundColor: "rgba(96,165,250,0.2)",
           borderColor: "#2563eb",
-          borderWidth: 2,
-          fill: true
-        }]
-      }
-    }
-  );
+          fill: true,
+        },
+      ],
+    },
+  });
 
-  /* TOP GASTOS */
-  let top = transacoes
-    .filter(t => t.tipo==="saida")
-    .sort((a,b) => b.valor - a.valor)
-    .slice(0,5);
+  // TOP 5 GASTOS
+  let topNomes = [];
+  let topValores = [];
+  let gastos = [];
 
-  if(chartTop) chartTop.destroy();
+  for (let i = 0; i < transacoes.length; i++) {
+    if (transacoes[i].tipo === "saida") gastos.push(transacoes[i]);
+  }
 
-  chartTop = new Chart(
-    document.getElementById("graficoTopGastos"),
-    {
-      type: "bar",
-      data: {
-        labels: top.map(t=>t.descricao),
-        datasets: [{
+  gastos.sort(function (a, b) {
+    return b.valor - a.valor;
+  });
+
+  for (let i = 0; i < 5 && i < gastos.length; i++) {
+    topNomes.push(gastos[i].descricao);
+    topValores.push(gastos[i].valor);
+  }
+
+  if (chartTop) chartTop.destroy();
+  chartTop = new Chart(document.getElementById("graficoTopGastos"), {
+    type: "bar",
+    data: {
+      labels: topNomes,
+      datasets: [
+        {
           label: "Gastos",
-          data: top.map(t=>t.valor),
+          data: topValores,
           backgroundColor: "#f87171",
-          borderColor: "#b91c1c",
-          borderWidth: 1
-        }]
-      }
-    }
-  );
+        },
+      ],
+    },
+  });
 
-  /* DISTRIBUIÇÃO */
-  if(chartDistribuicao) chartDistribuicao.destroy();
-
-  chartDistribuicao = new Chart(
-    document.getElementById("graficoDistribuicao"),
-    {
-      type: "pie",
-      data: {
-        labels: Object.keys(categorias),
-        datasets: [{
-          data: Object.values(categorias),
-          backgroundColor: Object.keys(categorias).map((_,i)=>`hsl(${i*50},70%,50%)`),
-          borderColor: "black",
-          borderWidth: 1
-        }]
-      }
-    }
-  );
-
-  /* MAIOR GASTO */
-  let maior = transacoes
-    .filter(t => t.tipo==="saida")
-    .sort((a,b) => b.valor - a.valor)[0];
-
+  // MAIOR GASTO
   document.getElementById("maiorGasto").innerText =
-    maior ? "R$ "+maior.valor : "R$ 0";
+    gastos.length > 0 ? "R$ " + gastos[0].valor : "R$ 0";
 
-  /* CATEGORIA TOP */
-  let topCategoria = Object.entries(categorias)
-    .sort((a,b) => b[1] - a[1])[0];
-
+  // CATEGORIA TOP
+  let maiorIndex = 0;
+  for (let i = 1; i < categoriasValores.length; i++) {
+    if (categoriasValores[i] > categoriasValores[maiorIndex]) maiorIndex = i;
+  }
   document.getElementById("categoriaTop").innerText =
-    topCategoria ? topCategoria[0] : "Nenhuma";
+    categoriasNomes[maiorIndex] || "Nenhuma";
 
-  /* PERCENTUAL */
+  // PERCENTUAL
   let total = entradas + saidas;
-  let percentual = total ? (saidas/total*100).toFixed(1) : 0;
+  let percentual = total ? ((saidas / total) * 100).toFixed(1) : 0;
   document.getElementById("percentualGasto").innerText = percentual + "%";
-
 }

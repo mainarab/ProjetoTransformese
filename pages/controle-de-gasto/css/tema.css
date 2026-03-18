@@ -1,0 +1,93 @@
+body {
+  background: #f0f2f5;
+  color: #1e293b;
+  transition: 0.3s;
+}
+
+
+body.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+
+body.dark .topo {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+
+body.dark .toggleMenu,
+body.dark .temaBtn {
+  background: #334155;
+  color: #ffffff;
+  border: none;
+}
+
+body.dark .toggleMenu:hover,
+body.dark .temaBtn:hover {
+  background: #475569;
+}
+
+
+
+body.dark .sidebar {
+  background: #020617;
+  color: #cbd5e1;
+  border-right: 1px solid #1e293b;
+}
+
+body.dark .sidebar .usuario {
+  border-bottom: 1px solid #1e293b;
+}
+
+body.dark .sidebar li {
+  color: #cbd5e1;
+}
+
+body.dark .sidebar li:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+
+body.dark .cardDash {
+  background: #1e293b;
+  color: #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .divTable {
+  background: #1e293b;
+}
+
+body.dark table {
+  color: #e2e8f0;
+}
+
+body.dark thead {
+  background: #020617;
+}
+
+body.dark tbody tr {
+  border-bottom: 1px solid #334155;
+}
+
+body.dark tbody tr:hover {
+  background: #334155;
+}
+
+body.dark .modal-content {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #ffffff;
+}
+
+body.dark p {
+  color: #cbd5e1;
+}
+

@@ -5,10 +5,23 @@ function abrirPagina(pagina) {
 
   document.getElementById(pagina).style.display = "block";
 }
-function toggleMenu(){
+function toggleMenu() {
+  const sidebar = document.querySelector(".sidebar");
 
-const sidebar = document.querySelector(".sidebar")
+  sidebar.classList.toggle("fechado");
+}
+function mostrarSecao(secao) {
+  const dashboard = document.getElementById("secaoDashboards");
+  const transacoes = document.getElementById("secaoTransacoes");
 
-sidebar.classList.toggle("fechado")
+  dashboard.style.display = "none";
+  transacoes.style.display = "none";
 
+  if (secao === "dashboard") {
+    dashboard.style.display = "block";
+  }
+
+  if (secao === "transacoes") {
+    transacoes.style.display = "block";
+  }
 }
