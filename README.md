@@ -12,22 +12,36 @@ O arquivo principal de cada página deve seguir o padrão page.html.
 Ao criar novas pastas, deve-se manter o padrão de nomenclatura em kebab-case (substituindo espaços por hífens) para garantir consistência e boas práticas de organização.
 
 
+```bash
 ProjetoTransformese/
 │
-├── CSS/
-│   └── style.css
+├── css/
+│   └── global.css
+│
 ├── img/
+│
+├── js/
+│   └── script.js
+│
 ├── pages/
 │   ├── cadastro/
+│   │   ├── cadastro.css
 │   │   └── page.html
+│   │
 │   ├── controle-de-gasto/
+│   │   ├── controleGasto.css
 │   │   └── page.html
+│   │
 │   ├── login/
+│   │   ├── login.css
 │   │   └── page.html
+│   │
 │   └── questionario/
+│       ├── questionario.css
 │       └── page.html
 │
 ├── .gitignore
 ├── index.html
 ├── LICENSE
 └── README.md
+```
