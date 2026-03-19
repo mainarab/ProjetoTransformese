@@ -3,8 +3,6 @@ function atualizarResumo() {
 
   let entradas = 0;
   let saidas = 0;
-  let contadorGastosAltos = 0; // contador para o sino
-  const limiteGasto = 1000; // valor limite para disparar o sino
 
   transacoes.forEach((t) => {
     if (t.tipo === "entrada") {
@@ -13,10 +11,6 @@ function atualizarResumo() {
 
     if (t.tipo === "saida") {
       saidas += Number(t.valor);
-
-      if (Number(t.valor) > limiteGasto) {
-        contadorGastosAltos += 1;
-      }
     }
   });
 
@@ -27,7 +21,7 @@ function atualizarResumo() {
   document.getElementById("total").innerText = "R$ " + total.toFixed(2);
 
   verificarSaldo(total);
-  atualizarSino(contadorGastosAltos); // atualiza o badge do sino
+  atualizarSino(total);
 }
 
 // verifica saldo e muda cor
@@ -36,18 +30,19 @@ function verificarSaldo(total) {
 
   if (total < 0) {
     totalEl.style.color = "red";
-    alert("⚠️ Atenção! Seu saldo está negativo. Controle melhor seus gastos.");
+    alert("Seu saldo está negativo! Melhore suas finanças");
   } else {
     totalEl.style.color = "green";
   }
 }
 
-// atualiza o badge do sino
-function atualizarSino(contador) {
+// atualiza o sino
+function atualizarSino(total) {
   var badge = document.getElementById("badgeGasto");
-  if (contador > 0) {
+
+  if (total < 0) {
     badge.style.display = "block";
-    badge.textContent = contador;
+    badge.textContent = "1";
   } else {
     badge.style.display = "none";
   }

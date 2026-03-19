@@ -1,17 +1,22 @@
-/* LAYOUT */
+body {
+  width: 100%;
+}
+
 .layout {
   display: flex;
   min-height: 100vh;
 }
 
+/* TOPO */
+
 .topo {
   height: 65px;
-  background: #ffffff;
+  background: var(--bg-topo);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 25px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-topo);
   position: sticky;
   top: 0;
   z-index: 2000;
@@ -24,6 +29,9 @@
   display: flex;
   align-items: center;
 }
+
+/* ALERTA */
+
 .alertaGasto {
   position: relative;
   background: none;
@@ -37,8 +45,8 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background: red;
-  color: white;
+  background: var(--badge-bg);
+  color: var(--badge-text);
   font-size: 12px;
   width: 16px;
   height: 16px;
@@ -47,6 +55,7 @@
   border-radius: 50%;
   font-weight: bold;
 }
+
 /* CENTRO */
 
 .topo-center {
@@ -69,7 +78,7 @@
   height: 40px;
   border-radius: 8px;
   border: none;
-  background: #f1f1f1;
+  background: var(--bg-btn);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,6 +86,7 @@
   cursor: pointer;
   transition: 0.2s;
 }
+
 .btnRelatorio {
   background: none;
   border: none;
@@ -92,15 +102,16 @@
 
 .toggleMenu:hover,
 .temaBtn:hover {
-  background: #e4e4e4;
+  background: var(--bg-btn-hover);
   transform: scale(1.05);
 }
 
 /* SIDEBAR */
+
 .sidebar {
   width: 240px;
-  background: #f7f7f7;
-  color: #000000;
+  background: var(--bg-sidebar);
+  color: var(--text-sidebar);
   transition: 0.3s;
   display: flex;
   flex-direction: column;
@@ -113,11 +124,13 @@
 }
 
 /* SIDEBAR FECHADA */
+
 .sidebar.fechado {
   transform: translateX(-100%);
 }
 
 /* USUARIO */
+
 .usuario {
   text-align: center;
   padding: 20px 10px;
@@ -132,10 +145,11 @@
 .usuario h2 {
   font-size: 15px;
   font-weight: 500;
-  color: #000000; /* cor fixa para usuário */
+  color: var(--text-sidebar);
 }
 
 /* MENU */
+
 .sidebar ul {
   list-style: none;
   padding-top: 10px;
@@ -152,15 +166,16 @@
 }
 
 .sidebar li:hover {
-  background: #919396; /* substituído var(--bg-hover-menu) */
+  background: var(--bg-hover-menu);
 }
 
 .sidebar li span {
   font-size: 18px;
   min-width: 20px;
 }
+
 .sidebar li a {
-  color: inherit; /* herda a cor do li, que muda com o tema */
+  color: inherit;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -168,10 +183,13 @@
 }
 
 .sidebar li a:hover {
-  color: inherit; /* mantém consistência no hover */
+  color: inherit;
 }
+
+/* MODAL */
+
 .modal {
-  display: none; /* escondido por padrão */
+  display: none;
   position: fixed;
   z-index: 3000;
   left: 0;
@@ -179,13 +197,13 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  backdrop-filter: blur(5px); /* blur do fundo */
-  background-color: rgba(0, 0, 0, 0.6); /* fundo escuro semi-transparente */
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.6);
   transition: 0.3s;
 }
 
 .modal-content {
-  background-color: #ffffff;
+  background-color: var(--bg-modal);
   margin: 10% auto;
   padding: 20px;
   border-radius: 12px;
@@ -200,7 +218,7 @@
 }
 
 .close {
-  color: #333;
+  color: var(--text-close);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -208,10 +226,11 @@
 }
 
 .close:hover {
-  color: #ff0000;
+  color: red;
 }
 
 /* CONTEÚDO */
+
 main {
   flex: 1;
   padding: 25px;
@@ -220,7 +239,28 @@ main {
 }
 
 /* QUANDO MENU SOME */
+
 .sidebar.fechado ~ main {
   margin-left: 0;
   width: 100%;
+}
+
+/* ANIMAÇÃO ALERTA */
+
+@keyframes alerta {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#badgeGasto {
+  animation: alerta 1s infinite;
 }

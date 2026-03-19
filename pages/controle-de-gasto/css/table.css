@@ -1,22 +1,38 @@
-/* TABELA */
+/* ================= TABELA ================= */
+
 .divTable {
-  background: white;
+  background: var(--bg-table-box);
   border-radius: 8px;
   padding: 10px;
 }
-#formTransacao{
+
+#formTransacao {
   margin-bottom: 3%;
 }
+#formTransacao input,
+#formTransacao select {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+#formTransacao input::placeholder {
+  color: var(--input-placeholder);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
+  color: var(--text-table);
 }
 
 thead {
   display: table;
   width: 100%;
   table-layout: fixed;
-  background: #ecf0f1;
+  background: var(--bg-thead);
 }
 
 tbody {
@@ -29,6 +45,11 @@ tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
+  border-bottom: 1px solid var(--tr-border);
+}
+
+tbody tr:hover {
+  background: var(--tr-hover);
 }
 
 th,
@@ -37,20 +58,22 @@ td {
   text-align: center;
 }
 
-/* SCROLL */
+/* ================= SCROLL ================= */
 
 tbody::-webkit-scrollbar {
   width: 6px;
 }
 
 tbody::-webkit-scrollbar-thumb {
-  background: #3498db;
+  background: var(--scroll-thumb);
   border-radius: 10px;
 }
 
 tbody::-webkit-scrollbar-track {
-  background: #ecf0f1;
+  background: var(--scroll-track);
 }
+
+/* ================= COLUNAS ================= */
 
 .columnAmount,
 .columnType,

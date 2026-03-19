@@ -1,7 +1,9 @@
 function gerarPDF() {
-  var doc = new window.jspdf.jsPDF();
+  var pdf = new window.jspdf.jsPDF();
+
   var transacoes = localStorage.getItem("transacoes");
-  if (!transacoes) {
+
+  if (transacoes == null) {
     transacoes = [];
   } else {
     transacoes = JSON.parse(transacoes);
@@ -9,47 +11,50 @@ function gerarPDF() {
 
   var entradas = 0;
   var saidas = 0;
-  var y = 30;
 
-  doc.setFontSize(20);
-  doc.text("Relatório Financeiro", 20, 20);
+  var linha = 30;
 
-  var data = new Date();
-  var dia = data.getDate();
-  var mes = data.getMonth() + 1;
-  var ano = data.getFullYear();
-  doc.setFontSize(12);
-  doc.text("Data: " + dia + "/" + mes + "/" + ano, 150, 20);
+  pdf.setFontSize(20);
+  pdf.text("Relatorio Financeiro", 20, 20);
 
-  doc.text("Descrição", 20, y);
-  doc.text("Tipo", 100, y);
-  doc.text("Valor", 150, y);
-  y = y + 10;
+  pdf.setFontSize(12);
+  pdf.text("Descricao", 20, linha);
+  pdf.text("Tipo", 90, linha);
+  pdf.text("Valor", 140, linha);
 
-  for (var i = 0; i < transacoes.length; i = i + 1) {
-    doc.text(transacoes[i].descricao, 20, y);
-    doc.text(transacoes[i].tipo, 100, y);
-    doc.text("R$ " + Number(transacoes[i].valor).toFixed(2), 150, y);
+  linha = linha + 10;
 
-    if (transacoes[i].tipo == "entrada") {
-      entradas = entradas + Number(transacoes[i].valor);
+  for (var i = 0; i < transacoes.length; i++) {
+    var descricao = transacoes[i].descricao;
+    var tipo = transacoes[i].tipo;
+    var valor = transacoes[i].valor;
+
+    pdf.text(descricao, 20, linha);
+    pdf.text(tipo, 90, linha);
+    pdf.text("R$ " + valor, 140, linha);
+
+    if (tipo == "entrada") {
+      entradas = entradas + Number(valor);
     }
 
-    if (transacoes[i].tipo == "saida") {
-      saidas = saidas + Number(transacoes[i].valor);
+    if (tipo == "saida") {
+      saidas = saidas + Number(valor);
     }
 
-    y = y + 10;
+    linha = linha + 10;
   }
 
-  var total = entradas - saidas;
+  var saldo = entradas - saidas;
 
-  y = y + 10;
-  doc.text("Total Entradas: R$ " + entradas.toFixed(2), 20, y);
-  y = y + 10;
-  doc.text("Total Saídas: R$ " + saidas.toFixed(2), 20, y);
-  y = y + 10;
-  doc.text("Saldo Final: R$ " + total.toFixed(2), 20, y);
+  linha = linha + 10;
 
-  doc.save("relatorio-financeiro-ControlMoney.pdf");
+  pdf.text("Entradas: R$ " + entradas, 20, linha);
+  linha = linha + 10;
+
+  pdf.text("Saidas: R$ " + saidas, 20, linha);
+  linha = linha + 10;
+
+  pdf.text("Saldo Final: R$ " + saldo, 20, linha);
+
+  pdf.save("relatorio.pdf");
 }

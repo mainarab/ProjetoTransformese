@@ -5,11 +5,10 @@ function mostrarTransacoes() {
   // Limpa a tabela antes de preencher
   lista.innerHTML = "";
 
-  // Percorre todas as transações
   for (let i = 0; i < transacoes.length; i++) {
-    let item = transacoes[i]; // pega cada transação
+    let item = transacoes[i]; 
 
-    // Cria uma linha da tabela com os dados da transação
+  
     lista.innerHTML +=
       "<tr>" +
       "<td>" +

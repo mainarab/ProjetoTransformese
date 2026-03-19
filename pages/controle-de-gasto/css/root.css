@@ -1,0 +1,170 @@
+:root {
+  /* ================= BODY ================= */
+
+  --bg-body: #f0f2f5;
+  --text-body: #1e293b;
+
+  /* ================= TOPO ================= */
+
+  --bg-topo: #ffffff;
+  --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  /* ================= BOTÕES ================= */
+
+  --btn-bg: #78a0b4;
+  --btn-text: #ffffff;
+  --btn-hover: #ccc;
+
+  --bg-btn: #f1f1f1;
+  --bg-btn-hover: #e4e4e4;
+
+  /* ================= SIDEBAR ================= */
+
+  --bg-sidebar: #f7f7f7;
+  --text-sidebar: #000000;
+  --border-sidebar: #e2e8f0;
+  --bg-hover-menu: #919396;
+
+  /* ================= CARDS ================= */
+
+  --bg-card: #ffffff;
+  --text-card: #1e293b;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  --card-bg: #ffffff;
+  --card-title: #333;
+  --card-info: #2c3e50;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* ================= RESUMO ================= */
+
+  --resume-entrada: #27ae60;
+  --resume-saida: #e74c3c;
+  --resume-total: #3498db;
+
+  /* ================= TABELA ================= */
+
+  --bg-table: #ffffff;
+  --text-table: #1e293b;
+
+  --bg-table-box: #ffffff;
+  --bg-thead: #ecf0f1;
+
+  --thead-bg: #f1f5f9;
+  --tr-border: #e2e8f0;
+  --tr-hover: #f8fafc;
+
+  /* ================= SCROLL ================= */
+
+  --scroll-thumb: #3498db;
+  --scroll-track: #ecf0f1;
+
+  /* ================= MODAL ================= */
+
+  --bg-modal: #ffffff;
+  --text-close: #333;
+
+  /* ================= INPUT ================= */
+
+  --input-border: #ccc;
+  --input-bg: #ffffff;
+
+  /* ================= ALERTA ================= */
+
+  --badge-bg: red;
+  --badge-text: white;
+
+  /* ================= CAROUSEL ================= */
+
+  --slide-btn-bg: rgba(255, 255, 255, 0.1);
+  --slide-btn-color: #000;
+  --slide-btn-hover: rgba(255, 255, 255, 0.24);
+
+  /* ================= TEXTOS ================= */
+
+  --title-color: #1e293b;
+  --text-p: #475569;
+}
+body.dark {
+  /* ================= BODY ================= */
+
+  --bg-body: #0f172a;
+  --text-body: #e2e8f0;
+
+  /* ================= TOPO ================= */
+
+  --bg-topo: #1e293b;
+  --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+  /* ================= BOTÕES ================= */
+
+  --btn-bg: #475569;
+  --btn-text: #ffffff;
+  --btn-hover: #64748b;
+
+  --bg-btn: #334155;
+  --bg-btn-hover: #475569;
+
+  /* ================= SIDEBAR ================= */
+
+  --bg-sidebar: #020617;
+  --text-sidebar: #cbd5e1;
+  --border-sidebar: #1e293b;
+  --bg-hover-menu: #1e293b;
+
+  /* ================= CARDS ================= */
+
+  --bg-card: #1e293b;
+  --text-card: #e2e8f0;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  --card-bg: #1e293b;
+  --card-title: #e2e8f0;
+  --card-info: #cbd5e1;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+  /* ================= TABELA ================= */
+
+  --bg-table: #1e293b;
+  --text-table: #e2e8f0;
+
+  --bg-table-box: #1e293b;
+  --bg-thead: #020617;
+
+  --thead-bg: #020617;
+  --tr-border: #334155;
+  --tr-hover: #334155;
+
+  /* ================= SCROLL ================= */
+
+  --scroll-thumb: #475569;
+  --scroll-track: #1e293b;
+
+  /* ================= MODAL ================= */
+
+  --bg-modal: #1e293b;
+  --text-close: #ffffff;
+
+  /* ================= INPUT ================= */
+
+  --input-bg: #1e293b;
+  --input-border: #475569;
+  --input-text: #e2e8f0;
+  --input-placeholder: #94a3b8;
+
+  /* ================= ALERTA ================= */
+
+  --badge-bg: #ef4444;
+  --badge-text: #ffffff;
+
+  /* ================= CAROUSEL ================= */
+
+  --slide-btn-bg: rgba(30, 41, 59, 0.6);
+  --slide-btn-color: #ffffff;
+  --slide-btn-hover: rgba(71, 85, 105, 0.7);
+
+  /* ================= TEXTOS ================= */
+
+  --title-color: #ffffff;
+  --text-p: #cbd5e1;
+}

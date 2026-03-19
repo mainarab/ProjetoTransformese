@@ -1,93 +1,79 @@
 body {
-  background: #f0f2f5;
-  color: #1e293b;
+  background: var(--bg-body);
+  color: var(--text-body);
   transition: 0.3s;
 }
 
-
-body.dark {
-  background: #0f172a;
-  color: #e2e8f0;
+.topo {
+  background: var(--bg-topo);
 }
 
-
-body.dark .topo {
-  background: #1e293b;
-  color: #e2e8f0;
-}
-
-
-body.dark .toggleMenu,
-body.dark .temaBtn {
-  background: #334155;
-  color: #ffffff;
+.toggleMenu,
+.temaBtn {
+  background: var(--btn-bg);
   border: none;
 }
 
-body.dark .toggleMenu:hover,
-body.dark .temaBtn:hover {
-  background: #475569;
+.toggleMenu:hover,
+.temaBtn:hover {
+  background: var(--btn-hover);
 }
 
-
-
-body.dark .sidebar {
-  background: #020617;
-  color: #cbd5e1;
-  border-right: 1px solid #1e293b;
+.sidebar {
+  background: var(--bg-sidebar);
+  color: var(--text-sidebar);
+  border-right: 1px solid var(--border-sidebar);
 }
 
-body.dark .sidebar .usuario {
-  border-bottom: 1px solid #1e293b;
+.sidebar .usuario {
+  border-bottom: 1px solid var(--border-sidebar);
 }
 
-body.dark .sidebar li {
-  color: #cbd5e1;
+.sidebar li {
+  color: var(--text-sidebar);
 }
 
-body.dark .sidebar li:hover {
-  background: #1e293b;
-  color: #ffffff;
+.sidebar li:hover {
+  background: var(--tr-hover);
+  color: #fff;
 }
 
-
-body.dark .cardDash {
-  background: #1e293b;
-  color: #e2e8f0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+.cardDash {
+  background: var(--bg-card);
+  color: var(--text-card);
+  box-shadow: var(--shadow-card);
 }
 
-body.dark .divTable {
-  background: #1e293b;
+.divTable {
+  background: var(--bg-table);
 }
 
-body.dark table {
-  color: #e2e8f0;
+table {
+  color: var(--text-table);
 }
 
-body.dark thead {
-  background: #020617;
+thead {
+  background: var(--thead-bg);
 }
 
-body.dark tbody tr {
-  border-bottom: 1px solid #334155;
+tbody tr {
+  border-bottom: 1px solid var(--tr-border);
 }
 
-body.dark tbody tr:hover {
-  background: #334155;
+tbody tr:hover {
+  background: var(--tr-hover);
 }
 
-body.dark .modal-content {
-  background-color: #1e293b;
-  color: #e2e8f0;
-}
-body.dark h1,
-body.dark h2,
-body.dark h3 {
-  color: #ffffff;
+.modal-content {
+  background: var(--bg-modal);
 }
 
-body.dark p {
-  color: #cbd5e1;
+h1,
+h2,
+h3 {
+  color: var(--title-color);
 }
 
+p {
+  color: var(--text-p);
+}
