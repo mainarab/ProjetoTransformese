@@ -3,6 +3,8 @@ let chartCategorias;
 let chartTipoGasto;
 let chartEvolucao;
 let chartTop;
+let chartMaiorGasto;
+let chartCategoriaTop;
 
 function atualizarDashboards() {
   // ENTRADAS E SAIDAS
@@ -72,7 +74,7 @@ function atualizarDashboards() {
         datasets: [
           {
             data: [entradas, saidas],
-            backgroundColor: ["green", "red"],
+            backgroundColor: ["rgba(0, 114, 17)", "rgba(217, 45, 32)"],
           },
         ],
       },
@@ -91,7 +93,7 @@ function atualizarDashboards() {
         {
           label: "Gastos",
           data: categoriasValores,
-          backgroundColor: "orange",
+          backgroundColor: "rgba(45, 168, 181, 1)",
         },
       ],
     },
@@ -108,7 +110,7 @@ function atualizarDashboards() {
       datasets: [
         {
           data: [fixo, variavel],
-          backgroundColor: ["blue", "yellow"],
+          backgroundColor: ["rgba(0, 114, 17)", "rgba(255, 192, 18)"],
         },
       ],
     },
@@ -149,7 +151,7 @@ function atualizarDashboards() {
         {
           label: "Saldo",
           data: valoresMes,
-          borderColor: "blue",
+          borderColor: "rgba(45, 168, 181, 1)",
           fill: false,
         },
       ],
@@ -188,34 +190,89 @@ function atualizarDashboards() {
         {
           label: "Top Gastos",
           data: valoresTop,
-          backgroundColor: "red",
+          backgroundColor: "rgba(221, 19, 19, 1)",
         },
       ],
     },
   });
 
-  // MAIOR GASTO
+  // MAIOR GASTO — doughnut só com o maior gasto
 
-  if (gastos.length > 0) {
-    document.getElementById("maiorGasto").innerText = "R$ " + gastos[0].valor;
-  } else {
-    document.getElementById("maiorGasto").innerText = "R$ 0";
-  }
+  let maiorNome = gastos.length > 0 ? gastos[0].descricao : "Nenhum";
+  let maiorValor = gastos.length > 0 ? gastos[0].valor : 0;
 
-  // CATEGORIA TOP
+  if (chartMaiorGasto) chartMaiorGasto.destroy();
+
+  chartMaiorGasto = new Chart(document.getElementById("graficoMaiorGasto"), {
+    type: "doughnut",
+    data: {
+      labels: [
+        maiorNome +
+          " — R$ " +
+          maiorValor.toLocaleString("pt-BR", { minimumFractionDigits: 2 }),
+      ],
+      datasets: [
+        {
+          data: [maiorValor],
+          backgroundColor: ["rgba(0, 114, 17)"],
+          borderWidth: 0,
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: "top",
+          labels: {
+            boxWidth: 12,
+            font: { size: 12 },
+          },
+        },
+      },
+    },
+  });
+
+  // CATEGORIA QUE MAIS GASTA — doughnut só com a categoria top
 
   let maiorCategoria = "";
-  let maiorValor = 0;
+  let maiorCategoriaValor = 0;
 
   for (let i = 0; i < categoriasValores.length; i++) {
-    if (categoriasValores[i] > maiorValor) {
-      maiorValor = categoriasValores[i];
+    if (categoriasValores[i] > maiorCategoriaValor) {
+      maiorCategoriaValor = categoriasValores[i];
       maiorCategoria = categoriasNomes[i];
     }
   }
 
-  document.getElementById("categoriaTop").innerText =
-    maiorCategoria || "Nenhuma";
+  if (chartCategoriaTop) chartCategoriaTop.destroy();
+
+  chartCategoriaTop = new Chart(
+    document.getElementById("graficoCategoriaTop"),
+    {
+      type: "doughnut",
+      data: {
+        labels: [maiorCategoria || "Nenhuma"],
+        datasets: [
+          {
+            data: [maiorCategoriaValor || 1],
+            backgroundColor: ["rgba(29, 123, 116, 1)"],
+            borderWidth: 0,
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            position: "top",
+            labels: {
+              boxWidth: 12,
+              font: { size: 12 },
+            },
+          },
+        },
+      },
+    },
+  );
 
   // % DESPESAS
 

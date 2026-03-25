@@ -1,30 +1,26 @@
 const elements = document.querySelectorAll(".problema, .card");
-
 const observer = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+    for (let i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) {
+        entries[i].target.classList.add("show");
       } else {
-        entry.target.classList.remove("show");
+        entries[i].target.classList.remove("show");
       }
-    });
+    }
   },
-  {
-    threshold: 0.25,
-  },
+  { threshold: 0.25 },
 );
 
-elements.forEach((el) => observer.observe(el));
-const darkBtn = document.querySelector("#toggle-dark");
+for (let i = 0; i < elements.length; i++) {
+  observer.observe(elements[i]);
+}
 
-darkBtn.addEventListener("click", () => {
+
+document.querySelector("#toggle-dark").addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
-
-menuToggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
+document.querySelector(".menu-toggle").addEventListener("click", () => {
+  document.querySelector(".menu").classList.toggle("active");
 });

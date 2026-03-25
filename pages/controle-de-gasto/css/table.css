@@ -45,6 +45,7 @@ tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
+  background-color: var(--tr-color);
   border-bottom: 1px solid var(--tr-border);
 }
 
@@ -56,6 +57,20 @@ th,
 td {
   padding: 12px;
   text-align: center;
+}
+tbody button {
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+tbody button:hover {
+  background: none;
+  transform: scale(1.2);
 }
 
 /* ================= SCROLL ================= */

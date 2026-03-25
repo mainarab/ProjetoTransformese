@@ -29,10 +29,10 @@ function verificarSaldo(total) {
   const totalEl = document.getElementById("total");
 
   if (total < 0) {
-    totalEl.style.color = "red";
+    totalEl.style.color = "rgba(221, 19, 19)";
     alert("Seu saldo está negativo! Melhore suas finanças");
   } else {
-    totalEl.style.color = "green";
+    totalEl.style.color = "rgba(0, 114, 17)";
   }
 }
 

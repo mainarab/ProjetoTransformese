@@ -1,0 +1,44 @@
+body {
+  background-color: #8c8c8c;
+}
+.campos {
+  background-color: #ebebeb;
+  border-radius: 15px;
+  margin: 0 auto;
+  max-width: 30%;
+  padding-bottom: 60px;
+}
+.titulo {
+  text-align: center;
+}
+.subtitulo {
+  text-align: justify;
+  margin-left: 30px;
+}
+.pergunta {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.formulario {
+  margin-left: 30px;
+}
+input[type="radio"] {
+  margin-right: 10px;
+}
+#btn-resp {
+  border: none;
+  background-color: #bbcffb;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.botoes {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-right: 30px;
+}
+.botao {
+  cursor: pointer;
+}
