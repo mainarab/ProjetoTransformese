@@ -1,6 +1,28 @@
 # ProjetoTransformese
 
-Projeto Final do Transforme-se
+Projeto Final do Transforme-se, com o objetivo de criar um site modular e escalável, utilizando boas práticas de organização de pastas. O site contém páginas para cadastro, login, SAC, questionário, controle de gasto e informações sobre o projeto.
+
+---
+
+## Descrição
+
+Control Money é um site para gerenciamento financeiro pessoal, permitindo que o usuário registre gastos, controle seu orçamento, responda questionários e tenha acesso a funcionalidades como cadastro, login e suporte ao cliente (SAC). O projeto foca em organização modular de código, com HTML, CSS e JavaScript, seguindo boas práticas de estruturação de pastas.
+
+---
+
+## Tecnologias utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- Estrutura modular de pastas inspirada em React
+
+---
+
+## Pré-requisitos
+
+- Navegador moderno (Chrome, Firefox, Edge)
+- Servidor local (opcional, para testes com JavaScript)
 
 ---
 
@@ -15,32 +37,22 @@ Ao criar novas pastas, deve-se manter o padrão de nomenclatura em kebab-case (s
 ```bash
 ProjetoTransformese/
 │
-├── css/
-│   └── global.css
+├── css/           # Estilos globais do projeto
+├── js/            # Scripts globais do projeto
+├── img/           # Imagens do projeto
 │
-├── img/
-│
-├── js/
-│   └── script.js
-│
-├── pages/
+├── pages/         # Páginas específicas do site
 │   ├── cadastro/
-│   │   ├── cadastro.css
-│   │   └── page.html
-│   │
-│   ├── controle-de-gasto/
-│   │   ├── controleGasto.css
+│   │   ├── css/ # Estilos da página
+│   │   ├── js/  # Scripts da página
 │   │   └── page.html
 │   │
 │   ├── login/
-│   │   ├── login.css
-│   │   └── page.html
-│   │
-│   └── questionario/
-│       ├── questionario.css
-│       └── page.html
+│   ├── sac/
+│   ├── sobre-nos/
+│   ├── questionario/
+│   └── controle-de-gasto/
 │
-├── .gitignore
 ├── index.html
 ├── LICENSE
 └── README.md
