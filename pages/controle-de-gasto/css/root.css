@@ -1,63 +1,62 @@
 :root {
   /* ================= BODY ================= */
 
-  --bg-body: #f0f2f5;
-  --text-body: #1e293b;
+  --bg-body: rgba(239, 238, 238, 1);
+  --text-body: rgba(37, 39, 42, 1);
 
   /* ================= TOPO ================= */
 
-  --bg-topo: #ffffff;
-  --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --bg-topo: rgba(29, 123, 116, 1);
+  --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.2);
 
   /* ================= BOTÕES ================= */
 
-  --btn-bg: #78a0b4;
+  --btn-bg: rgba(29, 123, 116, 1);
   --btn-text: #ffffff;
-  --btn-hover: #ccc;
+  --btn-hover: #145048;
 
-  --bg-btn: #f1f1f1;
-  --bg-btn-hover: #e4e4e4;
+  --bg-btn: rgba(29, 123, 116, 1);
+  --bg-btn-hover: #145048;
 
   /* ================= SIDEBAR ================= */
 
-  --bg-sidebar: #f7f7f7;
-  --text-sidebar: #000000;
-  --border-sidebar: #e2e8f0;
-  --bg-hover-menu: #919396;
+  --bg-sidebar: rgba(29, 123, 116, 1);
+  --text-sidebar: #ffffff;
+  --border-sidebar: #145048;
+  --bg-hover-menu: #145048;
 
   /* ================= CARDS ================= */
 
-  --bg-card: #ffffff;
+  --card-bg: rgba(211, 214, 217);
   --text-card: #1e293b;
   --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  --card-bg: #ffffff;
+  --card-bg: rgba(211, 214, 217);
   --card-title: #333;
   --card-info: #2c3e50;
   --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   /* ================= RESUMO ================= */
 
-  --resume-entrada: #27ae60;
-  --resume-saida: #e74c3c;
-  --resume-total: #3498db;
+  --resume-entrada: rgba(3, 152, 85, 1);
+  --resume-saida: rgba(221, 19, 19, 1);
+  --resume-total: rgba(45, 168, 181, 1);
 
   /* ================= TABELA ================= */
 
-  --bg-table: #ffffff;
-  --text-table: #1e293b;
-
-  --bg-table-box: #ffffff;
-  --bg-thead: #ecf0f1;
-
-  --thead-bg: #f1f5f9;
-  --tr-border: #e2e8f0;
-  --tr-hover: #f8fafc;
+  --bg-table-box: rgba(229, 231, 233, 1);
+  --bg-table: rgba(229, 231, 233, 1);
+  --text-table: rgba(37, 39, 42, 1);
+  --bg-thead: rgba(45, 168, 181, 1);
+  --thead-bg: #1a6b5e00;
+  --thead-text: rgb(0, 0, 0);
+  --tr-border: #fafafa;
+  --tr-hover: #f0faf8;
+  --tr-color: rgba(211, 214, 217);
 
   /* ================= SCROLL ================= */
 
-  --scroll-thumb: #3498db;
-  --scroll-track: #ecf0f1;
+  --scroll-thumb: rgba(45, 168, 181);
+  --scroll-track: rgba(190, 220, 223);
 
   /* ================= MODAL ================= */
 
@@ -76,15 +75,18 @@
 
   /* ================= CAROUSEL ================= */
 
-  --slide-btn-bg: rgba(255, 255, 255, 0.1);
-  --slide-btn-color: #000;
-  --slide-btn-hover: rgba(255, 255, 255, 0.24);
+  --slide-btn-bg: rgba(26, 107, 94, 0.15);
+  --slide-btn-color: #1a6b5e;
+  --slide-btn-hover: rgba(26, 107, 94, 0.28);
 
   /* ================= TEXTOS ================= */
 
-  --title-color: #1e293b;
-  --text-p: #475569;
+  --title-color: #ffffff;
+  --text-p: #ffffff;
 }
+
+/*==================MODO ESCURO=================*/
+
 body.dark {
   /* ================= BODY ================= */
 
@@ -93,24 +95,17 @@ body.dark {
 
   /* ================= TOPO ================= */
 
-  --bg-topo: #1e293b;
+  --bg-topo: #0d4a40;
   --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.5);
 
   /* ================= BOTÕES ================= */
 
-  --btn-bg: #475569;
-  --btn-text: #ffffff;
-  --btn-hover: #64748b;
-
-  --bg-btn: #334155;
-  --bg-btn-hover: #475569;
-
   /* ================= SIDEBAR ================= */
 
-  --bg-sidebar: #020617;
+  --bg-sidebar: #0d4a40;
   --text-sidebar: #cbd5e1;
-  --border-sidebar: #1e293b;
-  --bg-hover-menu: #1e293b;
+  --border-sidebar: #1a6b5e;
+  --bg-hover-menu: #1a6b5e;
 
   /* ================= CARDS ================= */
 
@@ -129,15 +124,16 @@ body.dark {
   --text-table: #e2e8f0;
 
   --bg-table-box: #1e293b;
-  --bg-thead: #020617;
+  --bg-thead: #0d4a40;
 
-  --thead-bg: #020617;
+  --thead-bg: #0d4a40;
+  --thead-text: #ffffff;
   --tr-border: #334155;
-  --tr-hover: #334155;
+  --tr-hover: #1a3a35;
 
   /* ================= SCROLL ================= */
 
-  --scroll-thumb: #475569;
+  --scroll-thumb: #1a6b5e;
   --scroll-track: #1e293b;
 
   /* ================= MODAL ================= */
@@ -148,7 +144,7 @@ body.dark {
   /* ================= INPUT ================= */
 
   --input-bg: #1e293b;
-  --input-border: #475569;
+  --input-border: #1a6b5e;
   --input-text: #e2e8f0;
   --input-placeholder: #94a3b8;
 
@@ -159,9 +155,9 @@ body.dark {
 
   /* ================= CAROUSEL ================= */
 
-  --slide-btn-bg: rgba(30, 41, 59, 0.6);
+  --slide-btn-bg: rgba(26, 107, 94, 0.4);
   --slide-btn-color: #ffffff;
-  --slide-btn-hover: rgba(71, 85, 105, 0.7);
+  --slide-btn-hover: rgba(26, 107, 94, 0.65);
 
   /* ================= TEXTOS ================= */
 

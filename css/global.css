@@ -1,0 +1,14 @@
+@import url(../pages/login/css/login.css);
+@import url(../pages/cadastro/css/cadastro.css);
+@import url(../pages/questionario/css/questionario.css);
+@import url(../pages/sobre-nos/css/sobreNos.css);
+@import url(../pages/sac/CSS/sac.css);
+@import url(../pages/sac/CSS/rootSac.css);
+@import url(../css/home.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
