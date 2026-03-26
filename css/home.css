@@ -16,6 +16,12 @@ body {
   overflow-x: hidden;
 }
 
+.main {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
 /* ================= HEADER ================= */
 
 .header {
@@ -25,8 +31,17 @@ body {
   padding: 20px 60px;
   background: var(--bg-header);
   position: relative;
+  border-bottom: 2px solid var(--border-header);
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 /* ================= MENU ================= */
@@ -39,18 +54,19 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: var(--text-menu);
+  color: var(--text-buttons);
   font-weight: 500;
   padding: 8px 14px;
-  border-radius: 6px;
+  border-radius: 15px;
   transition: 0.3s;
+  font-size: 1rem;
 }
 
 /* HOVER COM COR (igual antes) */
 
 .menu a:hover {
-  background: #6366f1;
-  color: white;
+  background: var(--hoverButton-Header);
+  color: var(--text-buttons);
 }
 
 /* ================= ICONES ================= */
@@ -63,12 +79,22 @@ body {
   cursor: pointer;
 }
 
+.iconHeader {
+  color: var(--text-buttons);
+}
+
 /* ================= MENU HAMBURGUER ================= */
 
 .menu-toggle {
   display: none;
   font-size: 26px;
   cursor: pointer;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+  height: 65px;
 }
 
 /* ================= HERO ================= */
@@ -88,15 +114,18 @@ body {
 }
 
 .slogan-text h2 {
-  font-size: 38px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5px;
   white-space: nowrap;
+  text-align: left;
 }
 
 .slogan-text p {
   margin-bottom: 25px;
   color: var(--text-secondary);
-  text-align: justify;
+  font-weight: 600;
+  text-align: left;
   justify-content: center;
 }
 
@@ -145,7 +174,7 @@ body {
   padding: 18px 28px;
   border-radius: 10px;
   width: 100%;
-  max-width: 450px;
+  max-width: 600px;
 
   display: flex;
   align-items: center;
@@ -154,6 +183,11 @@ body {
   opacity: 0;
   transform: translateY(40px);
   transition: 0.7s;
+}
+
+.problema p {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .problema.show {
@@ -293,18 +327,26 @@ body {
     padding: 20px;
   }
 
+  .logo {
+    height: 55px;
+  }
+
   .slogan {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     padding: 60px 20px;
   }
 
-  .slogan-image img {
-    width: 300px;
+  .slogan-text {
+    max-width: 100%;
   }
 
-  .problema {
-    width: 90%;
+  .slogan-text h2 {
+    white-space: wrap;
+  }
+
+  .slogan-image img {
+    width: 300px;
   }
 
   /* MENU MOBILE */
@@ -338,12 +380,37 @@ body {
 /* ================= CELULAR ================= */
 
 @media (max-width: 500px) {
-  .slogan-text h2 {
-    font-size: 28px;
+  .slogan-text h2,
+  .slogan-text p {
+    font-size: 1rem;
   }
 
-  .slogan {
-    padding: 50px 15px;
+  .slogan,
+  .problemas-section,
+  .solucao {
+    padding: 20px;
+  }
+
+  .problemas-section h2,
+  .solucao h2,
+  .card p,
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .problema p {
+    font-size: 0.8rem;
+  }
+  .card {
+    max-width: 234px;
+    max-height: 236px;
+  }
+
+  .solucao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer {

@@ -1,13 +1,16 @@
 
 :root {
   /* CORES LIGHT MODE */
-  --bg-body: #f1eeee;
-  --text-main: #1b1b1b;
+  --bg-body: #EFEEEE;
+  --text-main: #25272A;
 
-  --bg-header: #d2cccc;
+  --bg-header: #1D7B74;
+  --border-header:#25272A;
+  --hoverButton-Header:#2DA8B5;
+  --text-buttons:#D3D6D9;
   --bg-footer: #d2cccc;
 
-  --bg-hero: #dcd6d6;
+  --bg-hero: #D3D6D9;
 
   --bg-card: #cec7c7;
   --shadow-card: 0 10px 25px rgba(0,0,0,0.1);
@@ -21,13 +24,16 @@
 
 /* DARK MODE */
 body.dark {
-  --bg-body: #0f172a;
-  --text-main: #e2e8f0;
+  --bg-body: #080809;
+  --text-main: #D3D6D9;
 
-  --bg-header: #020617;
+  --bg-header: #05201E;
+  --border-header:#8E8F8F;
+  --hoverButton-Header:#033F31;
+  --text-buttons:#D3D6D9;
   --bg-footer: #020617;
 
-  --bg-hero: #1e293b;
+  --bg-hero: #25272A;
 
   --bg-card: #1e293b;
   --shadow-card: 0 10px 25px rgba(0,0,0,0.5);

@@ -1,140 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Control Money</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header class="header">
+      <div class="headerContainer">
         <div class="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars iconHeader"></i>
         </div>
-        <div class="logo">
-            <!--  <img src="" alt=""> -->
-        </div>
+        <img class="logo" src="./img/logo-site.svg" alt="Logo" />
         <nav class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./pages/controle-de-gasto/controledegastos.html">Controle de gastos</a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Missão</a></li>
-                <li><a href="./pages/sac/page.html">SAC</a></li>
-            </ul>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="./pages/controle-de-gasto/controledegastos.html"
+                >Controle de gastos</a
+              >
+            </li>
+            <li><a href="./pages/sobre-nos/page.html">Sobre nós</a></li>
+            <li><a href="#">Missão</a></li>
+            <li><a href="./pages/sac/page.html">SAC</a></li>
+          </ul>
         </nav>
 
         <div class="header-icons">
-            <button><i class="fa-solid fa-user"></i></button>
-            <button id="toggle-dark"><i class="fa-solid fa-moon"></i></button>
+          <button><i class="fa-regular fa-user iconHeader"></i></button>
+          <button id="toggle-dark"><i class="fa-solid fa-moon iconHeader"></i></button>
         </div>
+      </div>
     </header>
 
-
-    <section class="slogan">
+    <main class="main">
+      <section class="slogan">
         <div class="slogan-text">
-            <h2>Ctrl + M: Menos caos, mais controle</h2>
-            <p>
-                Registre gastos, acompanhe sua evolução e desenvolva
-                hábitos financeiros mais saudáveis com a Control Money.
-            </p>
-            <button class="btn">Começar agora</button>
+          <h2>Ctrl + M: Menos caos, mais controle</h2>
+          <p>
+            Registre gastos, acompanhe sua evolução e desenvolva hábitos
+            financeiros mais saudáveis com a Control Money.
+          </p>
+          <button class="btn">Começar agora</button>
         </div>
         <div class="slogan-image">
-            <!-- <img src="img/finance.png" alt="Controle financeiro"> -->
+          <img src="img/finance.png" alt="Controle financeiro">
         </div>
-    </section>
+      </section>
 
-
-    <section class="problemas-section">
+      <section class="problemas-section">
         <h2>Você sabe para onde seu dinheiro está indo?</h2>
         <div class="problemas-list">
-            <div class="problema">
-                <i class="fa-solid fa-dollar-sign"></i>
-                <p>Gastos que aparecem no fim do mês</p>
-            </div>
-            <div class="problema">
-                <i class="fa-solid fa-file-lines"></i>
-                <p>Falta de organização financeira</p>
-            </div>
-            <div class="problema">
-                <i class="fa-solid fa-chart-line"></i>
-                <p>Dificuldade de criar hábitos financeiros</p>
-            </div>
-            <div class="problema">
-                <i class="fa-solid fa-calendar"></i>
-                <p>Falta de planejamento</p>
-            </div>
+          <div class="problema">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <p>Gastos que aparecem no fim do mês</p>
+          </div>
+          <div class="problema">
+            <i class="fa-solid fa-file-lines"></i>
+            <p>Falta de organização financeira</p>
+          </div>
+          <div class="problema">
+            <i class="fa-solid fa-chart-line"></i>
+            <p>Dificuldade de criar hábitos financeiros</p>
+          </div>
+          <div class="problema">
+            <i class="fa-solid fa-calendar"></i>
+            <p>Falta de planejamento</p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="solucao">
+      <section class="solucao">
         <h2>Como o Control Money ajuda</h2>
         <div class="cards">
-            <div class="card">
-                <i class="fa-solid fa-file-invoice-dollar"></i>
-                <h3>Controle de receitas e despesas</h3>
-                <p>Registre suas entradas e saídas de forma simples.</p>
-            </div>
+          <div class="card">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            <h3>Controle de receitas e despesas</h3>
+            <p>Registre suas entradas e saídas de forma simples.</p>
+          </div>
 
-            <div class="card">
-                <i class="fa-solid fa-chart-column"></i>
-                <h3>Dashboards e gráficos claros</h3>
-                <p>Visualize sua situação financeira rapidamente.</p>
-            </div>
+          <div class="card">
+            <i class="fa-solid fa-chart-column"></i>
+            <h3>Dashboards e gráficos claros</h3>
+            <p>Visualize sua situação financeira rapidamente.</p>
+          </div>
 
-            <div class="card">
-                <i class="fa-solid fa-clipboard-list"></i>
-                <h3>Quiz de hábitos financeiros</h3>
-                <p>Descubra seu perfil financeiro e acompanhe sua evolução.</p>
-            </div>
+          <div class="card">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <h3>Quiz de hábitos financeiros</h3>
+            <p>Descubra seu perfil financeiro e acompanhe sua evolução.</p>
+          </div>
 
-            <div class="card">
-                <i class="fa-solid fa-coins"></i>
-                <h3>Educação financeira</h3>
-                <p>Aprenda a melhorar sua relação com o dinheiro.</p>
-            </div>
-
+          <div class="card">
+            <i class="fa-solid fa-coins"></i>
+            <h3>Educação financeira</h3>
+            <p>Aprenda a melhorar sua relação com o dinheiro.</p>
+          </div>
         </div>
 
         <div class="cta">
-            <button class="btn" id="modal">Começar agora</button>
+          <button class="btn" id="modal">Começar agora</button>
         </div>
-    </section>
-
+      </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-contact">
-            <h3>Contato</h3>
-            <p><i class="fa-solid fa-phone"></i>(11) 9999-9999</p>
-            <p>
-                <i class="fa-solid fa-envelope"></i>
-                contato@controlmoney.com.br
-            </p>
-        </div>
-        <div class="footer-links">
-            <h3>Links</h3>
-            <ul>
-                <li><a href="./pages/controle-de-gasto/controledegastos.html">Controle de gastos</a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Missão</a></li>
-                <li><a href="./pages/sac/page.html">Contato</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <h3>Redes sociais</h3>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <p><i class="fa-solid fa-phone"></i>(11) 9999-9999</p>
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          contato@controlmoney.com.br
+        </p>
+      </div>
+      <div class="footer-links">
+        <h3>Links</h3>
+        <ul>
+          <li>
+            <a href="./pages/controle-de-gasto/controledegastos.html"
+              >Controle de gastos</a
+            >
+          </li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Missão</a></li>
+          <li><a href="./pages/sac/page.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Redes sociais</h3>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
     </footer>
     <script src="./js/script.js"></script>
     <script src="./pages/questionario/js/script.js"></script>
-
-</body>
-
+  </body>
 </html>
