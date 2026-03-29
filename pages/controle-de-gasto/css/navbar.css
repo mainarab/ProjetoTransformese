@@ -1,14 +1,11 @@
 body {
   width: 100%;
+  overflow-x: hidden;
 }
-
 .layout {
   display: flex;
   min-height: 100vh;
 }
-
-/* TOPO */
-
 .topo {
   height: 65px;
   background: var(--bg-topo);
@@ -21,16 +18,51 @@ body {
   top: 0;
   z-index: 2000;
 }
-
-/* ÁREAS */
-
 .topo-left,
 .topo-right {
   display: flex;
   align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 100;
 }
 
-/* ALERTA */
+.topo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logoIMG {
+  width: 151px;
+  height: 65px;
+}
+
+.toggleMenu,
+.temaBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: var(--bg-btn);
+  color: var(--btn-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  position: relative;
+  z-index: 100;
+}
+
+.toggleMenu:hover,
+.temaBtn:hover {
+  background: var(--bg-btn-hover);
+  transform: scale(1.05);
+}
 
 .alertaGasto {
   position: relative;
@@ -39,6 +71,7 @@ body {
   cursor: pointer;
   font-size: 20px;
   color: inherit;
+  z-index: 100;
 }
 
 #badgeGasto {
@@ -54,87 +87,57 @@ body {
   line-height: 16px;
   border-radius: 50%;
   font-weight: bold;
+  animation: alerta 1s infinite;
 }
 
-/* CENTRO */
-
-.topo-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+@keyframes alerta {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-/* LOGO */
-
-.logoIMG {
-  width: 151px;
-  height: 65px;
-}
-
-/* BOTÕES */
-
-.toggleMenu,
-.temaBtn {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  border: none;
-  background: var(--bg-btn);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.btnRelatorio {
-  background: none;
-  border: none;
-  color: inherit;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* HOVER */
-
-.toggleMenu:hover,
-.temaBtn:hover {
-  background: var(--bg-btn-hover);
-  transform: scale(1.05);
-}
-
-/* SIDEBAR */
 
 .sidebar {
   width: 240px;
   background: var(--bg-sidebar);
   color: var(--text-sidebar);
-  transition: 0.3s;
   display: flex;
   flex-direction: column;
-
   position: fixed;
-  top: 60px;
+  top: 65px;
   left: 0;
-  height: 100%;
+  height: calc(100% - 65px);
   z-index: 1000;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
 }
-
-/* SIDEBAR FECHADA */
 
 .sidebar.fechado {
   transform: translateX(-100%);
 }
 
-/* USUARIO */
+/* OVERLAY (mobile) */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 999;
+}
+
+.sidebar-overlay.ativo {
+  display: block;
+}
 
 .usuario {
   text-align: center;
   padding: 20px 10px;
+  border-bottom: 1px solid var(--border-sidebar);
 }
 
 .usuario img {
@@ -150,7 +153,6 @@ body {
 }
 
 /* MENU */
-
 .sidebar ul {
   list-style: none;
   padding-top: 10px;
@@ -162,17 +164,13 @@ body {
   gap: 12px;
   padding: 14px 20px;
   cursor: pointer;
-  transition: 0.2s;
   font-size: 15px;
+  color: var(--text-sidebar);
+  transition: background 0.2s;
 }
 
 .sidebar li:hover {
   background: var(--bg-hover-menu);
-}
-
-.sidebar li span {
-  font-size: 18px;
-  min-width: 20px;
 }
 
 .sidebar li a {
@@ -181,26 +179,29 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
+}
+main {
+  flex: 1;
+  padding: 25px;
+  margin-left: 240px;
+  transition: margin-left 0.3s ease;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
-.sidebar li a:hover {
-  color: inherit;
+.sidebar.fechado ~ main {
+  margin-left: 0;
 }
-
-/* MODAL */
 
 .modal {
   display: none;
   position: fixed;
   z-index: 3000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   overflow: auto;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.6);
-  transition: 0.3s;
 }
 
 .modal-content {
@@ -230,214 +231,218 @@ body {
   color: red;
 }
 
-/* CONTEÚDO */
-
-main {
-  flex: 1;
-  padding: 25px;
-  margin-left: 240px;
-  transition: 0.3s;
-}
-
-/* QUANDO MENU SOME */
-
-.sidebar.fechado ~ main {
-  margin-left: 0;
-  width: 100%;
-}
-
-/* ANIMAÇÃO ALERTA */
-
-@keyframes alerta {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-#badgeGasto {
-  animation: alerta 1s infinite;
-}
-/* ============================================================
-   RESPONSIVO COMPLETO — FORM
-   Ultra-wide → Desktop → Tablet → Mobile → Small Phone
-   ============================================================ */
-
-/* ── ULTRA-WIDE (2560px+) ─────────────────────────────────── */
 @media (min-width: 2560px) {
-  .newItem {
-    margin-bottom: 32px;
+  .topo {
+    height: 90px;
+    padding: 0 48px;
   }
 
-  form {
-    gap: 16px;
+  .toggleMenu,
+  .temaBtn {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
   }
 
-  input,
-  select {
-    padding: 14px 20px;
+  .sidebar {
+    width: 320px;
+    top: 90px;
+    height: calc(100% - 90px);
+  }
+
+  .sidebar li {
+    padding: 20px 28px;
     font-size: 18px;
-    border-radius: 12px;
-    border-width: 2px;
   }
 
-  button[type="submit"],
-  form button {
-    padding: 14px 32px;
-    font-size: 18px;
-    border-radius: 12px;
+  .usuario img {
+    width: 80px;
+  }
+
+  .usuario h2 {
+    font-size: 20px;
+  }
+
+  main {
+    margin-left: 320px;
+    padding: 48px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
   }
 }
 
-/* ── LARGE DESKTOP (1440px – 2559px) ─────────────────────── */
+/* ── LARGE DESKTOP (1440px – 2559px) ───────── */
 @media (min-width: 1440px) and (max-width: 2559px) {
-  .newItem {
-    margin-bottom: 26px;
+  .topo {
+    height: 72px;
+    padding: 0 36px;
   }
 
-  form {
-    gap: 12px;
+  .sidebar {
+    width: 260px;
+    top: 72px;
+    height: calc(100% - 72px);
   }
 
-  input,
-  select {
-    padding: 12px 18px;
-    font-size: 15px;
-    border-radius: 10px;
+  .sidebar li {
+    padding: 16px 24px;
+    font-size: 16px;
   }
 
-  button[type="submit"],
-  form button {
-    padding: 12px 26px;
-    font-size: 15px;
-    border-radius: 10px;
+  main {
+    margin-left: 260px;
+    padding: 36px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  main {
+    margin-left: 240px;
+    padding: 28px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-  .newItem {
-    margin-bottom: 18px;
+  .sidebar {
+    width: 200px;
   }
 
-  form {
-    gap: 8px;
+  .sidebar li {
+    padding: 12px 16px;
+    font-size: 14px;
   }
 
-  input,
-  select {
-    padding: 9px 12px;
-    font-size: 13px;
+  main {
+    margin-left: 200px;
+    padding: 20px;
   }
 
-  button[type="submit"],
-  form button {
-    padding: 9px 18px;
-    font-size: 13px;
+  .sidebar.fechado ~ main {
+    margin-left: 0;
   }
 }
 @media (max-width: 768px) {
-  .newItem {
-    margin-bottom: 16px;
+  .topo {
+    height: 60px;
+    padding: 0 16px;
   }
 
-  form {
-    gap: 8px;
+  /* Sidebar oculta por padrão no mobile */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 220px;
+    top: 60px;
+    height: calc(100% - 60px);
+    z-index: 1500;
   }
 
-  input,
-  select {
-    flex: 1 1 calc(50% - 8px);
-    min-width: 0;
-    padding: 9px 12px;
-    font-size: 13px;
+  /* Abre quando JS adiciona .aberto */
+  .sidebar.aberto {
+    transform: translateX(0);
   }
 
-  button[type="submit"],
-  form button {
-    flex: 1 1 100%;
-    padding: 10px;
-    font-size: 13px;
-    text-align: center;
+  /* Remove comportamento desktop */
+  .sidebar.fechado {
+    transform: translateX(-100%);
+  }
+
+  main {
+    margin-left: 0 !important;
+    padding: 16px;
+    width: 100%;
   }
 }
 
 @media (max-width: 500px) {
-  .newItem {
-    margin-bottom: 14px;
+  .topo {
+    height: 56px;
+    padding: 0 12px;
   }
 
-  form {
-    flex-direction: column;
-    gap: 8px;
+  .toggleMenu,
+  .temaBtn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
   }
 
-  input,
-  select {
-    width: 100%;
-    flex: 1 1 100%;
-    padding: 10px 12px;
-    font-size: 14px; /* mantém legível no mobile */
-    border-radius: 8px;
-    box-sizing: border-box;
+  .alertaGasto {
+    font-size: 18px;
   }
 
-  button[type="submit"],
-  form button {
-    width: 100%;
-    padding: 12px;
+  .sidebar {
+    width: 200px;
+    top: 56px;
+    height: calc(100% - 56px);
+  }
+
+  .sidebar li {
+    padding: 12px 16px;
     font-size: 14px;
-    border-radius: 8px;
+  }
+
+  main {
+    padding: 12px;
   }
 }
 
 @media (max-width: 375px) {
-  form {
-    gap: 7px;
+  .topo {
+    padding: 0 10px;
   }
 
-  input,
-  select {
-    padding: 9px 10px;
-    font-size: 13px;
-    border-radius: 7px;
+  .sidebar {
+    width: 180px;
   }
 
-  button[type="submit"],
-  form button {
-    padding: 11px;
+  .sidebar li {
+    padding: 11px 14px;
     font-size: 13px;
-    border-radius: 7px;
+  }
+
+  main {
+    padding: 10px;
   }
 }
-
 @media (max-width: 320px) {
-  .newItem {
-    margin-bottom: 10px;
+  .topo {
+    height: 52px;
+    padding: 0 8px;
   }
 
-  form {
-    gap: 6px;
+  .toggleMenu,
+  .temaBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
 
-  input,
-  select {
-    padding: 8px 10px;
+  .sidebar {
+    width: 160px;
+    top: 52px;
+    height: calc(100% - 52px);
+  }
+
+  .sidebar li {
+    padding: 10px 12px;
     font-size: 12px;
-    border-radius: 6px;
-    border-width: 1px;
   }
 
-  button[type="submit"],
-  form button {
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 6px;
+  main {
+    padding: 8px;
   }
 }
