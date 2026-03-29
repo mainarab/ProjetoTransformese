@@ -182,12 +182,6 @@ tbody::-webkit-scrollbar-track {
     width: 10px;
   }
 }
-@media (min-width: 1440px) and (max-width: 2559px) {
-  .topo {
-    height: 72px;
-    padding: 0 36px;
-  }
-
   .sidebar {
     width: 260px;
   }
@@ -242,6 +236,151 @@ tbody::-webkit-scrollbar-track {
   tbody button {
     font-size: 18px;
   }
+@media (min-width: 2560px) {
+
+  .topo {
+    height: 90px;
+    padding: 0 48px;
+  }
+
+  .toggleMenu,
+  .temaBtn {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .sidebar {
+    width: 320px;
+    top: 90px;
+  }
+
+  .sidebar li {
+    padding: 20px 28px;
+    font-size: 18px;
+    gap: 16px;
+  }
+
+  .usuario img {
+    width: 80px;
+  }
+
+  .usuario h2 {
+    font-size: 20px;
+  }
+
+  main {
+    margin-left: 320px;
+    padding: 48px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
+  }
+
+  /* Tabela */
+  .divTable {
+    border-radius: 16px;
+    padding: 28px;
+  }
+
+  #formTransacao {
+    margin-bottom: 36px;
+    gap: 16px;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  #formTransacao button {
+    padding: 14px 36px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  th, td {
+    padding: 20px 24px;
+    font-size: 18px;
+  }
+
+  tbody {
+    max-height: 400px;
+  }
+
+  tbody button {
+    font-size: 22px;
+    padding: 8px 12px;
+  }
+
+  tbody::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+
+  .topo {
+    height: 72px;
+    padding: 0 36px;
+  }
+
+  .sidebar {
+    width: 260px;
+  }
+
+  .sidebar li {
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+
+  main {
+    margin-left: 260px;
+    padding: 36px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
+  }
+
+  .divTable {
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  #formTransacao {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    padding: 11px 16px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  #formTransacao button {
+    padding: 11px 28px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  th, td {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  tbody {
+    max-height: 260px;
+  }
+
+  tbody button {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -279,8 +418,7 @@ tbody::-webkit-scrollbar-track {
     font-size: 14px;
   }
 
-  th,
-  td {
+  th, td {
     padding: 13px 12px;
     font-size: 14px;
   }
@@ -334,8 +472,7 @@ tbody::-webkit-scrollbar-track {
     font-size: 13px;
   }
 
-  th,
-  td {
+  th, td {
     padding: 10px 8px;
     font-size: 13px;
   }
@@ -348,6 +485,7 @@ tbody::-webkit-scrollbar-track {
     font-size: 15px;
   }
 }
+
 @media (max-width: 768px) {
   /* Sidebar oculta por padrão */
   .sidebar {
@@ -361,7 +499,6 @@ tbody::-webkit-scrollbar-track {
     transform: translateX(0);
   }
 
-  /* Overlay */
   .sidebar-overlay {
     display: none;
     position: fixed;
@@ -373,6 +510,7 @@ tbody::-webkit-scrollbar-track {
   .sidebar-overlay.ativo {
     display: block;
   }
+
 
   main {
     margin-left: 0 !important;
@@ -410,8 +548,7 @@ tbody::-webkit-scrollbar-track {
     font-weight: 600;
   }
 
-  th,
-  td {
+  th, td {
     padding: 9px 6px;
     font-size: 13px;
   }
@@ -480,8 +617,7 @@ tbody::-webkit-scrollbar-track {
     font-size: 14px;
   }
 
-  th,
-  td {
+  th, td {
     padding: 8px 4px;
     font-size: 12px;
   }
@@ -503,6 +639,7 @@ tbody::-webkit-scrollbar-track {
     display: none;
   }
 }
+
 @media (max-width: 375px) {
   .topo {
     padding: 0 10px;
@@ -542,8 +679,7 @@ tbody::-webkit-scrollbar-track {
     border-radius: 7px;
   }
 
-  th,
-  td {
+  th, td {
     padding: 7px 3px;
     font-size: 11px;
   }
@@ -562,7 +698,6 @@ tbody::-webkit-scrollbar-track {
     display: none;
   }
 }
-
 @media (max-width: 320px) {
   .topo {
     height: 52px;
@@ -617,8 +752,7 @@ tbody::-webkit-scrollbar-track {
     border-radius: 6px;
   }
 
-  th,
-  td {
+  th, td {
     padding: 6px 3px;
     font-size: 11px;
   }
