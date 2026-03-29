@@ -263,119 +263,117 @@ body {
 
 /* ================= FOOTER ================= */
 
-.footer {
+*{font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: #F5F7FA;
+    box-sizing: border-box;
+}
+
+body{
+     margin: 0;
+  padding: 0;
+
+}
+
+.footer{
   display: flex;
-  justify-content: space-between;
-  padding: 50px 60px;
-  background: var(--bg-header);
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.footer-links ul {
-  list-style: none;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: var(--text-menu);
-  padding: 10px;
-  border-radius: 5px;
-  justify-content: center;
-}
-.footer-links a:hover {
-  background: #6366f1;
-  color: white;
-}
-.footer-social i {
-  font-size: 22px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-/* ================= ANIMAÇÕES ================= */
-
-.animate {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s;
-}
-
-.animate.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= FLOAT IMG ================= */
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* ================= RESPONSIVO TABLET ================= */
-
-@media (max-width: 900px) {
-  .header {
-    padding: 20px;
-  }
-
-  .logo {
-    height: 55px;
-  }
-
-  .slogan {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 60px 20px;
-  }
-
-  .slogan-text {
-    max-width: 100%;
-  }
-
-  .slogan-text h2 {
-    white-space: wrap;
-  }
-
-  .slogan-image img {
-    width: 300px;
-  }
-
-  /* MENU MOBILE */
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu {
-    position: absolute;
-    top: 70px;
-    left: 0;
+    justify-content: space-around; 
+    align-items: center;
+    background: #1D7B74;
     width: 100%;
-    background: var(--bg-header);
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.4s;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .menu.active {
-    max-height: 350px;
-  }
+    min-height: 166px;
+    border-top: 2px solid #25272A;
+    gap: 60px;
+    flex-wrap: wrap;
 }
+
+ .redes, .outros{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+    align-self: center;
+}
+
+h2{
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.contato h2 {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.contato-link{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.contato-lado{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+.redes ul{
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    font-size: 16px;
+}
+
+.outros{
+    line-height: 2.1;
+    font-size: 16px;
+}
+
+/* mobile*/
+
+@media screen and (max-width: 440px){
+    .footer{
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+}
+
+     .contato{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+     }
+
+     .contato-lado{
+       flex-direction: column;
+       margin: 1px;
+       
+     }
+     
+     .contato h2{
+        text-align: center;
+     }
+     
+     .outros{ 
+        align-self: flex-start;
+        text-align: left;
+        margin-top: 20px;
+     }
+}
+
+
+    
+
 
 /* ================= CELULAR ================= */
 
