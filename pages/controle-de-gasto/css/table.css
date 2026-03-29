@@ -99,35 +99,83 @@ tbody::-webkit-scrollbar-track {
   text-align: center;
 }
 @media (min-width: 2560px) {
+  .topo {
+    height: 90px;
+    padding: 0 48px;
+  }
+
+  .toggleMenu,
+  .temaBtn {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .sidebar {
+    width: 320px;
+    top: 90px;
+  }
+
+  .sidebar li {
+    padding: 20px 28px;
+    font-size: 18px;
+    gap: 16px;
+  }
+
+  .usuario img {
+    width: 80px;
+  }
+
+  .usuario h2 {
+    font-size: 20px;
+  }
+
+  main {
+    margin-left: 320px;
+    padding: 48px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
+  }
+
+  /* Tabela */
   .divTable {
-    border-radius: 14px;
-    padding: 20px;
+    border-radius: 16px;
+    padding: 28px;
   }
 
   #formTransacao {
-    margin-bottom: 28px;
+    margin-bottom: 36px;
+    gap: 16px;
   }
 
   #formTransacao input,
   #formTransacao select {
-    padding: 12px 16px;
-    font-size: 17px;
-    border-radius: 10px;
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  #formTransacao button {
+    padding: 14px 36px;
+    font-size: 18px;
+    border-radius: 12px;
   }
 
   th,
   td {
-    padding: 18px 20px;
-    font-size: 17px;
+    padding: 20px 24px;
+    font-size: 18px;
   }
 
   tbody {
-    max-height: 320px;
+    max-height: 400px;
   }
 
   tbody button {
-    font-size: 20px;
-    padding: 6px 10px;
+    font-size: 22px;
+    padding: 8px 12px;
   }
 
   tbody::-webkit-scrollbar {
@@ -135,25 +183,60 @@ tbody::-webkit-scrollbar-track {
   }
 }
 @media (min-width: 1440px) and (max-width: 2559px) {
+  .topo {
+    height: 72px;
+    padding: 0 36px;
+  }
+
+  .sidebar {
+    width: 260px;
+  }
+
+  .sidebar li {
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+
+  main {
+    margin-left: 260px;
+    padding: 36px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
+  }
+
   .divTable {
-    border-radius: 10px;
-    padding: 14px;
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  #formTransacao {
+    gap: 12px;
+    margin-bottom: 28px;
   }
 
   #formTransacao input,
   #formTransacao select {
-    padding: 10px 14px;
+    padding: 11px 16px;
     font-size: 15px;
+    border-radius: 10px;
+  }
+
+  #formTransacao button {
+    padding: 11px 28px;
+    font-size: 15px;
+    border-radius: 10px;
   }
 
   th,
   td {
-    padding: 14px 16px;
+    padding: 16px 18px;
     font-size: 15px;
   }
 
   tbody {
-    max-height: 240px;
+    max-height: 260px;
   }
 
   tbody button {
@@ -161,14 +244,93 @@ tbody::-webkit-scrollbar-track {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  main {
+    margin-left: 240px;
+    padding: 28px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
+  }
+
   .divTable {
-    padding: 8px;
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  #formTransacao {
+    gap: 10px;
+    margin-bottom: 22px;
   }
 
   #formTransacao input,
   #formTransacao select {
-    padding: 7px 10px;
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+
+  #formTransacao button {
+    padding: 9px 22px;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 13px 12px;
+    font-size: 14px;
+  }
+
+  tbody {
+    max-height: 200px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar li {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  main {
+    margin-left: 200px;
+    padding: 20px;
+  }
+
+  .sidebar.fechado ~ main {
+    margin-left: 0;
+  }
+
+  .divTable {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  #formTransacao {
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  #formTransacao button {
+    flex: 1 1 100%;
+    padding: 10px;
     font-size: 13px;
   }
 
@@ -187,19 +349,65 @@ tbody::-webkit-scrollbar-track {
   }
 }
 @media (max-width: 768px) {
+  /* Sidebar oculta por padrão */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 220px;
+    z-index: 1500;
+    top: 65px;
+  }
+
+  .sidebar.aberto {
+    transform: translateX(0);
+  }
+
+  /* Overlay */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1400;
+  }
+
+  .sidebar-overlay.ativo {
+    display: block;
+  }
+
+  main {
+    margin-left: 0 !important;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
   .divTable {
-    padding: 8px;
-    border-radius: 6px;
+    padding: 10px;
+    border-radius: 8px;
   }
 
   #formTransacao {
-    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
   }
 
   #formTransacao input,
   #formTransacao select {
-    padding: 7px 10px;
-    font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  #formTransacao button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    font-weight: 600;
   }
 
   th,
@@ -217,35 +425,59 @@ tbody::-webkit-scrollbar-track {
     padding: 3px 5px;
   }
 
+  /* Oculta coluna menos crítica */
   .columnType {
     display: none;
   }
 }
 
 @media (max-width: 500px) {
+  .topo {
+    height: 56px;
+    padding: 0 14px;
+  }
+
+  .toggleMenu,
+  .temaBtn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .sidebar {
+    width: 200px;
+    top: 56px;
+  }
+
+  main {
+    padding: 12px;
+  }
+
   .divTable {
-    padding: 6px;
+    padding: 8px;
     border-radius: 6px;
     overflow-x: auto;
   }
 
+  table {
+    min-width: 300px;
+  }
+
   #formTransacao {
+    gap: 7px;
     margin-bottom: 12px;
   }
 
   #formTransacao input,
   #formTransacao select {
-    padding: 6px 8px;
-    font-size: 12px;
-    border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 8px;
   }
 
-  table {
-    min-width: 320px;
-  }
-
-  thead {
-    font-size: 12px;
+  #formTransacao button {
+    padding: 11px;
+    font-size: 14px;
   }
 
   th,
@@ -271,25 +503,48 @@ tbody::-webkit-scrollbar-track {
     display: none;
   }
 }
-
 @media (max-width: 375px) {
+  .topo {
+    padding: 0 10px;
+  }
+
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar li {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
   .divTable {
-    padding: 5px;
+    padding: 6px;
+  }
+
+  table {
+    min-width: 260px;
   }
 
   #formTransacao input,
   #formTransacao select {
-    padding: 6px;
-    font-size: 11px;
+    padding: 9px 10px;
+    font-size: 13px;
+    border-radius: 7px;
   }
 
-  table {
-    min-width: 280px;
+  #formTransacao button {
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 7px;
   }
 
   th,
   td {
-    padding: 7px 4px;
+    padding: 7px 3px;
     font-size: 11px;
   }
 
@@ -309,20 +564,57 @@ tbody::-webkit-scrollbar-track {
 }
 
 @media (max-width: 320px) {
+  .topo {
+    height: 52px;
+    padding: 0 8px;
+  }
+
+  .toggleMenu,
+  .temaBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .sidebar {
+    width: 160px;
+    top: 52px;
+  }
+
+  .sidebar li {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  main {
+    padding: 8px;
+  }
+
   .divTable {
     padding: 4px;
     border-radius: 4px;
   }
 
-  #formTransacao input,
-  #formTransacao select {
-    padding: 5px;
-    font-size: 11px;
-    border-radius: 4px;
+  table {
+    min-width: 220px;
   }
 
-  table {
-    min-width: 240px;
+  #formTransacao {
+    gap: 6px;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    border-width: 1px;
+  }
+
+  #formTransacao button {
+    padding: 9px;
+    font-size: 12px;
+    border-radius: 6px;
   }
 
   th,
