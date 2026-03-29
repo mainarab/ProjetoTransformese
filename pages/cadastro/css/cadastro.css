@@ -1,11 +1,11 @@
- *{margin: 0;
+  *{margin: 0;
     padding: 0;
     color: #D3D6D9;
     font-family: "Poppins", sans-serif; 
     box-sizing: border-box;
 }
 
-body {
+.bodyLogin {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -17,7 +17,8 @@ body {
     overflow: hidden;
 } 
 
-.form{
+/*Formulario*/
+.formLogin{
     padding: 40px 69px;
     display: flex;
     flex-direction: column;
@@ -27,10 +28,12 @@ body {
   width: 100%;
   min-height: 100%;
    background: #1D7B74;
+   order: 1;
 
 }
 
-.title{
+
+.titleLogin{
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -45,7 +48,6 @@ body {
    display: flex;
    align-items: center;
    padding: 0 15px;
-
    justify-content: flex-start;
    height: 50px;
    border-radius: 15px;
@@ -55,6 +57,7 @@ body {
 
 .cor{
     background: transparent;
+    color: black;
     border: none;
     outline: none;
     width: 100%;
@@ -118,13 +121,14 @@ align-items: center;
     top: 20px;
     right: 20px;
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
     text-decoration: none;
 }
 
 .btn a{
     text-decoration: none;
+    gap: 5px;
 }
 
 .modo{
@@ -147,6 +151,7 @@ align-items: center;
     align-items: center;
     position: relative;
     z-index: 1;
+    order: 2;
 }
 
 .logo::before {
@@ -159,3 +164,153 @@ align-items: center;
     filter: blur(50px);
     z-index: -1;                                 
 }
+
+/*Responsivo*/
+
+@media (max-width: 900px) {
+  .bodyLogin {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 40px 0 40px;
+    gap: 25px;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-y: auto;}
+
+  .logo {
+    order: 1;
+    min-width: 100%;
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;}
+
+  .formLogin {
+    order: 2;
+    width: 100%;
+    max-width: 800px; 
+    padding: 40px;    
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  }
+
+  .titleLogin {font-size: 4rem;  
+    margin-bottom: 30px;}
+
+  .input {
+    width: 100%;
+    height: 65px;       
+    padding: 0 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;}
+
+  .formLogin label {font-size: 1.4rem;}
+
+  .cor {padding: 15px;font-size: 1.4rem;}
+
+  .conta-login {
+    font-size: 20px;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: auto;
+    display: flex;
+    gap: 15px; 
+    align-items: center;
+    z-index: 10;
+  }
+
+  .btn a {gap: 5px;}}
+
+
+@media (max-width: 440px) {
+  .bodyLogin {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; 
+    padding: 20px 0 20px; 
+    gap: 15px;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+
+  .logo {
+    order: 1;
+    min-width:100%;      
+    max-width: 440px;   
+    padding: 0;
+    margin: 0 auto 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .logo img {
+    width: 255px;      
+    max-width: 90%;    
+    height: 110px;
+    object-fit: contain;
+  }
+
+  .formLogin {
+    order: 2;
+    width: 100%;         
+    padding: 20px;      
+    margin: 0 auto;     
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .formLogin label { font-size: 1rem; }
+
+ .titleLogin { font-size: 2.5rem; }
+
+  .botao{
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .cor{
+    font-size: 1rem;
+    padding: 10px;
+    height: 50px;
+  }
+
+  .btn {
+    position: absolute;  
+    top: 10px;           
+    left: 10px;          
+    right: auto;         
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 10;
+    margin-bottom: auto;         
+  }
+
+  .btn, .modo {
+    margin: 0;   
+    height: 41px;       
+  }
+
+  .btn a {
+    gap: 5px;
+  }
+}
+
