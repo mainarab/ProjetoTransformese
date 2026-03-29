@@ -34,10 +34,10 @@ function mostrarTransacoes() {
       "<td>" +
       "<button onclick='editar(" +
       i +
-      ")'><i class='fa-regular fa-pen-to-square' style='color: rgba(29, 123, 116, 1);'></i></button> " +
+      ")'><i class='fa-regular fa-pen-to-square icon-edit'></i></button> " +
       "<button onclick='excluir(" +
       i +
-      ")'><i class='fa-regular fa-trash-can' style='color: rgba(221, 19, 19, 1);'></i></button>" +
+      ")'><i class='fa-regular fa-trash-can icon-delete'></i></button>" +
       "</td>" +
       "</tr>";
   }
