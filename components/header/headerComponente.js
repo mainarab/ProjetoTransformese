@@ -14,11 +14,11 @@ export default class Header {
         <div class="headerContainer">
           <i class="fa-solid fa-bars iconHeader" id="menuHamburguer"></i>
 
-          <img class="logo" src="../../img/logo-site.svg" alt="Logo" />
+          <img class="logo" src="./img/logo-site.svg" alt="Logo" />
 
           <nav class="menu" id="menuDesktop">
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="../.././index.html">Home</a></li>
               <li><a href="../../pages/login/page.html">Controle de gastos</a></li>
               <li><a href="./pages/sobre-nos/page.html">Sobre nós</a></li>
               <li><a href="#">Missão</a></li>
@@ -44,7 +44,7 @@ export default class Header {
 
         <nav class="menu">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="../.././index.html">Home</a></li>
             <li><a href="../../pages/login/page.html">Controle de gastos</a></li>
             <li><a href="./pages/sobre-nos/page.html">Sobre nós</a></li>
             <li><a href="#">Missão</a></li>
