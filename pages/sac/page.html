@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/sac.css">
+  <link rel="stylesheet" href="./CSS/sac.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="shortcut icon" href="../../img/logo-site.svg" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
   <title>SAC - Control Money</title>
 </head>
 <body>
 
-  <header>
-    <h1>Control Money SAC</h1>
-  </header>
   <main>
     <section class="cont">
 
@@ -54,7 +53,10 @@
     <p>© 2026 Control Money</p>
   </footer>
   <script src=""></script> <!-- Falta fazer o js do sac -->
-
+<script type="module">
+      import Header from "../../components/header/headerComponente.js";
+      new Header({ container: document.body });
+    </script>
 </body>
 
 </html>
