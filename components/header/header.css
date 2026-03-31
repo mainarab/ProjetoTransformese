@@ -118,6 +118,10 @@
     display: none;
   }
 
+  .logo{
+    content: url(../../img/logo-mobile.svg);
+  }
+
   .icons{
     display: none;
   }
