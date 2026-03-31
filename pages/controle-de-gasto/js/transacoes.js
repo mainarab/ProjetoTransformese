@@ -13,8 +13,8 @@ function adicionar() {
   }
 
   if (tipo === "entrada") {
-    tipoGasto = "";
-    subcategoria = "";
+    tipoGasto = "-";
+    subcategoria = "-";
   }
 
   let transacao = {

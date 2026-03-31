@@ -1,27 +1,62 @@
-/* ================= TABELA ================= */
-
 .divTable {
   background: var(--bg-table-box);
   border-radius: 8px;
   padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#formTransacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 16px;
+  align-items: center;
 }
 
-#formTransacao {
-  margin-bottom: 3%;
-}
 #formTransacao input,
 #formTransacao select {
   background: var(--input-bg);
   color: var(--input-text);
   border: 1px solid var(--input-border);
-  padding: 8px;
-  border-radius: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: border 0.2s;
+  flex: 1 1 150px;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 #formTransacao input::placeholder {
   color: var(--input-placeholder);
 }
 
+#formTransacao input:focus,
+#formTransacao select:focus {
+  border-color: var(--btn-bg);
+  box-shadow: 0 0 0 3px var(--slide-btn-bg);
+}
+
+#formTransacao button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+
+#formTransacao button:hover {
+  background: var(--btn-hover);
+  transform: scale(1.03);
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -57,6 +92,9 @@ th,
 td {
   padding: 12px;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 tbody button {
   background: none;
@@ -72,26 +110,358 @@ tbody button:hover {
   background: none;
   transform: scale(1.2);
 }
-
-/* ================= SCROLL ================= */
-
+.icon-edit {
+  color: var(--icon-edit);
+  transition: color 0.2s;
+}
+.icon-delete {
+  color: var(--icon-delete);
+  transition: color 0.2s;
+}
 tbody::-webkit-scrollbar {
   width: 6px;
 }
-
 tbody::-webkit-scrollbar-thumb {
   background: var(--scroll-thumb);
   border-radius: 10px;
 }
-
 tbody::-webkit-scrollbar-track {
   background: var(--scroll-track);
 }
-
-/* ================= COLUNAS ================= */
-
 .columnAmount,
 .columnType,
 .columnAction {
   text-align: center;
+}
+@media (min-width: 2560px) {
+  .divTable {
+    border-radius: 16px;
+    padding: 28px;
+  }
+  #formTransacao {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  #formTransacao input,
+  #formTransacao select {
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    flex: 1 1 200px;
+  }
+  #formTransacao button {
+    padding: 14px 36px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  th, td {
+    padding: 20px 24px;
+    font-size: 18px;
+  }
+  tbody {
+    max-height: 400px;
+  }
+  tbody button {
+    font-size: 22px;
+    padding: 8px 12px;
+  }
+  tbody::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+
+  .divTable {
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  #formTransacao {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    padding: 11px 16px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  #formTransacao button {
+    padding: 11px 28px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  th, td {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  tbody {
+    max-height: 260px;
+  }
+
+  tbody button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .divTable {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  #formTransacao {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  #formTransacao input,
+  #formTransacao select {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+
+  #formTransacao button {
+    padding: 9px 22px;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 13px 12px;
+    font-size: 14px;
+  }
+
+  tbody {
+    max-height: 200px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .divTable {
+    padding: 10px;
+  }
+  #formTransacao {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  #formTransacao input,
+  #formTransacao select {
+    flex: 1 1 calc(50% - 8px);
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  #formTransacao button {
+    flex: 1 1 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  tbody {
+    max-height: 160px;
+  }
+
+  tbody button {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+
+  .divTable {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  #formTransacao {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 11px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  #formTransacao button {
+    width: 100%;
+    padding: 13px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  th, td {
+    padding: 9px 6px;
+    font-size: 13px;
+  }
+
+  tbody {
+    max-height: 140px;
+  }
+
+  tbody button {
+    font-size: 14px;
+    padding: 3px 5px;
+  }
+
+  /* Oculta coluna menos crítica */
+  .columnType {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+
+  .divTable {
+    padding: 8px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 320px;
+  }
+
+  #formTransacao {
+    gap: 7px;
+    margin-bottom: 12px;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  #formTransacao button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+
+  tbody {
+    max-height: 130px;
+  }
+
+  tbody button {
+    font-size: 13px;
+    padding: 2px 4px;
+  }
+
+  tbody::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .columnType {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+
+  .divTable {
+    padding: 6px;
+  }
+
+  table {
+    min-width: 270px;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    padding: 9px 10px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
+  #formTransacao button {
+    padding: 11px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
+  th, td {
+    padding: 7px 3px;
+    font-size: 11px;
+  }
+
+  tbody {
+    max-height: 120px;
+  }
+
+  tbody button {
+    font-size: 12px;
+    padding: 2px 3px;
+  }
+  .columnType,
+  th:nth-child(4),
+  td:nth-child(4),
+  th:nth-child(5),
+  td:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .divTable {
+    padding: 4px;
+    border-radius: 6px;
+  }
+
+  table {
+    min-width: 240px;
+  }
+
+  #formTransacao {
+    gap: 6px;
+  }
+
+  #formTransacao input,
+  #formTransacao select {
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    border-width: 1px;
+  }
+
+  #formTransacao button {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  th, td {
+    padding: 6px 3px;
+    font-size: 11px;
+  }
+
+  tbody {
+    max-height: 110px;
+  }
+
+  tbody button {
+    font-size: 11px;
+    padding: 2px;
+  }
+
+  tbody::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .columnType,
+  th:nth-child(4), td:nth-child(4),
+  th:nth-child(5), td:nth-child(5),
+  th:nth-child(6), td:nth-child(6) {
+    display: none;
+  }
 }

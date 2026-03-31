@@ -1,16 +1,12 @@
-/* FORM */
-
 .newItem {
   margin-bottom: 20px;
 }
-
 form {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
 }
-
 input,
 select {
   padding: 10px 14px;
@@ -22,23 +18,20 @@ select {
   font-family: "Poppins", sans-serif;
   outline: none;
   transition: border 0.2s;
+  box-sizing: border-box;
 }
-
 input::placeholder {
   color: var(--input-placeholder);
 }
-
 input:focus,
 select:focus {
   border-color: var(--btn-bg);
   box-shadow: 0 0 0 3px var(--slide-btn-bg);
 }
-
 select {
   cursor: pointer;
   appearance: auto;
 }
-
 button[type="submit"],
 form button {
   padding: 10px 20px;
@@ -50,13 +43,112 @@ form button {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  transition:
-    background 0.2s,
-    transform 0.1s;
+  transition: background 0.2s, transform 0.1s;
 }
-
 button[type="submit"]:hover,
 form button:hover {
   background: var(--btn-hover);
   transform: scale(1.03);
+}
+@media (min-width: 2560px) {
+  .newItem { margin-bottom: 32px; }
+
+  form { gap: 16px; }
+  input, select {
+    padding: 14px 22px;
+    font-size: 18px;
+    border-radius: 12px;
+    border-width: 2px;
+  }
+
+  button[type="submit"],
+  form button {
+    padding: 14px 34px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+
+  .newItem { margin-bottom: 26px; }
+
+  form { gap: 12px; }
+
+  input, select {
+    padding: 12px 18px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  button[type="submit"],
+  form button {
+    padding: 12px 28px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .newItem { margin-bottom: 16px; }
+  form { gap: 8px; }
+
+  input, select {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+  button[type="submit"],
+  form button {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .newItem { margin-bottom: 14px; }
+  form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  button[type="submit"],
+  form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 375px) {
+  input, select {
+    padding: 9px 10px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+  button[type="submit"],
+  form button {
+    padding: 11px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+}
+@media (max-width: 320px) {
+  .newItem { margin-bottom: 8px; }
+  input, select {
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    border-width: 1px;
+  }
+
+  button[type="submit"],
+  form button {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
 }

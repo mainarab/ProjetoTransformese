@@ -281,8 +281,6 @@ body{
     justify-content: space-around; 
     align-items: center;
     background: #1D7B74;
-    width: 100%;
-    min-height: 166px;
     border-top: 2px solid #25272A;
     gap: 60px;
     flex-wrap: wrap;
@@ -291,7 +289,6 @@ body{
  .redes, .outros{
     display: flex;
     flex-direction: column;
-    align-content: center;
     gap: 10px;
     align-self: center;
 }
@@ -306,7 +303,6 @@ h2{
 }
 
 .contato h2 {
-    display: flex;
     justify-content: flex-start;
 
 }
@@ -321,7 +317,6 @@ h2{
 .contato-lado{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     gap: 20px;
 }
 
@@ -336,18 +331,21 @@ h2{
 .outros{
     line-height: 2.1;
     font-size: 16px;
+    margin: 20px 60px;
+
 }
 
-/* mobile*/
+           /*====== mobile=====*/
 
 @media screen and (max-width: 440px){
     .footer{
-        align-items: center;
+      align-items: center;
         flex-direction: column;
         gap: 24px;
+        padding: 40px 20px ;
 }
 
-     .contato{
+     .contato, .outros{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -356,20 +354,18 @@ h2{
 
      .contato-lado{
        flex-direction: column;
-       margin: 1px;
+       margin: 10px;
        
      }
      
      .contato h2{
+      align-self: center;
+      justify-content: center;
         text-align: center;
+  
      }
      
-     .outros{ 
-        align-self: flex-start;
-        text-align: left;
-        margin-top: 20px;
-     }
-}
+    }
 
 
     

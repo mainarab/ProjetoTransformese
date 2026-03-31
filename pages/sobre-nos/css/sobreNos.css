@@ -1,0 +1,270 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+body {
+	background: #f4f4f4;
+	color: #333;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #1D7B74;
+	padding: 15px 80px;
+	gap: 16px;
+}
+
+.logo img {
+	width: 200px;
+}
+
+.menu {
+	display: flex;
+	gap: 30px;
+	list-style: none;
+}
+
+.menu a {
+	color: white;
+	font-weight: 500;
+	padding: 15px 10px;
+	transition: 0.3s;
+	display: block;
+	border-radius: 10px;
+}
+
+.menu a:hover {
+	background: linear-gradient #1D7B74;
+	color: #fff;
+}
+
+/* MENU HAMBURGUER */
+.menu-toggle {
+	display: none;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.menu-toggle span {
+	display: block;
+	width: 26px;
+	height: 3px;
+	background: #fff;
+	margin: 5px 0;
+	border-radius: 2px;
+	transition: 0.2s;
+}
+
+/* ICONES */
+.nav-icons {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.icons {
+	width: 120px;
+	height: 45px;
+	background: rgba(245, 247, 250, 0.5);
+	border-radius: 50px;
+	padding: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+	display: flex;
+	align-items: center;
+}
+
+.user-icon img {
+	width: 28px;
+	height: 30px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.user-icon img:hover {
+	transform: scale(1.1);
+}
+
+.dark-circulo {
+	width: 35px;
+	height: 35px;
+	background: #1D7B74;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+}
+
+.dark-circulo img {
+	width: 20px;
+	height: 20px;
+}
+
+.dark-circulo:hover {
+	transform: translateX(5px);
+}
+
+.Title {
+	text-align: center;
+	padding: 60px 0 40px 0;
+}
+
+.Title > h1 {
+	color: #1D7B74;
+}
+
+.sobre {
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+}
+
+.card-wrapper {
+	margin: 15px;
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.card-wrapper.reverse {
+	flex-direction: row-reverse;
+}
+
+.card-text {
+	font-size: 20px;
+	background: #B2B3B3;
+	border-radius: 20px;
+	padding: 40px;
+	width: 70%;
+}
+
+.card-text h2 {
+	margin-bottom: 15px;
+	font-weight: 600;
+	text-align: justify;
+}
+
+.card-text p {
+	line-height: 1.7;
+	text-align: justify;
+}
+
+.card-image img {
+	width: 300px;
+	height: auto;
+	object-fit: contain;
+	border-radius: 8px;
+	transition: transform 0.3s;
+}
+
+.card-image img:hover {
+	transform: scale(1.05);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+@media (max-width: 900px) {
+	.navbar {
+		padding: 15px 24px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.logo img {
+		width: 160px;
+	}
+
+	.menu-toggle {
+		display: block;
+	}
+
+	.menu {
+		display: none;
+		width: 100%;
+		flex-direction: column;
+		gap: 8px;
+		margin-top: 10px;
+		padding: 10px 0;
+	}
+
+	.menu.is-open {
+		display: flex;
+	}
+
+	.menu a {
+		padding: 12px 12px;
+		background: rgba(255, 255, 255, 0.10);
+	}
+
+	.menu a:hover {
+		background: rgba(255, 255, 255, 0.18);
+	}
+
+	.nav-icons {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 600px) {
+	.Title {
+		padding: 40px 0 20px 0;
+	}
+
+	.sobre {
+		width: 92%;
+		gap: 32px;
+	}
+
+	.card-wrapper,
+	.card-wrapper.reverse {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 16px;
+		margin: 0;
+	}
+
+	.card-text {
+		width: 100%;
+		padding: 20px;
+		font-size: 16px;
+	}
+
+	.card-image img {
+		width: 100%;
+		max-width: 360px;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+	.sobre {
+		width: 90%;
+		gap: 48px;
+	}
+
+	.card-text {
+		width: 100%;
+		font-size: 18px;
+		padding: 28px;
+	}
+
+	.card-image img {
+		width: 260px;
+	}
+}

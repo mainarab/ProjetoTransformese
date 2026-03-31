@@ -32,7 +32,7 @@ function verificarSaldo(total) {
     totalEl.style.color = "rgba(221, 19, 19)";
     alert("Seu saldo está negativo! Melhore suas finanças");
   } else {
-    totalEl.style.color = "rgba(0, 114, 17)";
+    totalEl.style.color = "rgba(255, 255, 255, 255)";
   }
 }
 
