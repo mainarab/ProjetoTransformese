@@ -350,6 +350,7 @@ h2{
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 10px;
      }
 
      .contato-lado{
