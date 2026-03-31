@@ -69,6 +69,7 @@
 
 .logo {
   height: 65px;
+  content: url(../../img/logo-site.svg)
 }
 
 .containerMobile {

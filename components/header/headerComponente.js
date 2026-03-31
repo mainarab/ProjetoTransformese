@@ -14,7 +14,7 @@ export default class Header {
         <div class="headerContainer">
           <i class="fa-solid fa-bars iconHeader" id="menuHamburguer"></i>
 
-          <img class="logo" src="./img/logo-site.svg" alt="Logo" />
+          <img class="logo" src="" alt="Logo" />
 
           <nav class="menu" id="menuDesktop">
             <ul>
