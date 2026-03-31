@@ -36,6 +36,14 @@ body {
 .logoIMG {
   width: 151px;
   height: 65px;
+  padding: 10px;
+}
+.logo-mobile {
+  display: none;
+}
+
+.logo-desktop {
+  display: block;
 }
 
 .toggleMenu,
@@ -70,7 +78,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: 20px;
-  color: inherit;
+  color: var(--badge-text);
   z-index: 100;
 }
 
@@ -272,8 +280,6 @@ main {
     margin-left: 0;
   }
 }
-
-/* ── LARGE DESKTOP (1440px – 2559px) ───────── */
 @media (min-width: 1440px) and (max-width: 2559px) {
   .topo {
     height: 72px;
@@ -317,6 +323,14 @@ main {
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    width: 50px;
+  }
   .sidebar {
     width: 200px;
   }
@@ -336,6 +350,14 @@ main {
   }
 }
 @media (max-width: 768px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    width: 50px;
+  }
   .topo {
     height: 60px;
     padding: 0 16px;
@@ -368,6 +390,14 @@ main {
 }
 
 @media (max-width: 500px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    width: 50px;
+  }
   .topo {
     height: 56px;
     padding: 0 12px;
@@ -401,6 +431,13 @@ main {
 }
 
 @media (max-width: 375px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
   .topo {
     padding: 0 10px;
   }
@@ -419,6 +456,13 @@ main {
   }
 }
 @media (max-width: 320px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
   .topo {
     height: 52px;
     padding: 0 8px;

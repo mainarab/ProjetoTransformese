@@ -59,10 +59,6 @@ thead {
 tbody tr {
   border-bottom: 1px solid var(--tr-border);
 }
-
-
-
-
 tbody tr:hover {
   background: var(--tr-hover);
 }
@@ -70,7 +66,6 @@ tbody tr:hover {
 .modal-content {
   background: var(--bg-modal);
 }
-
 h1,
 h2,
 h3 {

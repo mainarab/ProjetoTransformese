@@ -28,11 +28,11 @@
   /* ================= CARDS ================= */
 
   --card-bg: rgba(211, 214, 217);
-  --text-card: #1e293b;
+  --text-card: rgb(0, 0, 0);
   --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
   --card-bg: rgba(211, 214, 217);
-  --card-title: #333;
-  --card-info: #2c3e50;
+  --card-title: #000000;
+  --card-info: #000000;
   --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   /* ================= RESUMO ================= */
@@ -62,7 +62,7 @@
 
   /* ================= MODAL ================= */
 
-  --bg-modal: #ffffff;
+  --bg-modal: rgba(45, 168, 181, 1);
   --text-close: #333;
 
   /* ================= INPUT ================= */
@@ -100,7 +100,6 @@ body.dark {
   --bg-topo: #0d4a40;
   --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.5);
 
-  /* ================= BOTÕES ================= */
 
   /* ================= SIDEBAR ================= */
 
@@ -238,7 +237,7 @@ body.dark {
 
   /* ================= INPUT ================= */
 
-  --input-bg: #000000;
+  --input-bg: #0e0d0d;
   --input-border: #ffffff;
   --input-text: #ffffff;
   --input-placeholder: #ffffff;

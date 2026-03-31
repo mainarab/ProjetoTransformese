@@ -1,5 +1,7 @@
 .resume {
   display: flex;
+  justify-content: space-between;
+  align-items: center; 
   gap: 20px;
   margin-bottom: 25px;
   width: 100%;
@@ -276,6 +278,9 @@
 @media (max-width: 375px) {
   .resume article {
     padding: 12px 14px;
+    gap: 8px;
+    margin-bottom: 5px;
+    width: 5%;
   }
   .resume p {
     font-size: 13px;
