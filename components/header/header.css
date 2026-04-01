@@ -121,6 +121,7 @@
 
   .logo{
     content: url(../../img/logo-mobile.svg);
+    height: 55px;
   }
 
   .icons{
