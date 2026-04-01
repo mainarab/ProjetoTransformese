@@ -29,7 +29,7 @@ export default class Header {
           </nav>
 
           <div class="icons">
-            <a href="/ProjetoTransformese/ProjetoTransformese/pages/login/page.html">
+            <a href="/ProjetoTransformese/pages/login/page.html">
               <i class="fa-regular fa-user iconHeader"></i>
             </a>
             <button class="toggleDark">
@@ -56,7 +56,7 @@ export default class Header {
           <div class="IconsMobile">
             <ul>
               <li>
-                <a class="conta" href="/ProjetoTransformese/ProjetoTransformese/pages/login/page.html">
+                <a class="conta" href="/ProjetoTransformese/pages/login/page.html">
                   <i class="fa-regular fa-user iconHeader"></i>Adicionar conta
                 </a>
               </li>
