@@ -1,0 +1,49 @@
+@import url(rootSobreNos.css);
+
+body.dark .navbar {
+  background: var(--color-navbar);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark .menu-mobile {
+  background: var(--color-background);
+}
+
+body.dark .Title > h1 {
+  color: var(--color-text);
+}
+
+body.dark .card-text {
+  background: var(--color-card);
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark .card-text h2 {
+  color: var(--color-text);
+}
+
+body.dark .icons {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+body.dark .dark-circulo {
+  margin-left: auto;
+  background: var(--color-icons);
+}
+
+body {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.card-text {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.navbar {
+  transition: background 0.3s ease;
+}
