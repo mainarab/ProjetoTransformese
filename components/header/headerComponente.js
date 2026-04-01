@@ -6,6 +6,8 @@ export default class Header {
     this.addEventListeners();
   }
 
+  
+
   render() {
     this.container.insertAdjacentHTML(
       "afterbegin",
@@ -18,11 +20,11 @@ export default class Header {
 
           <nav class="menu" id="menuDesktop">
             <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/pages/login/page.html">Controle de gastos</a></li>
-              <li><a href="/pages/sobre-nos/page.html">Sobre nós</a></li>
+              <li><a href="/ProjetoTransformese/index.html">Home</a></li>
+              <li><a href="/ProjetoTransformese/pages/login/page.html">Controle de gastos</a></li>
+              <li><a href="/ProjetoTransformese/pages/sobre-nos/page.html">Sobre nós</a></li>
               <li><a href="#">Missão</a></li>
-              <li><a href="/pages/sac/page.html">SAC</a></li>
+              <li><a href="/ProjetoTransformese/pages/sac/page.html">SAC</a></li>
             </ul>
           </nav>
 
