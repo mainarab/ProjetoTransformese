@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="header.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="headerContainer">
+        <i class="fa-solid fa-bars iconHeader" id="menuHamburguer"></i>
+
+        <img class="logo" src="../../img/logo-site.svg" alt="Logo" />
+
+        <nav class="menu" id="menuDesktop">
+          <ul>
+            <li><a href="../.././index.html">Home</a></li>
+            <li>
+              <a href="../../pages/login/page.html">Controle de gastos</a>
+            </li>
+            <li><a href="./pages/sobre-nos/page.html">Sobre nós</a></li>
+            <li><a href="#">Missão</a></li>
+            <li><a href="./pages/sac/page.html">SAC</a></li>
+          </ul>
+        </nav>
+
+        <div class="icons">
+          <a href="../../pages/login/page.html"
+            ><i class="fa-regular fa-user iconHeader"></i
+          ></a>
+
+          <button class="toggleDark">
+            <i class="fa-solid fa-moon iconHeader"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="containerMobile">
+      <div id="menuClose">
+        <i class="fa-solid fa-x iconHeader"></i>
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="../../pages/login/page.html">Controle de gastos</a>
+          </li>
+          <li><a href="./pages/sobre-nos/page.html">Sobre nós</a></li>
+          <li><a href="#">Missão</a></li>
+          <li><a href="./pages/sac/page.html">SAC</a></li>
+        </ul>
+
+        <div class="IconsMobile">
+          <ul>
+            <li>
+              <a class="conta" href="../../pages/login/page.html"
+                ><i class="fa-regular fa-user iconHeader"></i>Adicionar conta</a
+              >
+            </li>
+          </ul>
+
+          <button class="toggleDark">
+            <i class="fa-solid fa-moon iconHeader"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <script src="header.js"></script>
+  </body>
+</html>

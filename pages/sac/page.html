@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/sac.css">
+  <link rel="stylesheet" href="./CSS/sac.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="shortcut icon" href="../../img/logo-mobile.svg" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   <title>SAC - Control Money</title>
 </head>
 <body>
 
-  <header>
-    <h1>Control Money SAC</h1>
-  </header>
   <main>
     <section class="cont">
 
@@ -44,7 +47,7 @@
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="12" required></textarea>
         </div>
-        <button type="submit">Enviar Mensagem</button>
+        <button type="submit" class="btn">Enviar Mensagem</button>
       </form>
       <p id="status"></p>
     </section>
@@ -54,7 +57,10 @@
     <p>© 2026 Control Money</p>
   </footer>
   <script src=""></script> <!-- Falta fazer o js do sac -->
-
+<script type="module">
+      import Header from "../../components/header/headerComponente.js";
+      new Header({ container: document.body });
+    </script>
 </body>
 
 </html>

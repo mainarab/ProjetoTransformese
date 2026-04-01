@@ -5,21 +5,22 @@
   --text-main: #25272A;
 
   --bg-header: #1D7B74;
-  --border-header: #1D7B74;
+  --border-header: #25272A;
   --hoverButton-Header:#2DA8B5;
   --text-buttons:#D3D6D9;
   --bg-footer: #d2cccc;
 
   --bg-hero: #D3D6D9;
+  --text-sections:#1D7B74;
 
-  --bg-card: #cec7c7;
+  --bg-card: #0C8370;
   --shadow-card: 0 10px 25px rgba(0,0,0,0.1);
 
-  --bg-problem: #bfb9b9;
-  --bg-problem-hover: #b3acac;
+  --bg-problem: #2DA8B5;
+  --bg-problem-hover: #1D7B74;
 
-  --btn-bg: #555;
-  --btn-hover: #000;
+  --btn-bg: linear-gradient(105deg, #1D7B74 0%, #2DA8B5 100%);
+  --btn-hover: linear-gradient(-105deg, #1D7B74 0%, #2DA8B5 100%);
 }
 
 /* DARK MODE */
@@ -34,13 +35,14 @@ body.dark {
   --bg-footer: #020617;
 
   --bg-hero: #25272A;
+  --text-sections:#D3D6D9;
 
-  --bg-card: #1e293b;
+  --bg-card: #033F31;
   --shadow-card: 0 10px 25px rgba(0,0,0,0.5);
 
-  --bg-problem: #1e293b;
-  --bg-problem-hover: #334155;
+  --bg-problem: #1D5D5C;
+  --bg-problem-hover: #033F31;
 
-  --btn-bg: #334155;
-  --btn-hover: #1f2937;
+  --btn-bg: linear-gradient(105deg, #1D5D5C 0%, #05201E 100%);
+  --btn-hover: linear-gradient(-105deg, #1D5D5C 0%, #05201E 100%);
 }

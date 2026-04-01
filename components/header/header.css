@@ -1,0 +1,142 @@
+@import url(../../css/root.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: var(--bg-header);
+  position: relative;
+  border-bottom: 2px solid var(--border-header);
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+#menuHamburguer {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text-buttons);
+  font-weight: 500;
+  padding: 10px 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.menu a:hover {
+  background: var(--hoverButton-Header);
+  color: var(--text-buttons);
+}
+
+.icons button,
+.IconsMobile button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.iconHeader {
+  color: var(--text-buttons);
+}
+
+.logo {
+  height: 65px;
+  content: url(../../img/logo-site.svg)
+}
+
+.containerMobile {
+  background-color: var(--bg-header);
+  padding: 20px 40px;
+  width: 70vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#menuClose {
+  text-align: end;
+  margin: 50px 0px;
+}
+
+.containerMobile > .menu ul {
+  flex-direction: column;
+  gap: 32px;
+}
+
+.conta {
+  display: flex;
+  gap: 16px;
+  margin-top: 50px;
+  margin-bottom: 32px;
+}
+
+.ativo{
+    display: inline;
+}
+
+.inativo{
+    display: none;
+}
+
+@media (max-width: 900px) {
+  .header,
+  .containerMobile {
+    padding: 20px 40px;
+  }
+
+  .headerContainer .menu{
+    display: none;
+  }
+
+  .logo{
+    content: url(../../img/logo-mobile.svg);
+    height: 55px;
+  }
+
+  .icons{
+    display: none;
+  }
+
+  #menuHamburguer{
+    display: inline;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .header,
+  .containerMobile {
+    padding: 20px 20px;
+  }
+}

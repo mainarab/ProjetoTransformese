@@ -1,4 +1,5 @@
 @import url(../css/root.css);
+@import url(../components/header/header.css);
 
 * {
   margin: 0;
@@ -21,82 +22,6 @@ body {
   margin: 0 auto;
   max-width: 1400px;
 }
-
-/* ================= HEADER ================= */
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background: var(--bg-header);
-  position: relative;
-  border-bottom: 2px solid var(--border-header);
-}
-
-.headerContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1400px;
-}
-
-/* ================= MENU ================= */
-
-.menu ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: var(--text-buttons);
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 15px;
-  transition: 0.3s;
-  font-size: 1rem;
-}
-
-/* HOVER COM COR (igual antes) */
-
-.menu a:hover {
-  background: var(--hoverButton-Header);
-  color: var(--text-buttons);
-}
-
-/* ================= ICONES ================= */
-
-.header-icons button {
-  border: none;
-  background: none;
-  font-size: 18px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.iconHeader {
-  color: var(--text-buttons);
-}
-
-/* ================= MENU HAMBURGUER ================= */
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* ================= LOGO ================= */
-
-.logo {
-  height: 65px;
-}
-
 /* ================= HERO ================= */
 
 .slogan {
@@ -139,14 +64,15 @@ body {
 /* ================= BOTÃO ================= */
 
 .btn {
-  padding: 12px 28px;
-  border: none;
-  border-radius: 8px;
+  padding: 15px 20px;
+  border: 0.5px solid #D3D6D9;
+  border-radius: 15px;
   background: var(--btn-bg);
-  color: white;
+  color: var(--text-buttons);
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -157,12 +83,18 @@ body {
 /* ================= PROBLEMAS ================= */
 
 .problemas-section {
-  padding: 80px;
+  padding: 50px;
   text-align: center;
 }
 
+.problemas-section h2{
+  color: var(--text-sections);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
 .problemas-list {
-  margin-top: 40px;
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,12 +140,18 @@ body {
 /* ================= SOLUÇÃO ================= */
 
 .solucao {
-  padding: 80px;
+  padding: 50px;
   text-align: center;
 }
 
+.solucao h2{
+  color: var(--text-sections);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
 .cards {
-  margin-top: 50px;
+  margin-top: 32px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
@@ -224,7 +162,7 @@ body {
   padding: 30px;
   border-radius: 12px;
   transition: 0.5s;
-
+color: var(--text-buttons);
   opacity: 0;
   transform: translateX(-80px);
 }
@@ -405,14 +343,6 @@ h2{
 /* ================= RESPONSIVO TABLET ================= */
 
 @media (max-width: 900px) {
-  .header {
-    padding: 20px;
-  }
-
-  .logo {
-    height: 55px;
-  }
-
   .slogan {
     flex-direction: column-reverse;
     text-align: center;
@@ -431,32 +361,7 @@ h2{
     width: 300px;
   }
 
-  /* MENU MOBILE */
 
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: var(--bg-header);
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.4s;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .menu.active {
-    max-height: 350px;
-  }
 }
 
 /* ================= CELULAR ================= */
