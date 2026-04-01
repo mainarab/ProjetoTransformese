@@ -9,8 +9,9 @@
 
 .bodyLogin {
     position: relative;
-    width: 100%;
+    max-width: 1440px;
     height: 100vh;
+    margin: auto;
     background-color: #2DA8B5;
     display: flex;
     justify-content: center;
@@ -19,19 +20,25 @@
     overflow: hidden;
 } 
 
-/*Formulario*/
-.formLogin{
-    padding: 40px 69px;
+
+
+.container{
+  box-sizing: border-box;
+    margin-left: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    box-sizing: border-box;
-   max-width: 538px;
-  width: 100%;
-  min-height: 100%;
+    width: 100%;
+    min-height: 100%;
    background: #1D7B74;
    order: 1;
+}
 
+
+.formLogin{
+   width: 400px;
+   justify-content: center;
+   align-self: center;
 }
 
 
@@ -40,18 +47,24 @@
     justify-content: center;
     align-items: flex-start;
   font-weight: 650;
-  font-style: normal;
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 64px;
+  margin-bottom: 32px;
+}
+
+label{
+  display: block;
+  margin-bottom: 6px;
 }
 
 .input{background:#D3D6D9;
+  box-sizing: border-box;
    width: 100%;
+   height: 54px;
    display: flex;
    align-items: center;
    padding: 0 15px;
+   gap: 10px;
    justify-content: flex-start;
-   height: 50px;
    border-radius: 15px;
    margin-bottom: 10px;
 }
@@ -70,7 +83,7 @@
     margin-top: 10px;
     font-size: 16px;
     display: flex;
-    align-items: center;
+    align-self: center;
     gap: 5px;
 }
 
@@ -85,7 +98,8 @@
     border-radius: 15px;
     transition: background-position 300ms ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) ;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .botao:hover{
@@ -98,15 +112,15 @@
     width: 100%;
     height: 0.2px;
     background: white;
-    margin-bottom: 50px;
+    margin-bottom: 24px;
 }
 
-.borda{margin-bottom: 20px;}
+.borda{margin-bottom: 24px;}
 
 .ou-entre, .social{
 display: flex;
 justify-content: center;
-align-items: center;
+align-self: center;
 }
 
 .social{
@@ -118,8 +132,8 @@ align-items: center;
     height: 20px;
 }
 
-.btn{
-    position: absolute;
+.cm-modo{
+  position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
@@ -127,6 +141,12 @@ align-items: center;
     align-items: center;
     text-decoration: none;
 }
+
+.btn{
+  margin-right: 20px;
+
+}
+
 
 .btn a{
     text-decoration: none;
@@ -142,8 +162,17 @@ align-items: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 4px;
+    padding-left: 5px;
+    padding-top: 5px;
     cursor: pointer;
+}
+
+
+.modo button{
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .logo{
@@ -169,7 +198,14 @@ align-items: center;
 
 /*Responsivo*/
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+.container{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+
   .bodyLogin {
     flex-direction: column;
     justify-content: flex-start;
@@ -189,7 +225,8 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;}
+    margin-top: 70px;
+    z-index: 2;}
 
   .formLogin {
     order: 2;
@@ -205,7 +242,7 @@ align-items: center;
   .titleLogin {font-size: 4rem;  
     margin-bottom: 30px;}
 
-  .input {
+  .input, .botao {
     width: 100%;
     height: 65px;       
     padding: 0 25px;
@@ -222,21 +259,33 @@ align-items: center;
     margin-top: 20px;
   }
 
-  .btn {
+  .cm-modo{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     position: absolute;
     top: 20px;
-    left: 20px;
-    right: auto;
-    display: flex;
-    gap: 15px; 
-    align-items: center;
-    z-index: 10;
+    left: 0;
+    padding: 0 20px;
+    z-index: 3;
   }
 
-  .btn a {gap: 5px;}}
+   .btn{
+    margin: 0;
+    order: 1;
+   }
+
+  .btn a {gap: 5px;}
+ 
+  .modo{
+   order: 2;
+   margin: 0;
+
+  }
+}
 
 
-@media (max-width: 440px) {
+@media (max-width: 550px) {
   .bodyLogin {
     flex-direction: column;
     justify-content: flex-start;
@@ -281,6 +330,13 @@ align-items: center;
 
   .formLogin label { font-size: 1rem; }
 
+
+ .input {
+    width: 100%;
+    height: 54px;       
+    padding: 0 25px;
+  }
+
  .titleLogin { font-size: 2.5rem; }
 
   .botao{
@@ -295,7 +351,6 @@ align-items: center;
   }
 
   .btn {
-    position: absolute;  
     top: 10px;           
     left: 10px;          
     right: auto;         

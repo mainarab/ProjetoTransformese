@@ -265,15 +265,21 @@ body {
 .footer{
   box-sizing: border-box;
   display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    background: var(--bg-header);
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.cm-footer{
+  width: 100%;
+   background: var(--bg-header);
     color: #D3D6D9 ;
     text-decoration: none;
     border-top: 2px solid #25272A;
-    gap: 60px;
-    flex-wrap: wrap;
-    
 }
 
  .redes, .outros{
