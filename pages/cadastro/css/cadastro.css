@@ -5,6 +5,7 @@
     color: #D3D6D9;
     font-family: "Poppins", sans-serif; 
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 .bodyLogin {
@@ -101,6 +102,7 @@ label{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 
 .botao:hover{
     background:linear-gradient(90deg,#2DA8B5 0%, #1D7B74 50%, #2DA8B5 100%);
