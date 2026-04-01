@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px;
+  padding: 60px;
   background: var(--bg-hero);
   flex-wrap: wrap;
   gap: 40px;
@@ -39,9 +39,11 @@ body {
 }
 
 .slogan-text h2 {
+  display: block;
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 1.5px;
+  margin: 0;
+  padding: 0;
   white-space: nowrap;
   text-align: left;
 }
@@ -55,7 +57,7 @@ body {
 }
 
 .slogan-image img {
-  width: 400px;
+  width: 300px;
   max-width: 100%;
   border-radius: 10px;
   animation: float 4s ease-in-out infinite;
@@ -65,7 +67,7 @@ body {
 
 .btn {
   padding: 15px 20px;
-  border: 0.5px solid #D3D6D9;
+  border: 0.5px solid #d3d6d9;
   border-radius: 15px;
   background: var(--btn-bg);
   color: var(--text-buttons);
@@ -87,7 +89,7 @@ body {
   text-align: center;
 }
 
-.problemas-section h2{
+.problemas-section h2 {
   color: var(--text-sections);
   font-weight: 700;
   font-size: 2rem;
@@ -144,7 +146,7 @@ body {
   text-align: center;
 }
 
-.solucao h2{
+.solucao h2 {
   color: var(--text-sections);
   font-weight: 700;
   font-size: 2rem;
@@ -162,7 +164,7 @@ body {
   padding: 30px;
   border-radius: 12px;
   transition: 0.5s;
-color: var(--text-buttons);
+  color: var(--text-buttons);
   opacity: 0;
   transform: translateX(-80px);
 }
@@ -200,128 +202,126 @@ color: var(--text-buttons);
 }
 
 /* ================= FOOTER ================= */
-.footer{
+.footer {
   box-sizing: border-box;
   display: flex;
   max-width: 1440px;
   margin: auto;
   padding: 20px;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   gap: 60px;
   flex-wrap: wrap;
 }
 
-.cm-footer{
+.cm-footer {
   width: 100%;
-   background: var(--bg-header);
-    color: #D3D6D9 ;
-    text-decoration: none;
-    border-top: 2px solid #25272A;
+  background: var(--bg-header);
+  color: #d3d6d9;
+  text-decoration: none;
+  border-top: 2px solid #25272a;
 }
 
- .redes, .outros{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-self: center;
- }
+.redes,
+.outros {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: center;
+}
 
-h2{
-    display: flex;
-    font-weight: 600;
-    font-size: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+h2 {
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .contato h2 {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
-.contato-link{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.contato-lado{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-
-.redes ul{
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    font-size: 16px;
-    list-style: none;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.redes, .outros a{
+.contato-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
   text-decoration: none;
-  color: #D3D6D9;
 }
 
-.outros ul{
-    line-height: 2.1;
-    font-size: 16px;
-    margin: 20px 0px;
-    list-style: none;
+.contato-lado {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
+.redes ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  font-size: 16px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.redes,
+.outros a {
+  text-decoration: none;
+  color: #d3d6d9;
+}
+
+.outros ul {
+  line-height: 2.1;
+  font-size: 16px;
+  margin: 20px 0px;
+  list-style: none;
+}
 
 .outros a:hover {
   background: var(--hoverButton-Header);
   color: var(--text-buttons);
 }
-           /*====== mobile=====*/
 
-@media (max-width: 1000px){
-  .footer{
+/*====== mobile=====*/
+@media (max-width: 1000px) {
+  .footer {
     flex-direction: column;
     align-items: center;
     gap: 24px;
   }
 }
 
-@media (max-width: 440px){
-    .footer{
-      align-items: center;
-        flex-direction: column;
-        gap: 24px;
-        padding: 40px 20px ;
+@media (max-width: 440px) {
+  .footer {
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 20px;
+  }
+
+  .contato,
+  .outros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contato-lado {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .contato h2 {
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
-
-     .contato, .outros{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-     }
-
-     .contato-lado{
-       flex-direction: column;
-       margin: 10px;
-       
-     }
-     
-     .contato h2{
-      align-self: center;
-      justify-content: center;
-        text-align: center;
-  
-     }
-     
-    }
 
 /* ================= ANIMAÇÕES ================= */
 
@@ -351,6 +351,11 @@ h2{
 }
 
 /* ================= RESPONSIVO TABLET ================= */
+@media (max-width: 1000px) {
+  .slogan-image img {
+    width: 200px;
+  }
+}
 
 @media (max-width: 900px) {
   .slogan {
@@ -368,10 +373,8 @@ h2{
   }
 
   .slogan-image img {
-    width: 300px;
+    width: 150px;
   }
-
-
 }
 
 /* ================= CELULAR ================= */
