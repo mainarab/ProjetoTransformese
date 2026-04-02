@@ -1,66 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./CSS/sac.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="shortcut icon" href="../../img/logo-mobile.svg" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-  <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/sac.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../img/logo-mobile.svg"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-  <title>SAC - Control Money</title>
-</head>
-<body>
+    <title>SAC - Control Money</title>
+  </head>
+  <body>
+    <main>
+      <section class="cont">
+        <h2>Suporte</h2>
+        <p>Precisa de ajuda?</p>
+        <form id="formularioSac">
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              placeholder="Digite seu nome"
+            />
+          </div>
 
-  <main>
-    <section class="cont">
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Digite seu e-mail"
+            />
+          </div>
 
-      <h2>Suporte</h2>
-      <p>Precisa de ajuda?</p>
-      <form id="formularioSac">
+          <div class="campo">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto">
+              <option value="1">Problemas no Sistema</option>
+              <option value="2">Dúvida</option>
+              <option value="3">Sugestão</option>
+              <option value="4">Outros</option>
+            </select>
+          </div>
 
-        <div class="campo">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-        </div>
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="12"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+        <p id="status"></p>
+      </section>
+    </main>
 
-        <div class="campo">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
-        </div>
+    <div id="footer"></div>
 
-        <div class="campo">
-          <label for="assunto">Assunto</label>
-          <select id="assunto" name="assunto">
-            <option value="1">Problemas no Sistema</option>
-            <option value="2">Dúvida</option>
-            <option value="3">Sugestão</option>
-            <option value="4">Outros</option>
-          </select>
-        </div>
-
-        <div class="campo">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="12" required></textarea>
-        </div>
-        <button type="submit" class="btn">Enviar Mensagem</button>
-      </form>
-      <p id="status"></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Control Money</p>
-  </footer>
-  <script src=""></script> <!-- Falta fazer o js do sac -->
-<script type="module">
+    <script type="module">
       import Header from "../../components/header/headerComponente.js";
       new Header({ container: document.body });
     </script>
-</body>
 
+    <script type="module">
+      import Footer from "../../components/footer/footerComponent.js";
+
+      new Footer({
+        container: document.querySelector("#footer"),
+      });
+    </script>
+  </body>
 </html>

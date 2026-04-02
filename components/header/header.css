@@ -67,6 +67,11 @@
   color: var(--text-buttons);
 }
 
+.conta{
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   height: 65px;
   content: url(../../img/logo-site.svg)

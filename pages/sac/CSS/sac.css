@@ -1,5 +1,6 @@
 @import url(../CSS/rootSac.css);
 @import url(../../../components/header/header.css);
+@import url(../../../components/footer/footer.css);
 
 * {
   margin: 0;
@@ -20,7 +21,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 50px 0px;
 }
 
 .cont {
@@ -92,9 +93,3 @@ textarea {
   color: green;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  color: white;
-  font-size: 14px;
-}

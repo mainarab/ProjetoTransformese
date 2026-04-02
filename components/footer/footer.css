@@ -10,6 +10,10 @@
   flex-wrap: wrap;
 }
 
+.footer-contact h3{
+margin-bottom: 10px;
+}
+
 .cm-footer {
   width: 100%;
   background: var(--bg-header);
@@ -30,8 +34,6 @@
   display: flex;
   font-weight: 600;
   font-size: 20px;
-  justify-content: center;
-  align-items: center;
   margin: 0;
 }
 
