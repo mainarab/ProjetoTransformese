@@ -29,16 +29,21 @@ main {
   padding: 30px;
   border-radius: 10px;
   width: 380px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+   box-shadow: var(--sombra-card);
+  transition: box-shadow 0.3s ease;
+}
+.cont:hover {
+  box-shadow:var(--sombra-card-hover)
 }
 
 .cont h2 {
   margin-bottom: 5px;
+  color: var(--cor-titulo);
 }
 
 .cont p {
   margin-bottom: 15px;
-  color: #555;
+  color: var(--cor-texto);
 }
 
 form {
@@ -55,6 +60,7 @@ form {
 label {
   margin-bottom: 4px;
   font-size: 14px;
+  color: var(--cor-label);
 }
 
 input,
@@ -76,7 +82,7 @@ textarea {
   padding: 12px;
   border: none;
   background: var(--cor-botao);
-  color: white;
+  color: var(--color-btn);
   font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
@@ -92,4 +98,3 @@ textarea {
   text-align: center;
   color: green;
 }
-
