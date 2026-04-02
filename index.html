@@ -12,9 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./img/logo-mobile.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./img/logo-mobile.svg"
+      type="image/x-icon"
+    />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-        <title>Control Money</title>
+    <title>Control Money</title>
   </head>
 
   <body>
@@ -89,61 +93,21 @@
       </section>
     </main>
 
-    
-    
-<!--Footer-->
-<div class="cm-footer">
-<footer class="footer">
-<div class="footer-contact"> 
-<h3>Contato</h3> 
+    <div id="footer"></div>
 
-<div class="contato-lado">   
-<div class="contato-link">
-<img src="./img/phone.svg" alt="celular">
-<p>(11) 9999-9999</h3></p>
-</div>
+    <script src="./js/script.js"></script>
+    <script src="./pages/questionario/js/script.js"></script>
+    <script type="module">
+      import Header from "./components/header/headerComponente.js";
+      new Header({ container: document.body });
+    </script>
 
-<div class="contato-link">
-<img src="./img/email (1).svg" alt="email">
-<p>contato@controlmoney.com.br</p>
-</div>
-</div>
-</div>
+    <script type="module">
+      import Footer from "./components/footer/footerComponent.js";
 
-
-<div class="redes">
-<h2>Redes Sociais</h2>
-<nav aria-label="Redes Sociais">
-<ul>
-
-<li><a href="#" class="redes-link"> <img src="./img/insta.svg" alt="Instagram"></a> </li>
-<li><a href="#"><img src="./img/face.svg" alt="Facebook"></a></li>
-<li><a href="#"><img src="./img/x.svg" alt="X"></a></li>
-<li><a href="#"><img src="./img/youtube.svg" alt="Youtube"></a></li>
-</ul>
-</nav>
-</div>
-
-
-<div class="outros">
-<nav>
-<ul>
-<li><a href="./pages/controle-de-gasto/controledegastos.html" >Controle de gastos</a></li>
-<li><a href="./pages/sobre-nos/page.html" >Sobre nós</a></li>
-<li><a href="#" >Missão</a></li>
-<li><a href="./pages/sac/page.html" >SAC</a></li>
-</ul>
-</nav>
-</div>
-
-</footer>
-</div>
-
-<script src="./js/script.js"></script>
-<script src="./pages/questionario/js/script.js"></script>
-<script type="module">
-import Header from "./components/header/headerComponente.js";
-new Header({ container: document.body });
-</script>
-</body>
+      new Footer({
+        container: document.querySelector("#footer"),
+      });
+    </script>
+  </body>
 </html>
