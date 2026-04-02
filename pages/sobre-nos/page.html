@@ -1,111 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/sobreNos.css">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<title>Sobre Nós</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/sobreNos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../img/logo-mobile.svg"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Sobre Nós</title>
+  </head>
 
-<body>
-	<header>
-		<nav class="navbar">
-			<div class="container navbar__inner">
-				<button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+  <body>
+    <div class="container">
+      <section class="Title">
+        <h1>Sobre Nós</h1>
+      </section>
 
-				
-				<div class="logo">
-					<img src="../../img/logo-site.svg" alt="Logo Control Money" class="logo-desktop">
-					<img src="../../img/logo-mobile.svg" alt="Logo Control Money" class="logo-mobile">
-				</div>
+      <section class="sobre">
+        <div class="card-wrapper">
+          <div class="card-text">
+            <h2>Controle financeiro de forma simples</h2>
+            <p>
+              O Control Money nasceu com o objetivo de ajudar pessoas a
+              organizarem melhor suas finanças no dia a dia. A plataforma
+              permite registrar receitas e despesas de forma prática,
+              facilitando o acompanhamento do dinheiro.
+            </p>
+          </div>
+          <div class="card-image">
+            <img
+              src="../../img/Controle financeiro 1.png"
+              alt="Controle financeiro"
+            />
+          </div>
+        </div>
 
-				<!-- Menu central (desktop) -->
-				<ul class="menu" id="menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Controle de Gastos</a></li>
-					<li><a href="#">Sobre Nós</a></li>
-					<li><a href="#">Missão</a></li>
-					<li><a href="#">SAC</a></li>
-				</ul>
+        <div class="card-wrapper reverse">
+          <div class="card-text">
+            <h2>Entenda seus hábitos financeiros</h2>
+            <p>
+              Um dos principais diferenciais do Control Money é o quiz de
+              hábitos financeiros. Logo no início da experiência, a pessoa
+              responde algumas perguntas que ajudam a identificar seu
+              comportamento em relação ao dinheiro. Com isso, é possível
+              acompanhar a evolução financeira ao longo do tempo.
+            </p>
+          </div>
+          <div class="card-image">
+            <img
+              src="../../img/Entenda e cultive hábitos 1.png"
+              alt="Hábitos financeiros"
+            />
+          </div>
+        </div>
 
-				<!-- Ícones (direita) -->
-				<div class="nav-icons">
-					<div class="user-icon">
-						<img src="../../img/user.svg" alt="Usuário">
-					</div>
-					<div class="icons" id="DarkMuda">
-						<div class="dark-circulo">
-							<img src="../../img/modoEscuro.svg" alt="Modo Escuro" id="IconsModes">
-						</div>
-					</div>
-				</div>
+        <div class="card-wrapper">
+          <div class="card-text">
+            <h2>Planeje seu futuro financeiro</h2>
+            <p>
+              Com dashboards, relatórios e metas financeiras, a plataforma
+              permite acompanhar o orçamento de forma clara. O sistema também
+              pode emitir alertas quando os gastos ultrapassam o limite,
+              ajudando a evitar dívidas e incentivando hábitos financeiros mais
+              saudáveis.
+            </p>
+          </div>
+          <div class="card-image">
+            <img
+              src="../../img/Planejamento financeiro 1.png"
+              alt="Planejamento financeiro"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
 
-			</div>
+    <div id="footer"></div>
+    <script src="./js/script.js"></script>
 
-			<!-- Menu dropdown mobile (fora do container para ocupar largura total) -->
-			<ul class="menu-mobile" id="menuMobile">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Controle de Gastos</a></li>
-				<li><a href="#">Sobre Nós</a></li>
-				<li><a href="#">Missão</a></li>
-				<li><a href="#">SAC</a></li>
-			</ul>
-		</nav>
-	</header>
+    <script type="module">
+      import Header from "../../components/header/headerComponente.js";
+      new Header({ container: document.body });
+    </script>
 
-	<div class="container">
-		<section class="Title">
-			<h1>Sobre Nós</h1>
-		</section>
+    <script type="module">
+      import Footer from "../../components/footer/footerComponent.js";
 
-		<section class="sobre">
-			<div class="card-wrapper">
-				<div class="card-text">
-					<h2>Controle financeiro de forma simples</h2>
-					<p>
-						O Control Money nasceu com o objetivo de ajudar pessoas a organizarem melhor suas finanças no dia a dia.
-						A plataforma permite registrar receitas e despesas de forma prática, facilitando o acompanhamento do dinheiro.
-					</p>
-				</div>
-				<div class="card-image">
-					<img src="../../img/Controle financeiro 1.png" alt="Controle financeiro">
-				</div>
-			</div>
-
-			<div class="card-wrapper reverse">
-				<div class="card-text">
-					<h2>Entenda seus hábitos financeiros</h2>
-					<p>
-						Um dos principais diferenciais do Control Money é o quiz de hábitos financeiros.
-						Logo no início da experiência, a pessoa responde algumas perguntas que ajudam a identificar seu comportamento em relação ao dinheiro.
-						Com isso, é possível acompanhar a evolução financeira ao longo do tempo.
-					</p>
-				</div>
-				<div class="card-image">
-					<img src="../../img/Entenda e cultive hábitos 1.png" alt="Hábitos financeiros">
-				</div>
-			</div>
-
-			<div class="card-wrapper">
-				<div class="card-text">
-					<h2>Planeje seu futuro financeiro</h2>
-					<p>
-						Com dashboards, relatórios e metas financeiras, a plataforma permite acompanhar o orçamento de forma clara.
-						O sistema também pode emitir alertas quando os gastos ultrapassam o limite, ajudando a evitar dívidas e incentivando hábitos financeiros mais saudáveis.
-					</p>
-				</div>
-				<div class="card-image">
-					<img src="../../img/Planejamento financeiro 1.png" alt="Planejamento financeiro">
-				</div>
-			</div>
-		</section>
-	</div>
-	<script src="./js/script.js"></script>
-</body>
-
+      new Footer({
+        container: document.querySelector("#footer"),
+      });
+    </script>
+  </body>
 </html>

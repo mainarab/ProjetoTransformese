@@ -1,5 +1,7 @@
 @import url(rootSobreNos.css);
 @import url(temaescuro.css);
+@import url(../../../components/header/header.css);
+@import url(../../../components/footer/footer.css);
 
 * {
   margin: 0;
@@ -19,132 +21,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
-}
-
-.navbar {
-  background: var(--color-primary);
-}
-
-.navbar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  gap: 16px;
-}
-
-/* ── Logo ── */
-.logo {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.logo-desktop {
-  width: 180px;
-  display: block;
-}
-
-.logo-mobile {
-  display: none;
-}
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  list-style: none;
-  margin: 0 auto;
-}
-
-.menu a {
-  color: var(--color-white);
-  font-weight: 500;
-  font-size: 15px;
-  padding: 8px 12px;
-  transition: 0.3s;
-  display: block;
-  border-radius: 10px;
-  white-space: nowrap;
-}
-
-.menu a:hover {
-  background: var(--hoverButton-Header);
-  color: var(--text-buttons);
-}
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 8px;
-  flex-shrink: 0;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 24px;
-  height: 2.5px;
-  background: var(--color-white);
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: 0.2s;
-}
-
-.menu-mobile {
-  display: none;
-  flex-direction: column;
-  list-style: none;
-  background: var(--color-primary);
-  padding: 8px 24px 16px;
-}
-
-.menu-mobile.is-open {
-  display: flex;
-}
-
-.menu-mobile a {
-  color: var(--color-white);
-  font-weight: 500;
-  font-size: 15px;
-  padding: 12px;
-  display: inline-block;
-  border-radius: 8px;
-  margin-bottom: 6px;
-}
-
-.menu-mobile a:hover {
-  background: var(--hoverButton-Header);
-  color: var(--text-buttons);
-}
-
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-.icons {
-  width: 110px;
-  height: 42px;
-  background: var(--color-icon-bg);
-  border-radius: 50px;
-  padding: 4px;
-  cursor: pointer;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-}
-.user-icon img {
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
-  transition: 0.3s;
-  filter: brightness(0) invert(1);
-}
-
-.user-icon img:hover {
-  transform: scale(1.1);
 }
 
 body.dark .user-icon img {
