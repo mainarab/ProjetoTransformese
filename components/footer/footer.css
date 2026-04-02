@@ -81,6 +81,14 @@
   border-bottom: 1px solid #d3d6d9;
 }
 
+.phone{
+    content: url(../../img/phone.svg);
+}
+
+.mail{
+    content: url(../../img/emailWhite.svg);
+}
+
 .insta{
     content: url(../../img/insta.svg);
 }

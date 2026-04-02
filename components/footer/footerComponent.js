@@ -16,12 +16,12 @@ export default class Footer {
 
             <div class="contato-lado">   
               <div class="contato-link">
-                <i class="fa-solid fa-phone iconFooter"></i>
+                <img class="phone" src="" alt="celular">
                 <p>(11) 9999-9999</p>
               </div>
 
               <div class="contato-link">
-                <i class="fa-solid fa-envelope iconFooter"></i>
+                <img class="mail" src="" alt="celular">
                 <p>contato@controlmoney.com.br</p>
               </div>
             </div>
