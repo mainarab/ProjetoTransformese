@@ -1,44 +1,53 @@
 body {
-  background-color: #8c8c8c;
+  background: var(--bg-body);
 }
 .campos {
-  background-color: #ebebeb;
+  background-color: var(--card-bg);
   border-radius: 15px;
   margin: 0 auto;
-  max-width: 30%;
+  max-width: 707px;
   padding-bottom: 60px;
+  margin-top: 50px;
+  padding: 20px;
 }
 .titulo {
   text-align: center;
+  color: var(--card-title);
 }
 .subtitulo {
   text-align: justify;
   margin-left: 30px;
+  color: var(--card-title);
+
 }
 .pergunta {
   font-weight: 600;
   margin-bottom: 15px;
+  color: var(--card-title);
+
 }
 .formulario {
   margin-left: 30px;
+  color: var(--card-title);
+
 }
 input[type="radio"] {
   margin-right: 10px;
 }
-#btn-resp {
+
+.bt-resp{
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--btn-bg);
+  color: white;
   border: none;
-  background-color: #bbcffb;
-  padding: 5px;
-  border-radius: 3px;
-  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+font-size: 16px;
+max-width: 133px;
+max-height: 44px;
 }
-.botoes {
-  margin-top: 25px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding-right: 30px;
-}
-.botao {
-  cursor: pointer;
-}
+

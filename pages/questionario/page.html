@@ -4,11 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/questionario.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Questionário</title>
 </head>
 <body>
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="fecharMenu()"></div>
+  <header class="topo">
+
+    <div class="topo-left">
+      <button class="toggleMenu" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="topo-center">
+      <img src="../../img/logo-site.svg" class="logoIMG logo-desktop">
+       <img src="../../img/logo-mobile.svg" class="logoIMG logo-mobile">
+    </div>
+
+    <div class="topo-right">
+      <button onclick="toggleTema()" class="temaBtn">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+       <button class="alertaGasto">
+        <i class="fa-solid fa-bell"></i>
+        <span id="badgeGasto" style="display:none;">1</span>
+      </button>
+    </div>
+
+
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <section class="usuario">
+        <img src="https://i.pravatar.cc/100" id="fotoUsuario">
+        <h2 id="nomeUsuario">Usuário</h2>
+      </section>
+      <nav>
+        <ul>
+
+          <li onclick="mostrarSecao('dashboard')">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+          </li>
+
+          <li onclick="mostrarSecao('transacoes')">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            Transações
+          </li>
+
+          <li onclick="gerarPDF()">
+            <i class="fa-solid fa-chart-pie"></i>
+            Relatórios
+          </li>
+
+          <li>
+            <i class="fa-solid fa-video"></i>
+            Videos
+          </li>
+
+          <li>
+            <a href="../../index.html">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Sair
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+
+    
     <main>
         <div class="campos">
+            <div class="voltar">
+                <img src="../../img/voltar.svg" alt="Botão de Voltar">
+            </div>
             <h1 class="titulo">Quiz Avaliativo</h1>
             <p class="subtitulo">Insira está sua situação financeira. Clique em ver resultado quando terminar.</p>
             <form class="formulario">
@@ -60,12 +134,11 @@
                 <input type="radio" name="objetivosproano" id="sim10"><label for="sim10">Sim</label>
                 <input type="radio" name="objetivosproano" id="nao10"><label for="nao10">Não</label>
                 <input type="radio" name="objetivosproano" id="emparte10"><label for="emparte10">Em parte</label>
-                <div class="botoes">
-                <button class="botao">Voltar</button>
+
                 <button class="bt-resp" id="btn-resp">Ver resultado</button>
-                </div>
             </form>
         </div>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>
