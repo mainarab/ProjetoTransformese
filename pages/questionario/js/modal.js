@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const fundo = document.querySelector(".fundo");
     const botaoFechar = document.querySelector(".fechar");
 
-    console.log(botaoResultado, modal, fundo); // 👈 testa aqui
-
     function mostrarModal(){
         modal.classList.add("active");
         fundo.classList.add("active");
