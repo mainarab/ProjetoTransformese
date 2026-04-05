@@ -85,7 +85,16 @@
 
   --title-color: #ffffff;
   --text-p: #ffffff;
+
+  /* ================= FUNDO RESULTADO ============= */
+  --bg-fundo: rgba(29, 123, 116, 0.5);
+
+    /* ================= TEXTO MODAL RESULTADO ============= */
+--title-cor: #25272A;
+--text-presultado: #25272A;
 }
+ 
+
 
 /*==================MODO ESCURO=================*/
 
@@ -164,7 +173,12 @@ body.dark {
 
   --title-color: #ffffff;
   --text-p: #ffffff;
+
+    /* ================= FECHAR MODAL RESULTADO ============= */
+--btn-fechar: #1D7B74;
 }
+
+
 body.dark {
   /* ================= BODY ================= */
 
@@ -257,4 +271,15 @@ body.dark {
 
   --title-color: #ffffff;
   --text-p: #ffffff;
+
+
+  /* ================= FUNDO RESULTADO ============= */
+  --bg-fundo: rgba(8, 8, 9, 0.5);
+
+    /* ================= TEXTO MODAL RESULTADO ============= */
+--title-cor: #D3D6D9;
+--text-presultado: #D3D6D9;
+
+    /* ================= FECHAR MODAL RESULTADO ============= */
+--btn-fechar: #8E8F8F;
 }
