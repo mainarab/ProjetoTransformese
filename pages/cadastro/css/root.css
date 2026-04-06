@@ -1,0 +1,25 @@
+:root {
+  /* modo claro*/
+  --cdfundo: #2DA8B5;
+  --cdform: #1D7B74;
+  --cdbutton: linear-gradient(90deg, #1D7B74 0%, #2DA8B5 50%, #1D7B74 100%);
+  --cdbuttonhover: linear-gradient(90deg, #2DA8B5 0%, #1D7B74 50%, #2DA8B5 100%);
+  --cdborda: #D3D6D9;
+  --cdraio: radial-gradient(circle, #0C8370 0%, #319795 62%, #2DA8B5 100%);
+  --cdmodo: #B2B3B3;
+  --cdipunt: #D3D6D9;
+  --cdtexto: #D3D6D9;
+}
+
+/*modo dark*/
+.bodyLogin.dark {
+  --cdfundo: #05201E;
+  --cdform: #033F31;
+  --cdbutton: linear-gradient(90deg, #20747D 0%, #1D5D5C 50%, #20747D 100%);
+  --cdbuttonhover: linear-gradient(90deg, #1D5D5C 0%, #20747D 50%, #1D5D5C 100%);
+  --cdborda: #8E8F8F;
+  --cdraio: radial-gradient(circle, #033F31 0%, #05201E 100%);
+  --cdmodo: #696A6B;
+  --cdipunt: #8E8F8F;
+  --cdtexto: #D3D6D9;
+}

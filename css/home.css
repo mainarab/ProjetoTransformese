@@ -219,7 +219,7 @@ body {
   background: var(--bg-header);
   color: #d3d6d9;
   text-decoration: none;
-  border-top: 2px solid #25272a;
+  border-top: 2px solid var(--border-header);
 }
 
 .redes,

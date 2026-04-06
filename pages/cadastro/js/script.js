@@ -1,7 +1,13 @@
-const nome = document.getElementById("nome").value;
+const toggleThemeButton = document.getElementById('toggle-theme');
+const imgModo = document.getElementById('img-modo');
 
-localStorage.setItem("nomeUsuario", nome);
-
-window.location.href = "../pages/questionario/questionario.html";
-
+toggleThemeButton.addEventListener('click', (e) => {
+  e.stopPropagation();
+  document.body.classList.toggle('dark');
+  if (document.body.classList.contains('dark')) {
+    imgModo.src = '../../img/sol.svg';
+  } else {
+    imgModo.src = '../../img/modoEscuro.svg';
+  }
+});
 
