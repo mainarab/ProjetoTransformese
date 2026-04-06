@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../../img/logo-mobile.svg" type="image/x-icon"/>
+    <link
+      rel="shortcut icon"
+      href="../../img/logo-mobile.svg"
+      type="image/x-icon"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=swap"
       rel="stylesheet"
@@ -11,21 +15,18 @@
     <link rel="stylesheet" href="./css/login.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-   <title>Login</title>
+    <title>Login</title>
   </head>
 
   <body>
     <div class="Rectangle_3">
       <div class="logo">
         <div class="btn">
-          <div class="seta"></div>
-          <a href="../../index.html" class="voltar">← Voltar</a>
-
-          <button class="modo">
-            <div class="circulo"></div>
-          </button>
+          <div class="seta"><a href="../../index.html" class="voltar">← Voltar</a></div>
+          
+          <div class="btnTemaComp"></div>
         </div>
 
         <div class="logo_img">
@@ -55,7 +56,9 @@
           </div>
 
           <div class="button">
-            <button class="Rounded_rectangle"><a href="../questionario/page.html">LOGIN</a></button>
+            <button class="Rounded_rectangle">
+              <a href="../questionario/page.html">LOGIN</a>
+            </button>
             <p class="Nao_tem_Cadastro">
               Não tem cadastro? <a href="../cadastro/page.html">Cadastre-se</a>
             </p>
@@ -79,5 +82,11 @@
         </div>
       </div>
     </div>
+
+    <script type="module">
+      import ButtonTema from "../../components/buttonTema/buttonTemaComponente.js";
+
+      new ButtonTema({ container: document.querySelector(".btnTemaComp") });
+    </script>
   </body>
 </html>
