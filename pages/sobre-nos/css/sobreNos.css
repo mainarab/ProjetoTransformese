@@ -1,5 +1,4 @@
 @import url(rootSobreNos.css);
-@import url(temaescuro.css);
 @import url(../../../components/header/header.css);
 @import url(../../../components/footer/footer.css);
 
@@ -147,31 +146,6 @@ img {
 @media (max-width: 900px) {
   .container {
     padding: 0 20px;
-  }
-
-  .menu-toggle {
-    display: block;
-    order: 1;
-  }
-  .logo {
-    order: 2;
-    margin-left: auto;
-  }
-  .nav-icons {
-    display: none;
-  }
-  .logo-desktop {
-    display: none;
-  }
-
-  .logo-mobile {
-    display: block;
-    width: 52px;
-    height: auto;
-  }
-
-  .menu {
-    display: none;
   }
 
   .sobre {

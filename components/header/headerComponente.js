@@ -4,9 +4,8 @@ export default class Header {
     this.render();
     this.cacheElements();
     this.addEventListeners();
+    this.updateIcons();
   }
-
-  
 
   render() {
     this.container.insertAdjacentHTML(
@@ -15,7 +14,6 @@ export default class Header {
       <header class="header">
         <div class="headerContainer">
           <i class="fa-solid fa-bars iconHeader" id="menuHamburguer"></i>
-
           <img class="logo" src="" alt="Logo" />
 
           <nav class="menu" id="menuDesktop">
@@ -32,13 +30,17 @@ export default class Header {
             <a href="/ProjetoTransformese/pages/login/page.html">
               <i class="fa-regular fa-user iconHeader"></i>
             </a>
-            <button class="toggleDark">
-              <i class="fa-solid fa-moon iconHeader"></i>
-            </button>
+
+            <div class="btnTema">
+              <div class="iconTema">
+                <i class="fa-solid fa-moon iconBtnTema"></i>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
+      <!-- Menu mobile -->
       <div class="containerMobile">
         <div id="menuClose">
           <i class="fa-solid fa-x iconHeader"></i>
@@ -62,9 +64,11 @@ export default class Header {
               </li>
             </ul>
 
-            <button class="toggleDark">
-              <i class="fa-solid fa-moon iconHeader"></i>
-            </button>
+            <div class="btnTema">
+              <div class="iconTema">
+                <i class="fa-solid fa-moon iconBtnTema"></i>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
@@ -72,17 +76,16 @@ export default class Header {
     );
   }
 
-  
-
   cacheElements() {
     this.menuHamburguer = this.container.querySelector("#menuHamburguer");
-    this.menuClose = this.container.querySelector("#menuClose i"); // pegar o ícone diretamente
+    this.menuClose = this.container.querySelector("#menuClose i");
     this.containerMobile = this.container.querySelector(".containerMobile");
-    this.toggleButtons = this.container.querySelectorAll(".toggleDark");
+
+    this.toggleButtons = this.container.querySelectorAll(".btnTema");
   }
 
   addEventListeners() {
-    // Abrir menu
+    // Abrir menu mobile
     this.menuHamburguer.addEventListener("click", (e) => {
       e.stopPropagation();
       this.containerMobile.classList.add("ativo");
@@ -94,9 +97,9 @@ export default class Header {
       document.body.style.overflow = "hidden";
     });
 
-    // Fechar menu com X
+    // Fechar menu mobile
     this.menuClose.addEventListener("click", (e) => {
-      e.stopPropagation(); // impede clique do X de acionar "clique fora"
+      e.stopPropagation();
       this.closeMenu();
     });
 
@@ -111,12 +114,31 @@ export default class Header {
       }
     });
 
-    // Alternar tema
+
+    // Alternar tema ao clicar
     this.toggleButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
         document.body.classList.toggle("dark");
+        this.updateIcons();
       });
+    });
+  }
+
+  // Atualiza os ícones de todos os botões de tema de acordo com o body
+  updateIcons() {
+    const isDark = document.body.classList.contains("dark");
+    this.toggleButtons.forEach((btn) => {
+      const icon = btn.querySelector(".iconBtnTema");
+      if (isDark) {
+        btn.classList.add("btnTemaDark");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        btn.classList.remove("btnTemaDark");
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
     });
   }
 
