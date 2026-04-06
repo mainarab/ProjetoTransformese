@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/questionario.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Questionário</title>
@@ -80,9 +81,11 @@
     
     <main>
         <div class="campos">
+          <a href="../controle-de-gasto/controledegastos.html">
             <div class="voltar">
-                <img src="../../img/voltar.svg" alt="Botão de Voltar">
+                <img src="../../img/voltar.svg" alt="Botão de Voltar" >
             </div>
+          </a>
             <h1 class="titulo">Quiz Avaliativo</h1>
             <p class="subtitulo">Insira está sua situação financeira. Clique em ver resultado quando terminar.</p>
             <form class="formulario">
@@ -135,10 +138,23 @@
                 <input type="radio" name="objetivosproano" id="nao10"><label for="nao10">Não</label>
                 <input type="radio" name="objetivosproano" id="emparte10"><label for="emparte10">Em parte</label>
 
-                <button class="bt-resp" id="btn-resp">Ver resultado</button>
+                <button type="button" class="bt-resp" id="btn-resp">Ver resultado</button>
             </form>
+      
         </div>
     </main>
+          <div class="fundo">
+  <div class="modal" >
+    <button class="fechar">X</button>
+    <h2 class="titulo">Parabéns!</h2>
+    <p class="subTitulo">Com base nas respostas, você apresenta um perfil financeiro muito disciplinado e estável,  isso é excelente.</p>
+    <form action="../controle-de-gasto/controledegastos.html">
+    <button class="btnSair">Ir para Controle de gastos</button>
+    </form>
+  </div>
+</div>
+
     <script src="./js/script.js"></script>
+    <script src="./js/modal.js" defer></script>
 </body>
 </html>
