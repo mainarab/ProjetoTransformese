@@ -22,7 +22,7 @@ export default class Footer {
 
               <div class="contato-link">
                 <img class="mail" src="" alt="celular">
-                <p>contolMoney@proton.me"</p>
+                <p>contolMoney@proton.me</p>
               </div>
             </div>
           </div>
