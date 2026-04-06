@@ -1,5 +1,6 @@
 @import url(../css/root.css);
 @import url(../components/header/header.css);
+@import url(../components/footer/footer.css);
 
 * {
   margin: 0;
@@ -201,127 +202,6 @@ body {
   margin-top: 40px;
 }
 
-/* ================= FOOTER ================= */
-.footer {
-  box-sizing: border-box;
-  display: flex;
-  max-width: 1440px;
-  margin: auto;
-  padding: 20px;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-.cm-footer {
-  width: 100%;
-  background: var(--bg-header);
-  color: #d3d6d9;
-  text-decoration: none;
-  border-top: 2px solid var(--border-header);
-}
-
-.redes,
-.outros {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-self: center;
-}
-
-h2 {
-  display: flex;
-  font-weight: 600;
-  font-size: 20px;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-
-.contato h2 {
-  justify-content: flex-start;
-}
-
-.contato-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.contato-lado {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.redes ul {
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  font-size: 16px;
-  list-style: none;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.redes,
-.outros a {
-  text-decoration: none;
-  color: #d3d6d9;
-}
-
-.outros ul {
-  line-height: 2.1;
-  font-size: 16px;
-  margin: 20px 0px;
-  list-style: none;
-}
-
-.outros a:hover {
-  background: var(--hoverButton-Header);
-  color: var(--text-buttons);
-}
-
-/*====== mobile=====*/
-@media (max-width: 1000px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-}
-
-@media (max-width: 440px) {
-  .footer {
-    align-items: center;
-    flex-direction: column;
-    gap: 24px;
-    padding: 40px 20px;
-  }
-
-  .contato,
-  .outros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .contato-lado {
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  .contato h2 {
-    align-self: center;
-    justify-content: center;
-    text-align: center;
-  }
-}
 
 /* ================= ANIMAÇÕES ================= */
 
@@ -413,8 +293,5 @@ h2 {
     align-items: center;
   }
 
-  .footer {
-    flex-direction: column;
-    text-align: center;
-  }
+
 }

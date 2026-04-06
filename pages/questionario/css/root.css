@@ -1,0 +1,285 @@
+:root {
+  /* ================= BODY ================= */
+
+  --bg-body: rgba(239, 238, 238, 1);
+  --text-body: rgba(37, 39, 42, 1);
+
+  /* ================= TOPO ================= */
+
+  --bg-topo: rgba(29, 123, 116, 1);
+  --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  /* ================= BOTÕES ================= */
+
+  --btn-bg: rgba(29, 123, 116, 1);
+  --btn-text: #ffffff;
+  --btn-hover: #145048;
+
+  --bg-btn: rgba(29, 123, 116, 1);
+  --bg-btn-hover: #145048;
+
+  /* ================= SIDEBAR ================= */
+
+  --bg-sidebar: rgba(29, 123, 116, 1);
+  --text-sidebar: #ffffff;
+  --border-sidebar: #145048;
+  --bg-hover-menu: #145048;
+
+  /* ================= CARDS ================= */
+
+  --card-bg: rgba(211, 214, 217);
+  --text-card: rgb(0, 0, 0);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(211, 214, 217);
+  --card-title: #000000;
+  --card-info: #000000;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* ================= RESUMO ================= */
+
+  --resume-entrada: rgba(3, 152, 85, 1);
+  --resume-saida: rgba(221, 19, 19, 1);
+  --resume-total: rgba(45, 168, 181, 1);
+
+  /* ================= TABELA ================= */
+
+  --bg-table-box: rgba(229, 231, 233, 1);
+  --bg-table: rgba(229, 231, 233, 1);
+  --text-table: rgba(37, 39, 42, 1);
+  --bg-thead: rgba(45, 168, 181, 1);
+  --thead-bg: #1a6b5e00;
+  --thead-text: rgb(0, 0, 0);
+  --tr-border: #fafafa;
+  --tr-hover: #f0faf8;
+  --tr-color: rgba(211, 214, 217);
+  --icon-edit: rgba(29, 123, 116, 1);
+  --icon-delete: rgba(221, 19, 19, 1);
+
+  /* ================= SCROLL ================= */
+
+  --scroll-thumb: rgba(45, 168, 181);
+  --scroll-track: rgba(190, 220, 223);
+
+  /* ================= MODAL ================= */
+
+  --bg-modal: rgba(45, 168, 181, 1);
+  --text-close: #333;
+
+  /* ================= INPUT ================= */
+
+  --input-border: #ccc;
+  --input-bg: #ffffff;
+
+  /* ================= ALERTA ================= */
+
+  --badge-bg: red;
+  --badge-text: white;
+
+  /* ================= CAROUSEL ================= */
+
+  --slide-btn-bg: rgba(26, 107, 94, 0.15);
+  --slide-btn-color: #1a6b5e;
+  --slide-btn-hover: rgba(26, 107, 94, 0.28);
+
+  /* ================= TEXTOS ================= */
+
+  --title-color: #ffffff;
+  --text-p: #ffffff;
+
+  /* ================= FUNDO RESULTADO ============= */
+  --bg-fundo: rgba(29, 123, 116, 0.5);
+
+    /* ================= TEXTO MODAL RESULTADO ============= */
+--title-cor: #25272A;
+--text-presultado: #25272A;
+}
+ 
+
+
+/*==================MODO ESCURO=================*/
+
+body.dark {
+  /* ================= BODY ================= */
+
+  --bg-body: #0f172a;
+  --text-body: #e2e8f0;
+
+  /* ================= TOPO ================= */
+
+  --bg-topo: #0d4a40;
+  --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+
+  /* ================= SIDEBAR ================= */
+
+  --bg-sidebar: #0d4a40;
+  --text-sidebar: #f8f8f8;
+  --border-sidebar: #1a6b5e;
+  --bg-hover-menu: #1a6b5e;
+
+  /* ================= CARDS ================= */
+
+  --bg-card: #1e293b;
+  --text-card: #e2e8f0;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  --card-bg: #1e293b;
+  --card-title: #e2e8f0;
+  --card-info: #cbd5e1;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+  /* ================= TABELA ================= */
+
+  --bg-table: #1e293b;
+  --text-table: #e2e8f0;
+
+  --bg-table-box: #1e293b;
+  --bg-thead: #0d4a40;
+
+  --thead-bg: #0d4a40;
+  --thead-text: #ffffff;
+  --tr-border: #334155;
+  --tr-hover: #1a3a35;
+
+  /* ================= SCROLL ================= */
+
+  --scroll-thumb: #1a6b5e;
+  --scroll-track: #1e293b;
+
+  /* ================= MODAL ================= */
+
+  --bg-modal: #1e293b;
+  --text-close: #ffffff;
+
+  /* ================= INPUT ================= */
+
+  --input-bg: #1e293b;
+  --input-border: #1a6b5e;
+  --input-text: #e2e8f0;
+  --input-placeholder: #94a3b8;
+
+  /* ================= ALERTA ================= */
+
+  --badge-bg: #ef4444;
+  --badge-text: #ffffff;
+
+  /* ================= CAROUSEL ================= */
+
+  --slide-btn-bg: rgba(26, 107, 94, 0.4);
+  --slide-btn-color: #ffffff;
+  --slide-btn-hover: rgba(26, 107, 94, 0.65);
+
+  /* ================= TEXTOS ================= */
+
+  --title-color: #ffffff;
+  --text-p: #ffffff;
+
+    /* ================= FECHAR MODAL RESULTADO ============= */
+--btn-fechar: #1D7B74;
+}
+
+
+body.dark {
+  /* ================= BODY ================= */
+
+  --bg-body: #000000;
+  --text-body: #e2e8f0;
+
+  /* ================= TOPO ================= */
+
+  --bg-topo: #033127;
+  --shadow-topo: 0 2px 10px rgba(0, 0, 0, 0.6);
+
+  /* ================= BOTÕES ================= */
+
+  --btn-bg: rgba(3, 63, 49, 1);
+  --btn-text: #ffffff;
+  --btn-hover: #145048;
+
+  --bg-btn: rgba(3, 63, 49, 1);
+  --bg-btn-hover: #145048;
+
+  /* ================= SIDEBAR ================= */
+
+  --bg-sidebar: rgba(3, 63, 49, 1);
+  --text-sidebar: rgb(255, 255, 255);
+  --border-sidebar: #1a4a3e;
+  --bg-hover-menu: rgb(104, 184, 165);
+
+  /* ================= CARDS ================= */
+
+  --bg-card: rgba(37, 39, 42, 1);
+  --text-card: rgba(211, 214, 217, 1);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+  --card-bg: rgba(37, 39, 42, 1);
+  --card-title: #fcfcfc;
+  --card-info: #ffffff;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+
+  /* ================= RESUMO ================= */
+
+  --resume-entrada: rgba(10, 87, 21, 1);
+  --resume-saida: rgba(178, 13, 13, 1);
+  --resume-total: rgba(32, 116, 125, 1);
+
+  /* ================= TABELA ================= */
+
+  --bg-table: rgb(255, 255, 255);
+  --text-table: #fcfcfc;
+
+  --bg-table-box: #000000;
+  --bg-thead: rgba(3, 63, 49, 1);
+
+  --thead-bg: #207e69;
+  --thead-text: #ffffff;
+  --tr-border: rgba(3, 63, 49, 1);
+  --tr-hover: rgb(0, 0, 0);
+  --tr-color: rgba(37, 39, 42);
+  --icon-edit: #939695;
+  --icon-delete: #f87171;
+
+  /* ================= SCROLL ================= */
+
+  --scroll-thumb: #1d7b74;
+  --scroll-track: #0a1f1a;
+
+  /* ================= MODAL ================= */
+
+  --bg-modal: #0f2d25;
+  --text-close: #c8ddd8;
+
+  /* ================= INPUT ================= */
+
+  --input-bg: #0e0d0d;
+  --input-border: #ffffff;
+  --input-text: #ffffff;
+  --input-placeholder: #ffffff;
+
+  /* ================= ALERTA ================= */
+
+  --badge-bg: #ef4444;
+  --badge-text: #ffffff;
+
+  /* ================= CAROUSEL ================= */
+
+  --slide-btn-bg: rgba(29, 123, 116, 0.35);
+  --slide-btn-color: #ffffff;
+  --slide-btn-hover: rgba(29, 123, 116, 0.6);
+
+  /* ================= TEXTOS ================= */
+
+  --title-color: #ffffff;
+  --text-p: #ffffff;
+
+
+  /* ================= FUNDO RESULTADO ============= */
+  --bg-fundo: rgba(8, 8, 9, 0.5);
+
+    /* ================= TEXTO MODAL RESULTADO ============= */
+--title-cor: #D3D6D9;
+--text-presultado: #D3D6D9;
+
+    /* ================= FECHAR MODAL RESULTADO ============= */
+--btn-fechar: #8E8F8F;
+}

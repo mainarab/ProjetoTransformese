@@ -1,0 +1,153 @@
+.footer {
+  box-sizing: border-box;
+  display: flex;
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-contact h3{
+margin-bottom: 10px;
+}
+
+.cm-footer {
+  width: 100%;
+  background: var(--bg-header);
+  color: #d3d6d9;
+  text-decoration: none;
+  border-top: 2px solid #25272a;
+}
+
+.redes,
+.outros {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: center;
+}
+
+.h2Redes {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+.contato h2 {
+  justify-content: flex-start;
+}
+
+.contato-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.contato-lado {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.redes ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  font-size: 16px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.redes,
+.outros a {
+  text-decoration: none;
+  color: #d3d6d9;
+}
+
+.outros ul {
+  line-height: 2.1;
+  font-size: 16px;
+  margin: 20px 0px;
+  list-style: none;
+}
+
+.outros ul li a:hover {
+  color: var(--text-buttons);
+  border-bottom: 1px solid #d3d6d9;
+}
+
+.phone{
+    content: url(../../img/phone.svg);
+}
+
+.mail{
+    content: url(../../img/emailWhite.svg);
+}
+
+.insta{
+    content: url(../../img/insta.svg);
+}
+
+.facebook{
+    content: url(../../img/face.svg);
+}
+
+.x{
+    content: url(../../img/x.svg);
+}
+.youtube{
+    content: url(../../img/youtube.svg);
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .contato-lado{
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 440px) {
+  .footer {
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 20px;
+  }
+
+  .contato,
+  .outros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contato h2 {
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
