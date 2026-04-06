@@ -50,13 +50,13 @@ export default class Header {
             <li><a href="/ProjetoTransformese/pages/login/page.html">Controle de gastos</a></li>
             <li><a href="/ProjetoTransformese/pages/sobre-nos/page.html">Sobre nós</a></li>
             <li><a href="#">Missão</a></li>
-            <li><a href="pages/sac/page.html">SAC</a></li>
+            <li><a href="/ProjetoTransformese/pages/sac/page.html">SAC</a></li>
           </ul>
 
           <div class="IconsMobile">
             <ul>
               <li>
-                <a class="conta" href="pages/login/page.html">
+                <a class="conta" href="/ProjetoTransformese/pages/login/page.html">
                   <i class="fa-regular fa-user iconHeader"></i>Adicionar conta
                 </a>
               </li>

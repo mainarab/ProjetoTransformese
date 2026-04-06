@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-body);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -78,9 +78,9 @@ textarea {
 }
 
 .btn {
-  margin-top: 10px;
-  padding: 12px;
-  border: none;
+  padding: 15px 20px;
+  border: 0.5px solid #d3d6d9;
+  border-radius: 15px;
   background: var(--cor-botao);
   color: var(--color-btn);
   font-size: 16px;

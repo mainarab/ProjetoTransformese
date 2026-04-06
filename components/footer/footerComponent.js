@@ -31,7 +31,7 @@ export default class Footer {
             <h2 class="h2Redes">Redes Sociais</h2>
             <nav aria-label="Redes Sociais">
               <ul>
-                <li><a href="#"><img class="insta" src="" alt="Instagram"></a></li>
+                <li><a href="https://www.instagram.com/ctrl.moneyy/"><img class="insta" src="" alt="Instagram"></a></li>
                 <li><a href="#"><img class="facebook" src="" alt="Facebook"></a></li>
                 <li><a href="#"><img class="x" src="" alt=""></a></li>
                 <li><a href="#"><img class="youtube" src="" alt="Youtube"></a></li>
@@ -45,7 +45,7 @@ export default class Footer {
                 <li><a href="/ProjetoTransformese/pages/login/page.html">Controle de gastos</a></li>
                 <li><a href="/ProjetoTransformese/pages/sobre-nos/page.html">Sobre nós</a></li>
                 <li><a href="#">Missão</a></li>
-                <li><a href="pages/sac/page.html">SAC</a></li>
+                <li><a href="/ProjetoTransformese/pages/sac/page.html">SAC</a></li>
               </ul>
             </nav>
           </div>

@@ -1,8 +1,9 @@
 :root {
+  --cor-body:#EFEEEE;
   --cor-primaria: rgba(12, 131, 112, 1);
-  --cor-card: rgba(211, 214, 217, 1);
-  --cor-botao: linear-gradient(rgba(29, 123, 116, 1), rgba(45, 168, 181, 1));
-  --cor-botao-hover: rgba(49, 151, 149, 0.7);
+  --cor-card: rgba(12, 131, 112, 1);
+  --cor-botao: linear-gradient(105deg, #1D7B74 0%, #2DA8B5 100%);;
+  --cor-botao-hover: linear-gradient(-105deg, #1D7B74 0%, #2DA8B5 100%);
   --cor-titulo: rgba(0, 0, 0, 0.7);
   --cor-texto: rgba(0, 0, 0, 0.7);
   --cor-label:rgba(0, 0, 0, 0.7);
@@ -19,10 +20,11 @@
 }
 
 body.dark {
+  --cor-body:rgba(8, 8, 9, 1);
   --cor-primaria: rgba(8, 8, 9, 1);
   --cor-card: rgba(5, 32, 30, 1);
-  --cor-botao: linear-gradient(rgba(29, 123, 116, 1), rgba(45, 168, 181, 1));
-  --cor-botao-hover: rgba(3, 63, 49, 1);
+  --cor-botao: linear-gradient(105deg, #1D5D5C 0%, #05201E 100%);
+  --cor-botao-hover: linear-gradient(-105deg, #1D5D5C 0%, #05201E 100%);
   --cor-titulo: rgba(211, 214, 217, 1);
   --cor-texto: rgba(211, 214, 217, 1);
   --cor-label: rgba(211, 214, 217, 1);
