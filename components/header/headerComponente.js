@@ -1,10 +1,15 @@
 export default class Header {
   constructor({ container }) {
     this.container = container;
+    this.prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
     this.render();
     this.cacheElements();
     this.addEventListeners();
-    this.updateIcons();
+    this.applySystemTheme(this.prefersDark.matches);
+    this.prefersDark.addEventListener("change", (e) => {
+      this.applySystemTheme(e.matches);
+    });
   }
 
   render() {
@@ -40,7 +45,6 @@ export default class Header {
         </div>
       </header>
 
-      <!-- Menu mobile -->
       <div class="containerMobile">
         <div id="menuClose">
           <i class="fa-solid fa-x iconHeader"></i>
@@ -80,7 +84,6 @@ export default class Header {
     this.menuHamburguer = this.container.querySelector("#menuHamburguer");
     this.menuClose = this.container.querySelector("#menuClose i");
     this.containerMobile = this.container.querySelector(".containerMobile");
-
     this.toggleButtons = this.container.querySelectorAll(".btnTema");
   }
 
@@ -114,32 +117,32 @@ export default class Header {
       }
     });
 
-
-    // Alternar tema ao clicar
     this.toggleButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
-        document.body.classList.toggle("dark");
-        this.updateIcons();
+        this.toggleTheme();
       });
     });
   }
 
-  // Atualiza os ícones de todos os botões de tema de acordo com o body
-  updateIcons() {
-    const isDark = document.body.classList.contains("dark");
+  toggleTheme() {
+    const isDark = document.body.classList.toggle("dark");
+    this.updateIcons(isDark);
+  }
+
+  updateIcons(isDark = document.body.classList.contains("dark")) {
     this.toggleButtons.forEach((btn) => {
       const icon = btn.querySelector(".iconBtnTema");
-      if (isDark) {
-        btn.classList.add("btnTemaDark");
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-      } else {
-        btn.classList.remove("btnTemaDark");
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-      }
+      btn.classList.toggle("btnTemaDark", isDark);
+      icon.classList.toggle("fa-moon", !isDark);
+      icon.classList.toggle("fa-sun", isDark);
     });
+  }
+
+  applySystemTheme(isDark) {
+    // Só aplica se o usuário ainda não clicou para alternar manualmente
+    document.body.classList.toggle("dark", isDark);
+    this.updateIcons(isDark);
   }
 
   closeMenu() {
