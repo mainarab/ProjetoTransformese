@@ -25,6 +25,12 @@
 );
 
 --hover-link: #B2B3B3;
+--bg-gradient-mobile:radial-gradient(
+  circle,
+  #0c8370 0%,
+  #319795 30%,
+  #2da8b5 50%
+);
 }
 
 body.dark {
@@ -52,4 +58,9 @@ body.dark {
   #1D5D5C 96%
 );
 --hover-link: #B2B3B3;
+--bg-gradient-mobile: radial-gradient(
+    circle,
+    #033f31 0%,
+    #05201e 50% 
+  );
 }
