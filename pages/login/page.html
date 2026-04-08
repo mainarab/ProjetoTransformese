@@ -3,29 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../../img/logo-mobile.svg" type="image/x-icon"/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=swap"
-      rel="stylesheet"
+      rel="shortcut icon"
+      href="../../img/logo-mobile.svg"
+      type="image/x-icon"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="./css/login.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-   <title>Login</title>
+    <title>Login</title>
   </head>
 
   <body>
-    <div class="Rectangle_3">
+    <main class="Rectangle_3">
       <div class="logo">
         <div class="btn">
-          <div class="seta"></div>
-          <a href="../../index.html" class="voltar">← Voltar</a>
-
-          <button class="modo">
-            <div class="circulo"></div>
-          </button>
+          <div class="seta"><a href="../../index.html" class="voltar">← Voltar</a></div>
+          
+          <div class="btnTemaComp"></div>
         </div>
 
         <div class="logo_img">
@@ -37,27 +37,27 @@
 
       <div class="Cadastro">
         <div class="alinhamento">
-          <h2 class="LOGIN_Title">LOGIN</h2>
+          <h2 class="LOGIN_Title">Login</h2>
 
           <div class="email">
             <label class="EMAIL_label">E-mail</label>
             <div class="Rectangle_1">
-              <input type="email" placeholder="seu@email.com" />
+              <input type="email" placeholder="nome@email.com" />
             </div>
           </div>
 
           <div class="Senha">
             <label class="SENHA_label">Senha</label>
             <div class="Rectangle_2">
-              <input type="password" placeholder="********" />
+              <input type="password" placeholder="Senha@123" />
             </div>
             <a href="#" class="Esqueceu_a_Senha">Esqueceu a senha?</a>
           </div>
 
           <div class="button">
-            <button class="Rounded_rectangle"><a href="../questionario/page.html">LOGIN</a></button>
+              <a class="Rounded_rectangle" href="../questionario/page.html">LOGIN</a>
             <p class="Nao_tem_Cadastro">
-              Não tem cadastro? <a href="../cadastro/page.html">Cadastre-se</a>
+              Não tem conta? <a href="../cadastro/page.html">Cadastre-se</a>
             </p>
           </div>
 
@@ -67,17 +67,19 @@
             <p>Ou entre com:</p>
 
             <div class="Frame_3">
-              <div class="google_icon">
-                <i class="fa-brands fa-google"></i>
-              </div>
+                <img class="google_icon" src="../../img/google.svg" alt="logo Google">
 
-              <div class="apple_icon">
-                <i class="fa-brands fa-apple"></i>
-              </div>
+              <img class="apple_icon" src="../../img/apple.svg" alt="logo apple">
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script type="module">
+      import ButtonTema from "../../components/buttonTema/buttonTemaComponente.js";
+
+      new ButtonTema({ container: document.querySelector(".btnTemaComp") });
+    </script>
   </body>
 </html>

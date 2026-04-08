@@ -1,12 +1,16 @@
 export default class Header {
   constructor({ container }) {
     this.container = container;
+    this.prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
     this.render();
     this.cacheElements();
     this.addEventListeners();
+    this.applySystemTheme(this.prefersDark.matches);
+    this.prefersDark.addEventListener("change", (e) => {
+      this.applySystemTheme(e.matches);
+    });
   }
-
-  
 
   render() {
     this.container.insertAdjacentHTML(
@@ -15,7 +19,6 @@ export default class Header {
       <header class="header">
         <div class="headerContainer">
           <i class="fa-solid fa-bars iconHeader" id="menuHamburguer"></i>
-
           <img class="logo" src="" alt="Logo" />
 
           <nav class="menu" id="menuDesktop">
@@ -32,9 +35,12 @@ export default class Header {
             <a href="/ProjetoTransformese/pages/login/page.html">
               <i class="fa-regular fa-user iconHeader"></i>
             </a>
-            <button class="toggleDark">
-              <i class="fa-solid fa-moon iconHeader"></i>
-            </button>
+
+            <div class="btnTema">
+              <div class="iconTema">
+                <i class="fa-solid fa-moon iconBtnTema"></i>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -62,9 +68,11 @@ export default class Header {
               </li>
             </ul>
 
-            <button class="toggleDark">
-              <i class="fa-solid fa-moon iconHeader"></i>
-            </button>
+            <div class="btnTema">
+              <div class="iconTema">
+                <i class="fa-solid fa-moon iconBtnTema"></i>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
@@ -72,17 +80,15 @@ export default class Header {
     );
   }
 
-  
-
   cacheElements() {
     this.menuHamburguer = this.container.querySelector("#menuHamburguer");
-    this.menuClose = this.container.querySelector("#menuClose i"); // pegar o ícone diretamente
+    this.menuClose = this.container.querySelector("#menuClose i");
     this.containerMobile = this.container.querySelector(".containerMobile");
-    this.toggleButtons = this.container.querySelectorAll(".toggleDark");
+    this.toggleButtons = this.container.querySelectorAll(".btnTema");
   }
 
   addEventListeners() {
-    // Abrir menu
+    // Abrir menu mobile
     this.menuHamburguer.addEventListener("click", (e) => {
       e.stopPropagation();
       this.containerMobile.classList.add("ativo");
@@ -94,9 +100,9 @@ export default class Header {
       document.body.style.overflow = "hidden";
     });
 
-    // Fechar menu com X
+    // Fechar menu mobile
     this.menuClose.addEventListener("click", (e) => {
-      e.stopPropagation(); // impede clique do X de acionar "clique fora"
+      e.stopPropagation();
       this.closeMenu();
     });
 
@@ -111,13 +117,32 @@ export default class Header {
       }
     });
 
-    // Alternar tema
     this.toggleButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
-        document.body.classList.toggle("dark");
+        this.toggleTheme();
       });
     });
+  }
+
+  toggleTheme() {
+    const isDark = document.body.classList.toggle("dark");
+    this.updateIcons(isDark);
+  }
+
+  updateIcons(isDark = document.body.classList.contains("dark")) {
+    this.toggleButtons.forEach((btn) => {
+      const icon = btn.querySelector(".iconBtnTema");
+      btn.classList.toggle("btnTemaDark", isDark);
+      icon.classList.toggle("fa-moon", !isDark);
+      icon.classList.toggle("fa-sun", isDark);
+    });
+  }
+
+  applySystemTheme(isDark) {
+    // Só aplica se o usuário ainda não clicou para alternar manualmente
+    document.body.classList.toggle("dark", isDark);
+    this.updateIcons(isDark);
   }
 
   closeMenu() {

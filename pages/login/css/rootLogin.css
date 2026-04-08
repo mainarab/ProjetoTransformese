@@ -1,0 +1,66 @@
+:root {
+  --bg-body: #2da8b5;
+--bg-gradient: radial-gradient(
+  circle,
+  #0c8370 0%,
+  #319795 50%,
+  #2da8b5 70%
+);
+  --bg-login: #1D7B74;
+  --color-text: #D3D6D9;
+  --color-input:#1D7B74;
+  --bg-input:#D3D6D9;
+  --color-placeholder:#696A6B;
+  --btn-login: linear-gradient(
+  105deg,
+  #1D7B74 0%,
+  #2DA8B5 50%,
+  #1D7B74 100%
+);
+  --btn-login-hover: linear-gradient(
+  105deg,
+  #2DA8B5 0%,
+  #1D7B74 50%,
+  #2DA8B5 100%
+);
+
+--hover-link: #B2B3B3;
+--bg-gradient-mobile:radial-gradient(
+  circle,
+  #0c8370 0%,
+  #319795 30%,
+  #2da8b5 50%
+);
+}
+
+body.dark {
+  --bg-body: #05201e;
+  --bg-gradient: radial-gradient(
+    circle,
+    #033f31 0%,
+    #05201e 70% 
+  );
+  --bg-login: #033F31;
+  --color-text: #D3D6D9;
+  --color-input:#033F31;
+  --bg-input:#8E8F8F;
+  --color-placeholder:#B2B3B3;
+  --btn-login: linear-gradient(
+  105deg,
+  #20747D 0%,
+  #1D5D5C 48%,
+  #20747D 96%
+);
+  --btn-login-hover: linear-gradient(
+  105deg,
+  #1D5D5C 0%,
+  #20747D 48%,
+  #1D5D5C 96%
+);
+--hover-link: #B2B3B3;
+--bg-gradient-mobile: radial-gradient(
+    circle,
+    #033f31 0%,
+    #05201e 50% 
+  );
+}
