@@ -39,5 +39,5 @@ btnCadastrar.addEventListener("click", function(e) {
   // Levando para a pagina do questionario
   localStorage.setItem("nomeUsuario", nome);
   alert("Cadastro realizado com sucesso! Bem-vindo(a), " + nome + "!");
-  window.location.href = "../pages/questionario/questionario.html";
+  window.location.href = "../questionario/page.html";
 });
