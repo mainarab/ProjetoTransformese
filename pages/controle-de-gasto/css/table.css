@@ -49,7 +49,9 @@
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  transition: background 0.2s, transform 0.1s;
+  transition:
+    background 0.2s,
+    transform 0.1s;
   white-space: nowrap;
 }
 
@@ -57,8 +59,28 @@
   background: var(--btn-hover);
   transform: scale(1.03);
 }
+
+/* Wrapper para scroll horizontal da tabela */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  height: 4px;
+}
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 10px;
+}
+.tableWrapper::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
 table {
   width: 100%;
+  min-width: 480px; /* largura mínima para não comprimir colunas */
   border-collapse: collapse;
   color: var(--text-table);
 }
@@ -154,7 +176,8 @@ tbody::-webkit-scrollbar-track {
     font-size: 18px;
     border-radius: 12px;
   }
-  th, td {
+  th,
+  td {
     padding: 20px 24px;
     font-size: 18px;
   }
@@ -170,7 +193,6 @@ tbody::-webkit-scrollbar-track {
   }
 }
 @media (min-width: 1440px) and (max-width: 2559px) {
-
   .divTable {
     border-radius: 12px;
     padding: 20px;
@@ -194,7 +216,8 @@ tbody::-webkit-scrollbar-track {
     border-radius: 10px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 16px 18px;
     font-size: 15px;
   }
@@ -227,7 +250,8 @@ tbody::-webkit-scrollbar-track {
     padding: 9px 22px;
     font-size: 14px;
   }
-  th, td {
+  th,
+  td {
     padding: 13px 12px;
     font-size: 14px;
   }
@@ -257,7 +281,8 @@ tbody::-webkit-scrollbar-track {
     font-size: 13px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 10px 8px;
     font-size: 13px;
   }
@@ -271,7 +296,6 @@ tbody::-webkit-scrollbar-track {
   }
 }
 @media (max-width: 768px) {
-
   .divTable {
     padding: 10px;
     border-radius: 8px;
@@ -299,8 +323,9 @@ tbody::-webkit-scrollbar-track {
     border-radius: 8px;
   }
 
-  th, td {
-    padding: 9px 6px;
+  th,
+  td {
+    padding: 9px 8px;
     font-size: 13px;
   }
 
@@ -313,21 +338,18 @@ tbody::-webkit-scrollbar-track {
     padding: 3px 5px;
   }
 
-  /* Oculta coluna menos crítica */
-  .columnType {
-    display: none;
+  table {
+    min-width: 480px;
   }
 }
 @media (max-width: 500px) {
-
   .divTable {
     padding: 8px;
     border-radius: 8px;
-    overflow-x: auto;
   }
 
   table {
-    min-width: 320px;
+    min-width: 420px;
   }
 
   #formTransacao {
@@ -346,8 +368,9 @@ tbody::-webkit-scrollbar-track {
     font-size: 14px;
   }
 
-  th, td {
-    padding: 8px 5px;
+  th,
+  td {
+    padding: 8px 6px;
     font-size: 12px;
   }
 
@@ -363,19 +386,14 @@ tbody::-webkit-scrollbar-track {
   tbody::-webkit-scrollbar {
     width: 4px;
   }
-
-  .columnType {
-    display: none;
-  }
 }
 @media (max-width: 375px) {
-
   .divTable {
     padding: 6px;
   }
 
   table {
-    min-width: 270px;
+    min-width: 380px;
   }
 
   #formTransacao input,
@@ -391,8 +409,9 @@ tbody::-webkit-scrollbar-track {
     border-radius: 7px;
   }
 
-  th, td {
-    padding: 7px 3px;
+  th,
+  td {
+    padding: 7px 5px;
     font-size: 11px;
   }
 
@@ -404,13 +423,6 @@ tbody::-webkit-scrollbar-track {
     font-size: 12px;
     padding: 2px 3px;
   }
-  .columnType,
-  th:nth-child(4),
-  td:nth-child(4),
-  th:nth-child(5),
-  td:nth-child(5) {
-    display: none;
-  }
 }
 @media (max-width: 320px) {
   .divTable {
@@ -419,7 +431,7 @@ tbody::-webkit-scrollbar-track {
   }
 
   table {
-    min-width: 240px;
+    min-width: 320px;
   }
 
   #formTransacao {
@@ -440,8 +452,9 @@ tbody::-webkit-scrollbar-track {
     border-radius: 6px;
   }
 
-  th, td {
-    padding: 6px 3px;
+  th,
+  td {
+    padding: 6px 4px;
     font-size: 11px;
   }
 
@@ -456,12 +469,5 @@ tbody::-webkit-scrollbar-track {
 
   tbody::-webkit-scrollbar {
     width: 3px;
-  }
-
-  .columnType,
-  th:nth-child(4), td:nth-child(4),
-  th:nth-child(5), td:nth-child(5),
-  th:nth-child(6), td:nth-child(6) {
-    display: none;
   }
 }

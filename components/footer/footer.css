@@ -32,6 +32,7 @@ margin-bottom: 10px;
 
 .h2Redes {
   display: flex;
+  justify-content: center;
   font-weight: 600;
   font-size: 20px;
   margin: 0;
