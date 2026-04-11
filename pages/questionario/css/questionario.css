@@ -1,3 +1,6 @@
+@import url(../../../components/header/header.css);
+@import url(../../../components/footer/footer.css);
+
 body {
   background: var(--bg-body);
 }
@@ -8,6 +11,7 @@ body {
   max-width: 707px;
   padding-bottom: 60px;
   margin-top: 50px;
+  margin-bottom: 50px;
   padding: 20px;
 }
 .titulo {
@@ -54,4 +58,35 @@ max-height: 44px;
 .voltar{
     color: var(--btn-fechar);
   background: none;
+}
+
+@media (max-width: 1000px) {
+main{
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.campos{
+  margin: 0;
+}
+
+.titulo {
+  font-size: 1.5rem;
+}
+
+}
+
+@media (max-width: 600px) {
+main{
+  padding: 20px;
+}
+
+.subtitulo{
+  font-size: 1rem;
+}
+.pergunta{
+  font-size: 1rem;
+}
 }

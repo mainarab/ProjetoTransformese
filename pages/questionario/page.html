@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/questionario.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <!-- <link rel="stylesheet" href="./css/header.css"> -->
     <link rel="stylesheet" href="./css/root.css">
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="shortcut icon" href="../../img/logo-mobile.svg" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <title>Questionário</title>
 </head>
 <body>
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="fecharMenu()"></div>
-  <header class="topo">
+
+<!-- <div class="sidebar-overlay" id="sidebarOverlay" onclick="fecharMenu()"></div> -->
+<!--   <header class="topo">
 
     <div class="topo-left">
       <button class="toggleMenu" onclick="toggleMenu()">
@@ -77,7 +79,7 @@
 
         </ul>
       </nav>
-    </aside>
+    </aside> -->
 
     
     <main>
@@ -155,8 +157,23 @@
   </div>
 </div>
 
+  <div id="footer"></div>
+
     <script src="./js/script.js"></script>
     <script src="./js/quiz.js"></script>
     <script src="./js/modal.js" defer></script>
+
+     <script type="module">
+      import Header from "../../components/header/headerComponente.js";
+      new Header({ container: document.body });
+    </script>
+
+    <script type="module">
+      import Footer from "../../components/footer/footerComponent.js";
+
+      new Footer({
+        container: document.querySelector("#footer"),
+      });
+    </script>
 </body>
 </html>
