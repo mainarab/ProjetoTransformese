@@ -239,6 +239,10 @@ main {
   color: red;
 }
 
+  .btnTemaComp{
+    display: none;
+  }
+
 @media (min-width: 2560px) {
   .topo {
     height: 90px;
@@ -320,6 +324,8 @@ main {
   .sidebar.fechado ~ main {
     margin-left: 0;
   }
+
+  
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
@@ -387,6 +393,15 @@ main {
     padding: 16px;
     width: 100%;
   }
+
+   .btnTemaCompDesktop{
+    display: none;
+  }
+
+  .btnTemaComp{
+    display: inline;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -428,6 +443,11 @@ main {
   main {
     padding: 12px;
   }
+
+   .btnTemaCompDesktop{
+    display: none;
+  }
+
 }
 
 @media (max-width: 375px) {
@@ -454,6 +474,11 @@ main {
   main {
     padding: 10px;
   }
+
+   .btnTemaCompDesktop{
+    display: none;
+  }
+
 }
 @media (max-width: 320px) {
   .logo-desktop {
@@ -489,4 +514,9 @@ main {
   main {
     padding: 8px;
   }
+
+   .btnTemaCompDesktop{
+    display: none;
+  }
+
 }

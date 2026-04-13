@@ -30,9 +30,14 @@
     </div>
 
     <div class="topo-right">
-      <button onclick="toggleTema()" class="temaBtn">
+
+
+<div class="btnTemaCompDesktop"></div>
+
+      
+      <!-- <button onclick="toggleTema()" class="temaBtn">
         <i class="fa-solid fa-moon"></i>
-      </button>
+      </button> -->
       <button class="alertaGasto">
         <i class="fa-solid fa-bell"></i>
         <span id="badgeGasto" style="display:none;">1</span>
@@ -75,6 +80,10 @@
               <i class="fa-solid fa-right-from-bracket"></i>
               Sair
             </a>
+          </li>
+
+           <li>
+<div class="btnTemaComp"></div>
           </li>
 
         </ul>
@@ -222,5 +231,11 @@
   <script src="./js/carousel.js"></script>
   <script src="./js/relatorio.js"></script>
   <script src="./js/app.js"></script>
+   <script type="module">
+      import ButtonTema from "../../components/buttonTema/buttonTemaComponente.js";
+
+      new ButtonTema({ container: document.querySelector(".btnTemaComp") });
+      new ButtonTema({ container: document.querySelector(".btnTemaCompDesktop") });
+    </script>
 </body>
 </html>

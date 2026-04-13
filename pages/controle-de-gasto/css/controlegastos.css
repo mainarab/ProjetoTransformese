@@ -4,6 +4,7 @@
 @import "table.css";
 @import "navbar.css";
 @import "root.css";
+@import url(../../../components/buttonTema/buttonTema.css);
 
 *{
   margin:0;
