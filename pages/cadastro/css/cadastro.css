@@ -210,6 +210,10 @@ align-self: center;
     z-index: -1;                                 
 }
 
+input{
+  background-color: transparent;
+}
+
 /*Responsivo*/
 
 @media (max-width: 950px) {
