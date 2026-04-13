@@ -55,6 +55,7 @@ Ao criar novas pastas, deve-se manter o padrão de nomenclatura em kebab-case (s
 ```bash
 ProjetoTransformese/
 │
+├── components/           # Componentes reutilizáveis do projeto
 ├── css/           # Estilos globais do projeto
 ├── js/            # Scripts globais do projeto
 ├── img/           # Imagens do projeto
