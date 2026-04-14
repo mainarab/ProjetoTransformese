@@ -26,7 +26,7 @@ body {
 }
 .pergunta {
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-top: 20px;
   color: var(--card-title);
 
@@ -37,7 +37,8 @@ body {
 
 }
 input[type="radio"] {
-  margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 4px;
 }
 
 .bt-resp{
